@@ -27,7 +27,7 @@ class TranslationApi {
       String message, String fromLanguageCode, String toLanguageCode) async {
     final translation = await GoogleTranslator().translate(
       message,
-      from: fromLanguageCode,
+    //   from: fromLanguageCode,
       to: toLanguageCode,
     );
 
