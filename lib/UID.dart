@@ -119,7 +119,7 @@ class _UIDform extends State<UIDform> {
                           print(myController.text);
                           print(data.toString());
                           if (event.snapshot.exists) {
-                            setState(() {
+                            /* setState(() {
                               showLoading = true;
                             });
                              await _auth.verifyPhoneNumber(
@@ -148,10 +148,16 @@ class _UIDform extends State<UIDform> {
                               },
                               codeAutoRetrievalTimeout:
                                   (verificationId) async {},
-                            );  
+                            ); */  //original code
 
-                            
+                            /*dummy code*/
+                            if(data.toString() == "+919515974383")
+                              setState(() {
+                                currentState = MobileVerificationState
+                                      .SHOW_OTP_FORM_STATE;
+                              });
                             }
+                            /*dummy code ends*/
                         });
                       },
                     )),
@@ -190,12 +196,19 @@ class _UIDform extends State<UIDform> {
                     child: ElevatedButton(
                       child: const Text('Verify'),
                       onPressed: () async {
-                        PhoneAuthCredential phoneAuthCredential =
+                        /* PhoneAuthCredential phoneAuthCredential =
                             PhoneAuthProvider.credential(
                                 verificationId: verificationId,
                                 smsCode: otpController.text);
 
-                        signInWithPhoneAuthCredential(phoneAuthCredential);
+                        signInWithPhoneAuthCredential(phoneAuthCredential); */ //original code
+                        /*dummycode*/
+                        if(otpController.text == '123456')
+                        {
+                          Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                        }
+                        /*dummycode ends*/
                       },
                     )),
               ],
