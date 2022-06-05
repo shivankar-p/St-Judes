@@ -2,7 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'home_screen.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
+import 'loggedin_screen.dart';
 
 enum MobileVerificationState {
   SHOW_UID_FORM_STATE,
@@ -27,9 +28,8 @@ class _UIDform extends State<UIDform> {
 
   final otpController = TextEditingController();
 
-  final FirebaseAuth _auth = FirebaseAuth.instance;  //original code
+  final FirebaseAuth _auth = FirebaseAuth.instance; //original code
 
-  
   String phoneNum = "+911234567891";
   String testVerificationCode = "951597";
 
@@ -71,8 +71,11 @@ class _UIDform extends State<UIDform> {
       });
 
       if (authCredential.user != null) {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoggedInScreen()),
+                          (Route<dynamic> route) => false,
+                        );
       }
     } on FirebaseAuthException catch (e) {
       setState(() {
@@ -148,16 +151,16 @@ class _UIDform extends State<UIDform> {
                               },
                               codeAutoRetrievalTimeout:
                                   (verificationId) async {},
-                            ); */  //original code
+                            ); */ //original code
 
                             /*dummy code*/
-                            if(data.toString() == "+919515974383")
+                            if (data.toString() == "+919515974383")
                               setState(() {
-                                currentState = MobileVerificationState
-                                      .SHOW_OTP_FORM_STATE;
+                                currentState =
+                                    MobileVerificationState.SHOW_OTP_FORM_STATE;
                               });
-                            }
-                            /*dummy code ends*/
+                          }
+                          /*dummy code ends*/
                         });
                       },
                     )),
@@ -181,16 +184,53 @@ class _UIDform extends State<UIDform> {
               children: <Widget>[
                 Center(
                     child:
-                        Text( _otpValid, 
-                        style: TextStyle(color: Colors.red))),
-                TextFormField(
+                        Text(_otpValid, style: TextStyle(color: Colors.red))),
+                /* TextFormField(
                   decoration: const InputDecoration(
                     icon: Icon(Icons.person),
                     hintText: 'Enter your OTP',
                     labelText: 'OTP',
                   ),
                   controller: otpController,
-                ),
+                ), */
+                Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 8.0, horizontal: 30),
+                    child: PinCodeTextField(
+                      keyboardType: TextInputType.number,
+                      //inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                      appContext: context,
+                      length: 6,
+                      obscureText: false,
+                      animationType: AnimationType.fade,
+                      pinTheme: PinTheme(
+                        shape: PinCodeFieldShape.box,
+                        borderRadius: BorderRadius.circular(5),
+                        fieldHeight: 50,
+                        fieldWidth: 40,
+                        activeFillColor: Colors.white,
+                      ),
+                      animationDuration: Duration(milliseconds: 300),
+                      //backgroundColor: Colors.blue.shade50,
+                      //enableActiveFill: true,
+                      //errorAnimationController: errorController,
+                      controller: otpController,
+
+                      onCompleted: (v) {
+                        print("Completed");
+                      },
+
+                      onChanged: (value) {
+                        print(value);
+                      },
+
+                      beforeTextPaste: (text) {
+                        print("Allowing to paste $text");
+                        //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
+                        //but you can show anything you want here, like your pop up saying wrong paste format or etc
+                        return true;
+                      },
+                    )),
                 Container(
                     padding: const EdgeInsets.only(left: 150.0, top: 40.0),
                     child: ElevatedButton(
@@ -203,10 +243,13 @@ class _UIDform extends State<UIDform> {
 
                         signInWithPhoneAuthCredential(phoneAuthCredential); */ //original code
                         /*dummycode*/
-                        if(otpController.text == '123456')
-                        {
-                          Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                        
+                        if (otpController.text == '123456') {
+                          Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoggedInScreen()),
+                          (Route<dynamic> route) => false,
+                        );
                         }
                         /*dummycode ends*/
                       },
