@@ -40,7 +40,7 @@ class _UIDform extends State<UIDform> {
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
-    myController.dispose();
+    //myController.dispose();
     super.dispose();
   }
 
@@ -73,7 +73,7 @@ class _UIDform extends State<UIDform> {
       if (authCredential.user != null) {
         Navigator.pushAndRemoveUntil(
                           context,
-                          MaterialPageRoute(builder: (context) => LoggedInScreen()),
+                          MaterialPageRoute(builder: (context) => LoggedInScreen(myController)),
                           (Route<dynamic> route) => false,
                         );
       }
@@ -115,7 +115,7 @@ class _UIDform extends State<UIDform> {
                       child: const Text('Submit'),
                       onPressed: () async {
                         DatabaseReference _testRef = FirebaseDatabase.instance
-                            .ref('uidToPhone/' + myController.text);
+                            .ref('uidToPhone/' + myController.text + '/phone');
                         _testRef.onValue.listen((DatabaseEvent event) async {
                           final data = event.snapshot.value;
                           _uidStatus(event.snapshot.exists);
@@ -247,7 +247,7 @@ class _UIDform extends State<UIDform> {
                         if (otpController.text == '123456') {
                           Navigator.pushAndRemoveUntil(
                           context,
-                          MaterialPageRoute(builder: (context) => LoggedInScreen()),
+                          MaterialPageRoute(builder: (context) => LoggedInScreen(myController)),
                           (Route<dynamic> route) => false,
                         );
                         }
