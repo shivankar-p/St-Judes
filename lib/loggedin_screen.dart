@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'UID.dart';
-import 'chat_screen.dart';
+import 'test_screen.dart';
 
 
 class LoggedInScreen extends StatefulWidget {
@@ -90,8 +90,8 @@ class _LoggedInScreenState extends State<LoggedInScreen>
       body: TabBarView(
         controller: _tabController,
         children: <Widget>[
-          ChatScreen(),
-          ChatScreen(),
+          TestScreen(),
+          TestScreen(),
         ],
       ),
       floatingActionButton: showFab
