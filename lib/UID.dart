@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:first/widgets/upload.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'home_screen.dart';
+import 'widgets/uploadWait.dart';
 
 enum MobileVerificationState {
   SHOW_UID_FORM_STATE,
@@ -27,9 +28,8 @@ class _UIDform extends State<UIDform> {
 
   final otpController = TextEditingController();
 
-  final FirebaseAuth _auth = FirebaseAuth.instance;  //original code
+  final FirebaseAuth _auth = FirebaseAuth.instance; //original code
 
-  
   String phoneNum = "+911234567891";
   String testVerificationCode = "951597";
 
@@ -72,7 +72,7 @@ class _UIDform extends State<UIDform> {
 
       if (authCredential.user != null) {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+            context, MaterialPageRoute(builder: (context) => UploadWait()));
       }
     } on FirebaseAuthException catch (e) {
       setState(() {
@@ -148,16 +148,16 @@ class _UIDform extends State<UIDform> {
                               },
                               codeAutoRetrievalTimeout:
                                   (verificationId) async {},
-                            ); */  //original code
+                            ); */ //original code
 
                             /*dummy code*/
-                            if(data.toString() == "+919515974383")
+                            if (data.toString() == "+919515974383")
                               setState(() {
-                                currentState = MobileVerificationState
-                                      .SHOW_OTP_FORM_STATE;
+                                currentState =
+                                    MobileVerificationState.SHOW_OTP_FORM_STATE;
                               });
-                            }
-                            /*dummy code ends*/
+                          }
+                          /*dummy code ends*/
                         });
                       },
                     )),
@@ -181,8 +181,7 @@ class _UIDform extends State<UIDform> {
               children: <Widget>[
                 Center(
                     child:
-                        Text( _otpValid, 
-                        style: TextStyle(color: Colors.red))),
+                        Text(_otpValid, style: TextStyle(color: Colors.red))),
                 TextFormField(
                   decoration: const InputDecoration(
                     icon: Icon(Icons.person),
@@ -203,10 +202,11 @@ class _UIDform extends State<UIDform> {
 
                         signInWithPhoneAuthCredential(phoneAuthCredential); */ //original code
                         /*dummycode*/
-                        if(otpController.text == '123456')
-                        {
+                        if (otpController.text == '123456') {
                           Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Upload()));
                         }
                         /*dummycode ends*/
                       },
