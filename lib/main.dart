@@ -1,4 +1,6 @@
+import 'package:first/screens/Language.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
 import './screens/mainScreen.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -50,10 +52,20 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  late Future notif;
+  int loginstate = 0;
+
+  getState() async {
+    var prefs = await SharedPreferences.getInstance();
+    // loginstate = prefs.getInt('loginstate') ?? 0;
+    return loginstate;
+  }
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+
+    notif = getState();
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       RemoteNotification? notification = message.notification;
@@ -78,23 +90,38 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  showScreen() {
+    if (loginstate == 0) {
+      return MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.orange,
+          ),
+          home: Language());
+    } else {
+      return MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.orange,
+          ),
+          home: Mainscreen());
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.orange,
-      ),
-      home: Mainscreen(),
+    return FutureBuilder(
+      future: notif,
+      builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          print('There is an error ${snapshot.error.toString()}');
+          return Text('Something went wrong');
+        } else if (snapshot.hasData) {
+          return showScreen();
+        } else {
+          return Center(child: const CircularProgressIndicator());
+        }
+      },
     );
   }
 }
