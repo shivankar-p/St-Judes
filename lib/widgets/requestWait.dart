@@ -12,24 +12,39 @@ class RequestWait extends StatefulWidget {
 class _RequestWaitState extends State<RequestWait> {
   int _state = 1;
   DatabaseReference ref = FirebaseDatabase.instance.ref('activerequests/15000');
+  DatabaseReference ref1 =
+      FirebaseDatabase.instance.ref('remarks/15000/remarks');
+
+  late String rejectdate, rejectremarks;
 
   getUploadData() async {
     var event = await ref.child('docs').once();
-    var data = event.snapshot.value as Map<dynamic, dynamic>;
-    var map = data.keys;
+    var data = event.snapshot.value as List<dynamic>;
+    // var map = data.keys;
     List<String> stringlist = [];
-    // for (int i = 0; i < map.length; i++) {
-    //   if (map[i] != null) {
-    //     stringlist.add(i.toString());
-    //     stringlist.add(map[i]['state'].toString());
-    //   }
-    // }
-    map.forEach((doc) {
-      stringlist.add(doc);
-      stringlist.add(data[doc]['state'].toString());
-    });
+    for (int i = 0; i < data.length; i++) {
+      if (data[i] != null) {
+        stringlist.add(i.toString());
+        stringlist.add(data[i]['state'].toString());
+      }
+    }
+    // map.forEach((doc) {
+    //   stringlist.add(doc);
+    //   stringlist.add(data[doc]['state'].toString());
+    // });
     var prefs = await SharedPreferences.getInstance();
     await prefs.setStringList('items', stringlist);
+  }
+
+  getRejectData() async {
+    var event = await ref1.once();
+    var data = event.snapshot.value as String;
+
+    event = await ref.once();
+    var data1 = event.snapshot.value as Map<dynamic, dynamic>;
+
+    rejectremarks = data;
+    rejectdate = data1['date'];
   }
 
   checkValue() async {
@@ -40,6 +55,8 @@ class _RequestWaitState extends State<RequestWait> {
     });
     if (_state == 2) {
       getUploadData();
+    } else if (_state == -1) {
+      getRejectData();
     }
   }
 
@@ -56,6 +73,8 @@ class _RequestWaitState extends State<RequestWait> {
       });
       if (_state == 2) {
         getUploadData();
+      } else if (_state == -1) {
+        getRejectData();
       }
     });
   }
@@ -63,6 +82,17 @@ class _RequestWaitState extends State<RequestWait> {
   changeState(int i) async {
     var prefs = await SharedPreferences.getInstance();
     await prefs.setInt('request', i);
+
+    if (i == 0) {
+      var stringlist = prefs.getStringList('old');
+      var list = [rejectdate, rejectremarks, '-1'];
+
+      if (stringlist != null) {
+        stringlist.addAll(list);
+        await prefs.setStringList('old', stringlist);
+      } else
+        await prefs.setStringList('old', list);
+    }
   }
 
   Widget displayScreen() {

@@ -1,12 +1,16 @@
 import 'package:first/screens/faq.dart';
 import 'package:first/widgets/Counselling.dart';
 import 'package:first/widgets/Raise_request.dart';
-import 'package:first/widgets/requestWait.dart';
+import 'package:first/widgets/requestHistory.dart';
+
 import 'package:flutter/material.dart';
-import '../widgets/uploadWait.dart';
-import '../widgets/upload.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/notifications.dart';
+
+import '../widgets/overlay.dart';
+import '../widgets/displayRequests.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 class Constants {
   static const String Logout = 'Logout';
@@ -33,9 +37,8 @@ class _MainscreenState extends State<Mainscreen> {
     setState(() {
       _appStateC = prefs.getInt('counselling') ?? 0;
       _appStateR = prefs.getInt('request') ?? 0;
+      if (_appStateR > 1) _appStateR = 1;
     });
-
-    prefs.getInt('request') ?? 0;
   }
 
   @override
@@ -60,7 +63,7 @@ class _MainscreenState extends State<Mainscreen> {
   // }
 
   List<List<Widget>> screens = [
-    [RaiseRequest(), RequestWait(), Upload(), UploadWait()],
+    [RaiseRequest(), Displayrequests()],
     [Counselling()],
     [Notifications()]
   ];
@@ -70,8 +73,6 @@ class _MainscreenState extends State<Mainscreen> {
       '/': (context) {
         if (index == 0) {
           return screens[index][_appStateR];
-        } else if (index == 1) {
-          return screens[index][_appStateC];
         }
         return screens[index][0];
       },
@@ -98,7 +99,6 @@ class _MainscreenState extends State<Mainscreen> {
       appBar: AppBar(
         title: Text("St Judes"),
         elevation: 5,
-        leading: Icon(Icons.account_circle_rounded),
         actions: <Widget>[
           Padding(
               padding: EdgeInsets.only(right: 20.0),
@@ -115,7 +115,12 @@ class _MainscreenState extends State<Mainscreen> {
           Padding(
               padding: EdgeInsets.only(right: 20.0),
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (_) => FunkyOverlay(),
+                  );
+                },
                 child: Icon(Icons.more_vert),
               )),
           // PopupMenuButton<String>(

@@ -1,6 +1,7 @@
 import 'package:first/widgets/uploadWait.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 class Notifications extends StatefulWidget {
   const Notifications({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _NotificationsState extends State<Notifications> {
             itemBuilder: (ctx, index) {
               return ListTile(
                 title: Text(messages[index]['date']),
-                isThreeLine: true,
+                // isThreeLine: true,
                 subtitle: Text(messages[index]['msg']),
                 leading: CircleAvatar(child: Text('AD')),
                 trailing: Text(messages[index]['time']),
@@ -47,7 +48,6 @@ class _NotificationsState extends State<Notifications> {
   @override
   void initState() {
     super.initState();
-    print("init not");
     notif = getData();
   }
 

@@ -1,8 +1,11 @@
+import 'package:first/widgets/displayRequests.dart';
+import 'package:first/widgets/requestHistory.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'requestWait.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:intl/intl.dart';
 
 class RaiseRequest extends StatelessWidget {
   DatabaseReference ref1 =
@@ -73,45 +76,72 @@ class RaiseRequest extends StatelessWidget {
                       height: 1),
                 )),
             Positioned(
-              top: 620 * (constraints.maxHeight / 800),
-              left: 80 * (constraints.maxWidth / 360),
-              child: SizedBox(
-                  width: 200,
-                  height: 54,
-                  child: ElevatedButton(
-                    child: Text(
-                      'Raise Request',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Color.fromRGBO(255, 255, 255, 1),
-                          fontFamily: 'RobotoSerif-Regular',
-                          fontSize: 24,
-                          letterSpacing: 0,
-                          fontWeight: FontWeight.normal,
-                          height: 1),
+                top: 620 * (constraints.maxHeight / 800),
+                left: 80 * (constraints.maxWidth / 360),
+                child: Column(children: [
+                  SizedBox(
+                      width: 200,
+                      height: 54,
+                      child: ElevatedButton(
+                        child: Text(
+                          'Raise Request',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontFamily: 'RobotoSerif-Regular',
+                              fontSize: 24,
+                              letterSpacing: 0,
+                              fontWeight: FontWeight.normal,
+                              height: 1),
+                        ),
+                        onPressed: () {
+                          changeState();
+                          ref1.set({
+                            'date':
+                                DateFormat('dd-MM-yyyy').format(DateTime.now()),
+                            'state': 1,
+                            'language': 'english',
+                            'logs': {
+                              'amount': 0,
+                              'category': '',
+                              'description': '',
+                              'remarks': ''
+                            }
+                          });
+
+                          ref2.set(1);
+
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => (Displayrequests())));
+                        },
+                        style: ElevatedButton.styleFrom(
+                            primary: Color.fromRGBO(245, 130, 32, 1),
+                            padding: EdgeInsets.all(10)),
+                      )),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      textStyle: const TextStyle(fontSize: 16),
                     ),
                     onPressed: () {
-                      ref1.set({'state': 1, 'language': 'english'});
-
-                      ref2.set(1);
-                      changeState();
-
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => (RequestWait())));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => (History())));
                     },
-                    style: ElevatedButton.styleFrom(
-                        primary: Color.fromRGBO(245, 130, 32, 1),
-                        padding: EdgeInsets.all(10)),
-                  )),
-            ),
+                    child: const Text('Or view request history'),
+                  )
+                ])),
           ]));
     }));
   }
 
   changeState() async {
     var prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList(
+        'active', [DateFormat('dd-MM-yyyy').format(DateTime.now()), '1']);
     await prefs.setInt('request', 1);
   }
 }

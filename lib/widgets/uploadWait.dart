@@ -15,26 +15,44 @@ class _UploadWaitState extends State<UploadWait> {
   DatabaseReference ref =
       FirebaseDatabase.instance.ref('activerequests/15000/state');
 
+  DatabaseReference ref1 =
+      FirebaseDatabase.instance.ref('remarks/15000/remarks');
+
   DatabaseReference ref2 =
       FirebaseDatabase.instance.ref('activerequests/15000');
 
+  late String statusdate, statusremarks;
+  late int statusstate;
+
   getUploadData() async {
     var event = await ref2.child('docs').once();
-    var data = event.snapshot.value as Map<dynamic, dynamic>;
-    var map = data.keys;
+    var data = event.snapshot.value as List<dynamic>;
+    // var map = data.keys;
     List<String> stringlist = [];
-    // for (int i = 0; i < map.length; i++) {
-    //   if (map[i] != null) {
-    //     stringlist.add(i.toString());
-    //     stringlist.add(map[i]['state'].toString());
-    //   }
-    // }
-    map.forEach((doc) {
-      stringlist.add(doc);
-      stringlist.add(data[doc]['state'].toString());
-    });
+    for (int i = 0; i < data.length; i++) {
+      if (data[i] != null) {
+        stringlist.add(i.toString());
+        stringlist.add(data[i]['state'].toString());
+      }
+    }
+    // map.forEach((doc) {
+    //   stringlist.add(doc);
+    //   stringlist.add(data[doc]['state'].toString());
+    // });
     var prefs = await SharedPreferences.getInstance();
     await prefs.setStringList('items', stringlist);
+  }
+
+  getStatusData() async {
+    var event = await ref1.once();
+    var data = event.snapshot.value as String;
+
+    event = await ref2.once();
+    var data1 = event.snapshot.value as Map<dynamic, dynamic>;
+
+    statusremarks = data;
+    statusstate = data1['state'];
+    statusdate = data1['date'];
   }
 
   checkValue() async {
@@ -45,6 +63,8 @@ class _UploadWaitState extends State<UploadWait> {
     });
     if (_state == 2) {
       getUploadData();
+    } else {
+      getStatusData();
     }
   }
 
@@ -61,6 +81,8 @@ class _UploadWaitState extends State<UploadWait> {
       });
       if (_state == 2) {
         getUploadData();
+      } else {
+        getStatusData();
       }
     });
   }
@@ -68,6 +90,17 @@ class _UploadWaitState extends State<UploadWait> {
   changeState(int i) async {
     var prefs = await SharedPreferences.getInstance();
     await prefs.setInt('request', i);
+
+    if (i == 0) {
+      var stringlist = prefs.getStringList('old');
+      var list = [statusdate, statusremarks, statusstate.toString()];
+
+      if (stringlist != null) {
+        stringlist.addAll(list);
+        await prefs.setStringList('old', stringlist);
+      } else
+        await prefs.setStringList('old', list);
+    }
   }
 
   Widget displayScreen() {
