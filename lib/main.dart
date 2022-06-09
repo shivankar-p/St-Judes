@@ -8,7 +8,6 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
-  print('Handling a background message ${message.messageId}');
 }
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
@@ -53,7 +52,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   late Future notif;
-  int loginstate = 0;
+  int loginstate = 1;
 
   getState() async {
     var prefs = await SharedPreferences.getInstance();

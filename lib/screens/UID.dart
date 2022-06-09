@@ -288,23 +288,24 @@ class _UIDform extends State<UIDform> {
                       child: ElevatedButton(
                         child: const Text('Verify'),
                         onPressed: () async {
-                          /* PhoneAuthCredential phoneAuthCredential =
+                          PhoneAuthCredential phoneAuthCredential =
                               PhoneAuthProvider.credential(
                                   verificationId: verificationId,
                                   smsCode: otpController.text);
-      
-                          signInWithPhoneAuthCredential(phoneAuthCredential); */ //original code
+
+                          signInWithPhoneAuthCredential(
+                              phoneAuthCredential); //original code
                           /*dummycode*/
 
-                          if (otpController.text == verificationId) {
-                            Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Mainscreen()),
-                              (Route<dynamic> route) => false,
-                            );
-                          }
-                          /*dummycode ends*/
+                          // if (otpController.text == verificationId) {
+                          //   Navigator.pushAndRemoveUntil(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (context) => Mainscreen()),
+                          //     (Route<dynamic> route) => false,
+                          //   );
+                          // }
+                          // /*dummycode ends*/
                         },
                       )),
                 ],

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'upload.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../models/document.dart';
 
 class RequestWait extends StatefulWidget {
   @override
@@ -19,19 +20,19 @@ class _RequestWaitState extends State<RequestWait> {
 
   getUploadData() async {
     var event = await ref.child('docs').once();
-    var data = event.snapshot.value as List<dynamic>;
-    // var map = data.keys;
+    var data = event.snapshot.value as Map<dynamic, dynamic>;
+    var map = data.keys;
     List<String> stringlist = [];
-    for (int i = 0; i < data.length; i++) {
-      if (data[i] != null) {
-        stringlist.add(i.toString());
-        stringlist.add(data[i]['state'].toString());
-      }
-    }
-    // map.forEach((doc) {
-    //   stringlist.add(doc);
-    //   stringlist.add(data[doc]['state'].toString());
-    // });
+    // for (int i = 0; i < data.length; i++) {
+    //   if (data[i] != null) {
+    //     stringlist.add(i.toString());
+    //     stringlist.add(data[i]['state'].toString());
+    //   }
+    // }
+    map.forEach((doc) {
+      stringlist.add(dockeys.indexOf(doc).toString());
+      stringlist.add(data[doc]['state'].toString());
+    });
     var prefs = await SharedPreferences.getInstance();
     await prefs.setStringList('items', stringlist);
   }

@@ -13,11 +13,10 @@ import '../widgets/displayRequests.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 class Constants {
-  static const String Logout = 'Logout';
-  static const String Profile = 'Profile';
-  static const String Language = 'Language';
+  static const String history = 'View Request History';
+  static const String Language = 'Change Language';
 
-  static const List<String> choices = <String>[Profile, Language, Logout];
+  static const List<String> choices = <String>[Language, history];
 }
 
 class Mainscreen extends StatefulWidget {
@@ -47,20 +46,16 @@ class _MainscreenState extends State<Mainscreen> {
     getAppState();
   }
 
-  //void choiceAction(String choice) {
-  //   if (choice == Constants.Profile) {
-  //     Navigator.push(context, MaterialPageRoute(builder: (context) {
-  //       return ProfilePage(widget.myController);
-  //     }));
-  //     print('Profile');
-  //   } else if (choice == Constants.Language) {
-  //     print('Language');
-  //   } else if (choice == Constants.Logout) {
-  //     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-  //       return UIDform();
-  //     }));
-  //   }
-  // }
+  void choiceAction(String choice) {
+    if (choice == Constants.Language) {
+      print('Language');
+    } else {
+      showDialog(
+        context: context,
+        builder: (_) => FunkyOverlay(),
+      );
+    }
+  }
 
   List<List<Widget>> screens = [
     [RaiseRequest(), Displayrequests()],
@@ -72,7 +67,7 @@ class _MainscreenState extends State<Mainscreen> {
     return {
       '/': (context) {
         if (index == 0) {
-          return screens[index][_appStateR];
+          return screens[index][1];
         }
         return screens[index][0];
       },
@@ -112,28 +107,17 @@ class _MainscreenState extends State<Mainscreen> {
                   size: 26.0,
                 ),
               )),
-          Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (_) => FunkyOverlay(),
-                  );
-                },
-                child: Icon(Icons.more_vert),
-              )),
-          // PopupMenuButton<String>(
-          //   // onSelected: choiceAction,
-          //   itemBuilder: (BuildContext context) {
-          //     return Constants.choices.map((String choice) {
-          //       return PopupMenuItem<String>(
-          //         value: choice,
-          //         child: Text(choice),
-          //       );
-          //     }).toList();
-          //   },
-          // )
+          PopupMenuButton<String>(
+            onSelected: choiceAction,
+            itemBuilder: (BuildContext context) {
+              return Constants.choices.map((String choice) {
+                return PopupMenuItem<String>(
+                  value: choice,
+                  child: Text(choice),
+                );
+              }).toList();
+            },
+          )
         ],
       ),
       body: Stack(

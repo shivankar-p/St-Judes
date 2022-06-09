@@ -106,7 +106,7 @@ class _UploadState extends State<Upload> {
     var downloadUrl = await ref.getDownloadURL();
     doctypes[page].urls.add(downloadUrl);
 
-    var newref = ref1.child('docs/$page/url').push();
+    var newref = ref1.child('docs/${dockeys[page]}/url').push();
     newref.set(downloadUrl);
 
     setState(() {
@@ -122,7 +122,7 @@ class _UploadState extends State<Upload> {
       for (int i = 0; i < l; i++) {
         uploadFile(doctypes[page].docpaths[i], page);
         if (i == l - 1) {
-          ref1.child('docs/$page/state').set(1);
+          ref1.child('docs/${dockeys[page]}/state').set(1);
         }
       }
 

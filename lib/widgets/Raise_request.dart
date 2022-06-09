@@ -123,16 +123,16 @@ class RaiseRequest extends StatelessWidget {
                   SizedBox(
                     height: 5,
                   ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      textStyle: const TextStyle(fontSize: 16),
-                    ),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => (History())));
-                    },
-                    child: const Text('Or view request history'),
-                  )
+                  // TextButton(
+                  //   style: TextButton.styleFrom(
+                  //     textStyle: const TextStyle(fontSize: 16),
+                  //   ),
+                  //   onPressed: () {
+                  //     Navigator.push(context,
+                  //         MaterialPageRoute(builder: (context) => (History())));
+                  //   },
+                  //   child: const Text('Or view request history'),
+                  // )
                 ])),
           ]));
     }));
