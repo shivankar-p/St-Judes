@@ -90,8 +90,8 @@ class _NotificationsState extends State<Notifications> {
       if (messages.isNotEmpty) {
         _showNotification(
             id: 0,
-            title: messages.last['msg'].split(':')[0],
-            body: messages.last['msg'].split(':')[1]);
+            title: messages.first['msg'].split(':')[0],
+            body: messages.first['msg'].split(':')[1]);
       }
     });
   }

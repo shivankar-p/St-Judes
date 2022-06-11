@@ -254,7 +254,7 @@ class RequestOptionsState extends State<RequestOptions>
                               'language':
                                   _locales[_languages.indexOf(_chosenValue)],
                               'logs': {
-                                'amount': 0,
+                                'amount': '',
                                 'category': '',
                                 'description': '',
                                 'remarks': ''

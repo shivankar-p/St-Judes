@@ -88,9 +88,11 @@ class FunkyOverlayState extends State<FunkyOverlay>
                                 if (myController.text.isNotEmpty) {
                                   var newref = ref.push();
                                   newref.set({
-                                    'message': myController.text,
-                                    'uid': 15000,
-                                    'timestamp': DateFormat('dd-MM-yyyy')
+                                    'msg': myController.text,
+                                    'uid': '15000',
+                                    'date': DateFormat("dd MMMM yyyy")
+                                        .format(DateTime.now()),
+                                    'time': DateFormat("HH:mm:ss")
                                         .format(DateTime.now())
                                   });
                                 }
