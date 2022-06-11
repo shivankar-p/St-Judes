@@ -94,31 +94,59 @@ class _DisplayrequestsState extends State<Displayrequests> {
   }
 
   Widget showScreen() {
-    return Column(children: [
-      Text("ACTIVE"),
-      Card(
-          child: ListTile(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => (_widgetList[stateindex - 1])));
-              },
-              title: Text(active.date),
-              subtitle: Text(active.state),
-              leading: CircleAvatar(child: Icon(Icons.pending_actions_rounded)),
-              trailing: Icon(Icons.star))),
-      Text("OLD"),
-      Expanded(
-          child: ListView(padding: const EdgeInsets.all(8), children: [
-        ...olds.map((e) => Card(
-            child: ListTile(
-                title: Text(e.date),
-                subtitle: Text(e.remarks),
-                leading: CircleAvatar(child: e.icon),
-                trailing: Icon(Icons.star))))
-      ]))
-    ]);
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+              padding: EdgeInsets.only(top: 30, left: 10),
+              child: Text("ACTIVE REQUESTS",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 27, 63, 27),
+                    fontSize: 20,
+                    letterSpacing: 0,
+                    fontWeight: FontWeight.normal,
+                    height: 1,
+                  ))),
+          Padding(
+              padding: const EdgeInsets.all(8),
+              child: Card(
+                  child: ListTile(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    (_widgetList[stateindex - 1])));
+                      },
+                      title: Text(active.date),
+                      subtitle: Text(active.state),
+                      leading: CircleAvatar(
+                          child: Icon(Icons.pending_actions_rounded)),
+                      trailing: Icon(Icons.star)))),
+          Padding(
+            padding: EdgeInsets.only(top: 20, bottom: 20, left: 10),
+            child: Text("OLDER REQUESTS",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 27, 63, 27),
+                  fontSize: 20,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.normal,
+                  height: 1,
+                )),
+          ),
+          Expanded(
+              child: ListView(padding: const EdgeInsets.all(8), children: [
+            ...List.from(olds.reversed).map((e) => Card(
+                child: ListTile(
+                    title: Text(e.date),
+                    subtitle: Text(e.remarks),
+                    leading: CircleAvatar(child: e.icon),
+                    trailing: Icon(Icons.star))))
+          ]))
+        ]);
   }
 
   @override

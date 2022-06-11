@@ -40,7 +40,26 @@ class _LanguageState extends State<Language> {
                     image: DecorationImage(
                         image: AssetImage('assets/images/Logo.png'))))),
         Positioned(
-            top: 435 * (constraints.maxHeight / 800),
+            top: 350 * (constraints.maxHeight / 800),
+            child: SizedBox(
+              width: 350,
+              child: Material(
+                  color: Color.fromARGB(0, 255, 255, 255),
+                  child: Text(
+                      //Select Language
+                      'St Judes India Childcares',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 27, 63, 27),
+                        fontFamily: 'ProximaNovaRegular',
+                        fontSize: 27,
+                        letterSpacing: 0,
+                        fontWeight: FontWeight.normal,
+                        height: 1,
+                      ))),
+            )),
+        Positioned(
+            top: 500 * (constraints.maxHeight / 800),
             child: SizedBox(
               width: 300,
               child: Material(
@@ -59,7 +78,7 @@ class _LanguageState extends State<Language> {
                       ))),
             )),
         Positioned(
-            top: 480 * (constraints.maxHeight / 800),
+            top: 550 * (constraints.maxHeight / 800),
             //left: (constraints.maxWidth - 237) / 2,
             child: Hero(
                 tag: "SelectLang",
@@ -87,7 +106,7 @@ class _LanguageState extends State<Language> {
                                         fontWeight: FontWeight.normal,
                                         height: 1)))))))),
         Positioned(
-            top: 590 * (constraints.maxHeight / 800),
+            top: 700 * (constraints.maxHeight / 800),
             //left: (constraints.maxWidth - 100) / 2,
             child: GestureDetector(
                 onTap: () {
@@ -105,11 +124,11 @@ class _LanguageState extends State<Language> {
                             borderRadius: BorderRadius.circular(5)),
                         child: Stack(alignment: Alignment.center, children: [
                           SizedBox(
-                            width: 110,
-                            height: 35,
+                            width: 300,
+                            height: 40,
                           ),
                           Positioned(
-                              top: 7,
+                              top: 9,
                               //left: 20,
                               //Continue
                               child: Text(AppLocalizations.of(context)!.cont,

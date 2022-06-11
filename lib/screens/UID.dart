@@ -146,7 +146,8 @@ class _UIDform extends State<UIDform> {
                                   focusedBorder: InputBorder.none,
                                   enabledBorder: InputBorder.none,
                                   errorBorder: InputBorder.none,
-                                  disabledBorder: InputBorder.none),
+                                  disabledBorder: InputBorder.none,
+                                  hintText: ''),
                               controller: myController,
                             ),
                           ),
@@ -176,45 +177,48 @@ class _UIDform extends State<UIDform> {
                             print(myController.text);
                             print(data.toString());
                             if (event.snapshot.exists) {
-                              /* setState(() {
-                              showLoading = true;
-                            });
-                            await _auth.verifyPhoneNumber(
-                              phoneNumber: data.toString(),
-                              verificationCompleted:
-                                  (PhoneAuthCredential) async {
-                                setState(() {
-                                  showLoading = false;
-                                });
-                              },
-                              verificationFailed: (verificationFailed) async {
-                                setState(() {
-                                  _otpValid = 'Invalid Otp. Please try again!';
-                                  showLoading = false;
-                                  print('updated otpstatus');
-                                });
-                              },
-                              codeSent: (verificationId, resendingToken) async {
-                                setState(() {
-                                  showLoading = false;
-                                  currentState = MobileVerificationState
-                                      .SHOW_OTP_FORM_STATE;
-                                  this.verificationId = verificationId;
-                                  print('In verification state');
-                                });
-                              },
-                              codeAutoRetrievalTimeout:
-                                  (verificationId) async {},
-                            ); */ //original code
+                              setState(() {
+                                showLoading = true;
+                              });
+                              await _auth.verifyPhoneNumber(
+                                phoneNumber: data.toString(),
+                                verificationCompleted:
+                                    (PhoneAuthCredential) async {
+                                  setState(() {
+                                    showLoading = false;
+                                  });
+                                },
+                                verificationFailed: (verificationFailed) async {
+                                  setState(() {
+                                    _otpValid =
+                                        'Invalid Otp. Please try again!';
+                                    showLoading = false;
+                                    print('updated otpstatus');
+                                  });
+                                },
+                                codeSent:
+                                    (verificationId, resendingToken) async {
+                                  setState(() {
+                                    showLoading = false;
+                                    currentState = MobileVerificationState
+                                        .SHOW_OTP_FORM_STATE;
+                                    this.verificationId = verificationId;
+                                    print('In verification state');
+                                  });
+                                },
+                                codeAutoRetrievalTimeout:
+                                    (verificationId) async {},
+                              ); //original code
 
-                              /*dummy code*/
-                              if (data.toString() == "+918105715824")
-                                setState(() {
-                                  currentState = MobileVerificationState
-                                      .SHOW_OTP_FORM_STATE;
-                                });
+                              //   /*dummy code*/
+                              //   if (data.toString() == "+918105715824")
+                              //     setState(() {
+                              //       currentState = MobileVerificationState
+                              //           .SHOW_OTP_FORM_STATE;
+                              //     });
+                              // }
+                              // /*dummy code ends*/
                             }
-                            /*dummy code ends*/
                           });
                         },
                       )),
@@ -306,24 +310,24 @@ class _UIDform extends State<UIDform> {
                                 fontSize: 17,
                               )),
                           onPressed: () async {
-                            // PhoneAuthCredential phoneAuthCredential =
-                            //     PhoneAuthProvider.credential(
-                            //         verificationId: verificationId,
-                            //         smsCode: otpController.text);
+                            PhoneAuthCredential phoneAuthCredential =
+                                PhoneAuthProvider.credential(
+                                    verificationId: verificationId,
+                                    smsCode: otpController.text);
 
-                            // signInWithPhoneAuthCredential(
-                            //     phoneAuthCredential); //original code
-                            /*dummycode*/
+                            signInWithPhoneAuthCredential(
+                                phoneAuthCredential); //original code
+                            // /*dummycode*/
 
-                            if (otpController.text == '123456') {
-                              Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Mainscreen()),
-                                (Route<dynamic> route) => false,
-                              );
-                            }
-                            /*dummycode ends*/
+                            // if (otpController.text == '123456') {
+                            //   Navigator.pushAndRemoveUntil(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => Mainscreen()),
+                            //     (Route<dynamic> route) => false,
+                            //   );
+                            // }
+                            // /*dummycode ends*/
                           },
                         )),
                   ),
