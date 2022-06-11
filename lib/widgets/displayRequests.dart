@@ -3,7 +3,6 @@ import 'package:first/widgets/upload.dart';
 import 'package:first/widgets/uploadWait.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -55,7 +54,7 @@ class _DisplayrequestsState extends State<Displayrequests> {
             'Request shortlisted. You can proceed to upload documents.';
       } else if (state == 3) {
         active.state =
-            'Documents have been uploaded. Please wait till we verify them.';
+            'Documents have been apploaded. Please wait till we verify them.';
       } else if (state == 4) {
         active.state = 'Request Approved. We ll contact you shortly';
       } else

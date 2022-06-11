@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'dart:io';
 import '../models/document.dart';
 import 'upload.dart';
@@ -39,7 +38,7 @@ class _DocumentcaptureState extends State<Documentcapture> {
     if (_docState == 0) {
       line1 = 'Please upload your';
     } else {
-      line1 = 'Your ${doctypes[_index].name}';
+      line1 = 'Your ${doctypes[_index].name} has been';
     }
 
     return Text(line1,
@@ -58,9 +57,9 @@ class _DocumentcaptureState extends State<Documentcapture> {
               color: Colors.black, fontSize: 32, fontWeight: FontWeight.bold));
     } else {
       if (_docState == 1) {
-        line2 = "has been Uploaded";
+        line2 = "Uploaded";
       } else {
-        line2 = 'has been Approved';
+        line2 = 'Approved';
       }
 
       return RichText(
@@ -147,8 +146,8 @@ class _DocumentcaptureState extends State<Documentcapture> {
             borderRadius: BorderRadius.circular(20),
             // padding: EdgeInsets.only(left: 16),
             child: Column(children: [
-              Image.asset(
-                'assets/images/pdf.png',
+              SvgPicture.asset(
+                'assets/images/PDF_file_icon.svg',
                 height: 150,
               ),
               SizedBox(

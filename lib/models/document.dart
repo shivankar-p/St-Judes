@@ -1,6 +1,6 @@
 import 'dart:collection';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class Document {
   final String name;
   final String desc;
@@ -10,6 +10,24 @@ class Document {
 
   Document(this.name, this.desc, this.docState);
 }
+
+List<String> dockeys = [
+  "aadhar",
+  "pan",
+  "birth",
+  "Passport",
+  "photo",
+  "license",
+  "caste",
+  "voter",
+  "ssc",
+  "10th",
+  "12th",
+  "bonafide",
+  "reportcard",
+  "prescription",
+  "medical_report"
+];
 
 var doctypes = [
   Document(
@@ -21,7 +39,6 @@ var doctypes = [
   Document('Passport', '', 0),
   Document('Passport Size photograph', '', 0),
   Document('Driving License', '', 0),
-  Document('Attendence Certificate', '', 0),
   Document('Caste Certificate', '', 0),
   Document('Voter ID card', '', 0),
   Document('Secondary School Certificate/10th', '', 0),

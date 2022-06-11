@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:intl/intl.dart';
 
 class FunkyOverlay extends StatefulWidget {
   @override
@@ -13,7 +13,7 @@ class FunkyOverlayState extends State<FunkyOverlay>
   late AnimationController controller;
   late Animation<double> scaleAnimation;
 
-  DatabaseReference ref = FirebaseDatabase.instance.ref('/queries/15000');
+  DatabaseReference ref = FirebaseDatabase.instance.ref('queries');
 
   static const NUMBER = '+918130494605';
   final myController = TextEditingController();
@@ -87,7 +87,12 @@ class FunkyOverlayState extends State<FunkyOverlay>
                               onPressed: () {
                                 if (myController.text.isNotEmpty) {
                                   var newref = ref.push();
-                                  newref.set(myController.text);
+                                  newref.set({
+                                    'message': myController.text,
+                                    'uid': 15000,
+                                    'timestamp': DateFormat('dd-MM-yyyy')
+                                        .format(DateTime.now())
+                                  });
                                 }
                                 Navigator.pop(context);
                               })),

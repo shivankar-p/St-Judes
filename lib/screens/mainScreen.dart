@@ -1,21 +1,63 @@
+import 'package:first/screens/Language.dart';
 import 'package:first/screens/faq.dart';
 import 'package:first/widgets/Counselling.dart';
 import 'package:first/widgets/Raise_request.dart';
 import 'package:first/widgets/requestHistory.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'package:flutter/material.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/notifications.dart';
+
 import '../widgets/overlay.dart';
 import '../widgets/displayRequests.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 class Constants {
-  static const String Logout = 'Logout';
-  static const String Profile = 'Profile';
-  static const String Language = 'Language';
+  static const String Contact = 'Contact Us';
+  static const String Language = 'Change Language';
 
-  static const List<String> choices = <String>[Profile, Language, Logout];
+  static const List<String> choices = <String>[Language, Contact];
+}
+
+class LanguageList1 extends StatelessWidget {
+  var languages = [
+    ['English (default)', 'en'],
+    ['தமிழ் (Tamil)', 'ta'],
+    ['తెలుగు (Telugu)', 'te'],
+    ['हिन्दी (Hindi)', 'hi'],
+    ['മലയാളം (Malayalam)', 'ml'],
+    ['বাংলা (Bengali)', 'bn']
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Container(
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 255, 255, 255),
+              borderRadius: BorderRadius.all(Radius.circular(5)),
+            ),
+            width: 230,
+            child: ListView(
+                padding: EdgeInsets.zero,
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                physics: const BouncingScrollPhysics(
+                    parent: AlwaysScrollableScrollPhysics()),
+                children: <Widget>[
+                  ...languages.map((e) => Card(
+                      child: ListTile(
+                          title: Center(
+                              child: Text(e[0],
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 0, 0, 0)))),
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          tileColor: Color.fromARGB(255, 255, 255, 255))))
+                ])));
+  }
 }
 
 class Mainscreen extends StatefulWidget {
@@ -45,20 +87,19 @@ class _MainscreenState extends State<Mainscreen> {
     getAppState();
   }
 
-  //void choiceAction(String choice) {
-  //   if (choice == Constants.Profile) {
-  //     Navigator.push(context, MaterialPageRoute(builder: (context) {
-  //       return ProfilePage(widget.myController);
-  //     }));
-  //     print('Profile');
-  //   } else if (choice == Constants.Language) {
-  //     print('Language');
-  //   } else if (choice == Constants.Logout) {
-  //     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-  //       return UIDform();
-  //     }));
-  //   }
-  // }
+  void choiceAction(String choice) {
+    if (choice == Constants.Language) {
+      showDialog(
+        context: context,
+        builder: (_) => LanguageList1(),
+      );
+    } else {
+      showDialog(
+        context: context,
+        builder: (_) => FunkyOverlay(),
+      );
+    }
+  }
 
   List<List<Widget>> screens = [
     [RaiseRequest(), Displayrequests()],
@@ -95,11 +136,11 @@ class _MainscreenState extends State<Mainscreen> {
   Widget displayScreen() {
     return Scaffold(
       appBar: AppBar(
-        title: Text("St Judes"),
+        title: Text("St. Judes For Life"),
         elevation: 5,
         actions: <Widget>[
           Padding(
-              padding: EdgeInsets.only(right: 20.0),
+              padding: EdgeInsets.only(right: 10.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(context,
@@ -110,28 +151,17 @@ class _MainscreenState extends State<Mainscreen> {
                   size: 26.0,
                 ),
               )),
-          Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (_) => FunkyOverlay(),
-                  );
-                },
-                child: Icon(Icons.more_vert),
-              )),
-          // PopupMenuButton<String>(
-          //   // onSelected: choiceAction,
-          //   itemBuilder: (BuildContext context) {
-          //     return Constants.choices.map((String choice) {
-          //       return PopupMenuItem<String>(
-          //         value: choice,
-          //         child: Text(choice),
-          //       );
-          //     }).toList();
-          //   },
-          // )
+          PopupMenuButton<String>(
+            onSelected: choiceAction,
+            itemBuilder: (BuildContext context) {
+              return Constants.choices.map((String choice) {
+                return PopupMenuItem<String>(
+                  value: choice,
+                  child: Text(choice),
+                );
+              }).toList();
+            },
+          )
         ],
       ),
       body: Stack(
@@ -146,15 +176,11 @@ class _MainscreenState extends State<Mainscreen> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-                //Raise request tab
-                icon: Icon(Icons.home),
-                label: AppLocalizations.of(context)!.raisereq),
+                icon: Icon(Icons.add_moderator), label: 'Raise Request'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: AppLocalizations.of(context)!.counselling),
+                icon: Icon(Icons.announcement), label: 'Counselling'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.notifications),
-                label: AppLocalizations.of(context)!.notifications)
+                icon: Icon(Icons.notifications), label: 'Notifications')
           ],
           onTap: (index) => {
                 setState(() {

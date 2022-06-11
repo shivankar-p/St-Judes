@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Counselling extends StatelessWidget {
   DatabaseReference ref = FirebaseDatabase.instance.ref('counselling/15000');
@@ -16,7 +15,7 @@ class Counselling extends StatelessWidget {
           decoration: BoxDecoration(
             color: Color.fromRGBO(255, 255, 255, 1),
           ),
-          child: Stack(alignment: Alignment.center, children: <Widget>[
+          child: Stack(children: <Widget>[
             Positioned(
                 top: 335 * (constraints.maxHeight / 800),
                 left: 50 * (constraints.maxWidth / 360),
@@ -29,10 +28,7 @@ class Counselling extends StatelessWidget {
             Positioned(
                 top: 100 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
-                child: Text(
-                    AppLocalizations.of(context)!.applyfor +
-                        '\n' +
-                        AppLocalizations.of(context)!.incoun,
+                child: Text('Apply for\nCounselling',
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         color: Color.fromRGBO(245, 130, 32, 1),
@@ -42,10 +38,10 @@ class Counselling extends StatelessWidget {
                         fontWeight: FontWeight.normal,
                         height: 1))),
             Positioned(
-                top: 65 * (constraints.maxHeight / 800),
+                top: 75 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
                 child: Text(
-                  AppLocalizations.of(context)!.need,
+                  'Need some guidance?',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color.fromRGBO(245, 129, 45, 1),
@@ -56,11 +52,11 @@ class Counselling extends StatelessWidget {
                       height: 1),
                 )),
             Positioned(
-                top: 225 * (constraints.maxHeight / 800),
+                top: 215 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
                 right: 25 * (constraints.maxWidth / 360),
                 child: Text(
-                  AppLocalizations.of(context)!.countext,
+                  'We’re there for you! On applying for counselling our officials will help you out with your much required career and life counselling.',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color.fromRGBO(109, 109, 109, 1),
@@ -71,14 +67,14 @@ class Counselling extends StatelessWidget {
                       height: 1),
                 )),
             Positioned(
-              top: 630 * (constraints.maxHeight / 800),
-              //left: 80 * (constraints.maxWidth / 360),
+              top: 620 * (constraints.maxHeight / 800),
+              left: 80 * (constraints.maxWidth / 360),
               child: SizedBox(
                   width: 200,
                   height: 54,
                   child: ElevatedButton(
                     child: Text(
-                      AppLocalizations.of(context)!.enrol,
+                      'Get Enrolled',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Color.fromRGBO(255, 255, 255, 1),

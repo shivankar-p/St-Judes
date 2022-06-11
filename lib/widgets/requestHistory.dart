@@ -2,7 +2,6 @@ import 'package:first/widgets/uploadWait.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class History extends StatefulWidget {
   @override
