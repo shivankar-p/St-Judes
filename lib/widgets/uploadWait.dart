@@ -69,7 +69,7 @@ class _UploadWaitState extends State<UploadWait> {
 
     checkValue();
 
-    ref.onValue.listen((event) {
+    ref.child('state').onValue.listen((event) {
       var value = event.snapshot.value as int;
       setState(() {
         _state = value;

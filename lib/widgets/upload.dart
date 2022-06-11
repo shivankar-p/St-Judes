@@ -52,7 +52,7 @@ class _UploadState extends State<Upload> {
       int state = int.parse(stringlist[i + 1]);
 
       if (state == 0) {
-        pagemap[i / 2] = int.parse(stringlist[i]);
+        pagemap[nod] = int.parse(stringlist[i]);
         setState(() {
           nod++;
         });
@@ -65,11 +65,7 @@ class _UploadState extends State<Upload> {
     for (int i = 0; i < _numberOfDocuments; i++) {
       typestatelist.add(0);
     }
-
-    // _numberOfDocuments = 2;
-    // pagemap = {0: 0, 1: 1};
-    // typestatelist = [0, 0];
-
+    print(pagemap);
     return _numberOfDocuments;
   }
 
@@ -90,8 +86,6 @@ class _UploadState extends State<Upload> {
       _currentpage = index;
     });
   }
-
-  int c = 0;
 
   Future uploadFile(pickedFile, page) async {
     final path = 'files/${pickedFile!.name}';

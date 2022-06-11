@@ -31,7 +31,7 @@ class _NotificationsState extends State<Notifications> {
     var data = event.snapshot.value as List<dynamic>;
     setState(() {
       _itemCount = data.length;
-      messages = data;
+      messages = List.from(data.reversed);
     });
 
     return data;
@@ -82,7 +82,7 @@ class _NotificationsState extends State<Notifications> {
       var data = event.snapshot.value as List<dynamic>;
       setState(() {
         _itemCount = data.length;
-        messages = data;
+        messages = List.from(data.reversed);
       });
 
       if (messages.isNotEmpty) {
