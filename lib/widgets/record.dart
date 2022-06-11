@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sound_lite/flutter_sound.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'dart:io';
-import 'package:path_provider/path_provider.dart';
 
 enum AudioState { recording, stop, play }
 
@@ -34,7 +30,7 @@ class SoundRecorder {
 
   void dispose() {
     _audioRecorder!.closeAudioSession();
-    _player!.openAudioSession();
+    _player!.closeAudioSession();
     _audioRecorder = null;
     _isRecorderInit = false;
   }
@@ -76,33 +72,10 @@ class Record extends StatefulWidget {
 
 class _RecordState extends State<Record> {
   final String _path;
-  UploadTask? task;
   _RecordState(this._path);
-  DatabaseReference ref1 =
-      FirebaseDatabase.instance.ref('/activerequests/15000');
 
   AudioState? audioState = null;
   late final recorder;
-
-  Future uploadFile() async {
-    Directory tempDir = await getTemporaryDirectory();
-    String tempPath = tempDir.path + '/$_path';
-    final file = File(tempPath);
-
-    var ref = FirebaseStorage.instance.ref().child('files/$_path');
-    setState(() {
-      task = ref.putFile(file);
-    });
-
-    final snapshot = await task!.whenComplete(() {});
-    var downloadUrl = await ref.getDownloadURL();
-
-    ref1.child('voicenote').set(downloadUrl);
-
-    setState(() {
-      task = null;
-    });
-  }
 
   @override
   void initState() {
@@ -127,7 +100,6 @@ class _RecordState extends State<Record> {
       } else if (audioState == AudioState.recording) {
         audioState = AudioState.play;
         recorder.stop();
-        // uploadFile();
       } else if (audioState == AudioState.play) {
         audioState = AudioState.stop;
         recorder.play();
@@ -140,50 +112,42 @@ class _RecordState extends State<Record> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Microphone Flutter Web',
-      home: Scaffold(
-        backgroundColor: veryDarkBlue,
-        body: Center(
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              AnimatedContainer(
-                duration: Duration(milliseconds: 300),
-                padding: EdgeInsets.all(24),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: handleAudioColour(audioState)),
-                child: RawMaterialButton(
-                  fillColor: Colors.white,
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(30),
-                  onPressed: () => handleAudioState(audioState),
-                  child: getIcon(audioState),
-                ),
-              ),
-              SizedBox(width: 20),
-              if (audioState == AudioState.play ||
-                  audioState == AudioState.stop)
-                Container(
-                  padding: EdgeInsets.all(24),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: kindaDarkBlue,
-                  ),
-                  child: RawMaterialButton(
-                    fillColor: Colors.white,
-                    shape: CircleBorder(),
-                    padding: EdgeInsets.all(30),
-                    onPressed: () => setState(() {
-                      audioState = null;
-                    }),
-                    child: Icon(Icons.replay, size: 50),
-                  ),
-                ),
-            ],
+    return Center(
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          AnimatedContainer(
+            duration: Duration(milliseconds: 300),
+            padding: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+                shape: BoxShape.circle, color: handleAudioColour(audioState)),
+            child: RawMaterialButton(
+              fillColor: Colors.white,
+              shape: CircleBorder(),
+              padding: EdgeInsets.all(5),
+              onPressed: () => handleAudioState(audioState),
+              child: getIcon(audioState),
+            ),
           ),
-        ),
+          SizedBox(width: 20),
+          if (audioState == AudioState.play || audioState == AudioState.stop)
+            Container(
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: kindaDarkBlue,
+              ),
+              child: RawMaterialButton(
+                fillColor: Colors.white,
+                shape: CircleBorder(),
+                padding: EdgeInsets.all(5),
+                onPressed: () => setState(() {
+                  audioState = null;
+                }),
+                child: Icon(Icons.replay, size: 15),
+              ),
+            ),
+        ],
       ),
     );
   }
@@ -201,13 +165,13 @@ class _RecordState extends State<Record> {
   Icon getIcon(AudioState? state) {
     switch (state) {
       case AudioState.play:
-        return Icon(Icons.play_arrow, size: 50);
+        return Icon(Icons.play_arrow, size: 15);
       case AudioState.stop:
-        return Icon(Icons.stop, size: 50);
+        return Icon(Icons.stop, size: 15);
       case AudioState.recording:
-        return Icon(Icons.mic, color: Colors.redAccent, size: 50);
+        return Icon(Icons.mic, color: Colors.redAccent, size: 15);
       default:
-        return Icon(Icons.mic, size: 50);
+        return Icon(Icons.mic, size: 15);
     }
   }
 }
