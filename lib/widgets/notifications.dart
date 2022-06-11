@@ -28,6 +28,7 @@ class _NotificationsState extends State<Notifications> {
     await _notifications.initialize(InitializationSettings(
         android: AndroidInitializationSettings('@mipmap/ic_launcher')));
     var event = await ref.once();
+    if (event.snapshot.value == null) return;
     var data = event.snapshot.value as List<dynamic>;
     setState(() {
       _itemCount = data.length;
@@ -79,6 +80,7 @@ class _NotificationsState extends State<Notifications> {
     notif = getData();
 
     ref.onValue.listen((event) {
+      if (event.snapshot.value == null) return;
       var data = event.snapshot.value as List<dynamic>;
       setState(() {
         _itemCount = data.length;
