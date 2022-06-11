@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">578883270908-bgjfk5jd3kd2j9npsm5a0lci2fdrlu1n.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://shivankarvid-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">578883270908</string>
+    <string name="google_api_key" translatable="false">AIzaSyAY3i-eo6uSj1vMaBuaudMyOkW3qfpQAG8</string>
+    <string name="google_app_id" translatable="false">1:578883270908:android:3febb35f192e69a86e3f79</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAY3i-eo6uSj1vMaBuaudMyOkW3qfpQAG8</string>
+    <string name="google_storage_bucket" translatable="false">shivankarvid.appspot.com</string>
+    <string name="project_id" translatable="false">shivankarvid</string>
+</resources>
