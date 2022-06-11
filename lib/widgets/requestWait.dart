@@ -13,8 +13,6 @@ class RequestWait extends StatefulWidget {
 class _RequestWaitState extends State<RequestWait> {
   int _state = 1;
   DatabaseReference ref = FirebaseDatabase.instance.ref('activerequests/15000');
-  DatabaseReference ref1 =
-      FirebaseDatabase.instance.ref('remarks/15000/remarks');
 
   late String rejectdate, rejectremarks;
 
@@ -38,7 +36,7 @@ class _RequestWaitState extends State<RequestWait> {
   }
 
   getRejectData() async {
-    var event = await ref1.once();
+    var event = await ref.child('close_remarks').once();
     var data = event.snapshot.value as String;
 
     event = await ref.once();

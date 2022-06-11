@@ -40,6 +40,21 @@ class _MainscreenState extends State<Mainscreen> {
     });
   }
 
+  // void choiceAction(String choice) {
+  //   if (choice == Constants.Profile) {
+  //     Navigator.push(context, MaterialPageRoute(builder: (context) {
+  //       return ProfilePage(widget.myController);
+  //     }));
+  //     print('Profile');
+  //   } else if (choice == Constants.Language) {
+  //     print('Language');
+  //   } else if (choice == Constants.Logout) {
+  //     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+  //       return UIDform();
+  //     }));
+  //   }
+  // }
+
   @override
   void initState() {
     super.initState();

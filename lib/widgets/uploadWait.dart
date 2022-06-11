@@ -13,20 +13,14 @@ class UploadWait extends StatefulWidget {
 
 class _UploadWaitState extends State<UploadWait> {
   int _state = 1;
-  DatabaseReference ref =
-      FirebaseDatabase.instance.ref('activerequests/15000/state');
 
-  DatabaseReference ref1 =
-      FirebaseDatabase.instance.ref('remarks/15000/remarks');
-
-  DatabaseReference ref2 =
-      FirebaseDatabase.instance.ref('activerequests/15000');
+  DatabaseReference ref = FirebaseDatabase.instance.ref('activerequests/15000');
 
   late String statusdate, statusremarks;
   late int statusstate;
 
   getUploadData() async {
-    var event = await ref2.child('docs').once();
+    var event = await ref.child('docs').once();
     var data = event.snapshot.value as Map<dynamic, dynamic>;
     var map = data.keys;
     List<String> stringlist = [];
@@ -45,10 +39,10 @@ class _UploadWaitState extends State<UploadWait> {
   }
 
   getStatusData() async {
-    var event = await ref1.once();
+    var event = await ref.child('close_remarks').once();
     var data = event.snapshot.value as String;
 
-    event = await ref2.once();
+    event = await ref.once();
     var data1 = event.snapshot.value as Map<dynamic, dynamic>;
 
     statusremarks = data;
