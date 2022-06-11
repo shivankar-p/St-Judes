@@ -76,5 +76,7 @@
     "fintext":"Dont worry! Once you raise a request, our officials shall contact you to furthur understand your problem and requirement.",
     "@fintext": {"description":"Dont worry! Once you raise"},
     "requestraised":"Request has been made. Please wait until it is approved.",
-    "@requestraised": {"description":"Request has been made. Please"}
+    "@requestraised": {"description":"Request has been made. Please"},
+    "stjudes":"St Judes for Life",
+    "@stjudes": {"description":"St"}
 }
