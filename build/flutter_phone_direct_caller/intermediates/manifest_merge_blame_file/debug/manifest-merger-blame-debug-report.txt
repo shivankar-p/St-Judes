@@ -4,19 +4,19 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="16"
-6-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml
+6-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="31" />
-7-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml
+7-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml
 8
 9    <uses-permission android:name="android.permission.CALL_PHONE" />
-9-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:3:5-68
-9-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:3:22-66
+9-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:3:5-68
+9-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:3:22-66
 10
 11    <uses-feature
-11-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:4:5-88
+11-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:4:5-88
 12        android:name="android.hardware.telephony"
-12-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:4:19-60
+12-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:4:19-60
 13        android:required="false" />
-13-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:4:61-85
+13-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_phone_direct_caller-2.1.1/android/src/main/AndroidManifest.xml:4:61-85
 14
 15</manifest>

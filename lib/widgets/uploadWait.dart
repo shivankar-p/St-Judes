@@ -58,7 +58,7 @@ class _UploadWaitState extends State<UploadWait> {
     });
     if (_state == 2) {
       getUploadData();
-    } else {
+    } else if (_state == 4 || _state == -1) {
       getStatusData();
     }
   }
@@ -76,7 +76,7 @@ class _UploadWaitState extends State<UploadWait> {
       });
       if (_state == 2) {
         getUploadData();
-      } else {
+      } else if (_state == 4 || _state == -1) {
         getStatusData();
       }
     });

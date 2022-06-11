@@ -4,8 +4,8 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="18"
-6-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sound_lite-8.5.0/android/src/main/AndroidManifest.xml
+6-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sound_lite-8.5.0/android/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="18" />
-7-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sound_lite-8.5.0/android/src/main/AndroidManifest.xml
+7-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sound_lite-8.5.0/android/src/main/AndroidManifest.xml
 8
 9</manifest>

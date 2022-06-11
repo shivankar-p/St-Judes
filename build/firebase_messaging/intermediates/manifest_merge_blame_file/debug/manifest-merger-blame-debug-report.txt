@@ -4,81 +4,81 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="19"
-6-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml
+6-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="19" />
-7-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml
+7-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml
 8
 9    <uses-permission android:name="android.permission.INTERNET" />
-9-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:3:3-64
-9-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:3:20-62
+9-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:3:3-64
+9-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:3:20-62
 10    <uses-permission android:name="android.permission.WAKE_LOCK" />
-10-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:4:3-65
-10-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:4:20-63
+10-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:4:3-65
+10-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:4:20-63
 11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-11-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:5:3-76
-11-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:5:20-74
+11-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:5:3-76
+11-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:5:20-74
 12
 13    <application>
-13-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:6:3-34:17
+13-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:6:3-34:17
 14        <service
-14-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:7:5-10:33
+14-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:7:5-10:33
 15            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
-15-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:8:7-64
+15-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:8:7-64
 16            android:exported="false"
-16-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:10:7-31
+16-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:10:7-31
 17            android:permission="android.permission.BIND_JOB_SERVICE" />
-17-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:9:7-63
+17-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:9:7-63
 18        <service
-18-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:11:5-16:15
+18-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:11:5-16:15
 19            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
-19-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:11:14-61
+19-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:11:14-61
 20            android:exported="false" >
-20-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:12:7-31
+20-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:12:7-31
 21            <intent-filter>
-21-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:13:7-15:23
+21-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:13:7-15:23
 22                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-22-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:14:9-69
-22-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:14:17-67
+22-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:14:9-69
+22-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:14:17-67
 23            </intent-filter>
 24        </service>
 25
 26        <receiver
-26-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:17:5-24:16
+26-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:17:5-24:16
 27            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
-27-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:18:7-55
+27-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:18:7-55
 28            android:exported="true"
-28-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:19:7-30
+28-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:19:7-30
 29            android:permission="com.google.android.c2dm.permission.SEND" >
-29-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:20:7-67
+29-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:20:7-67
 30            <intent-filter>
-30-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:21:7-23:23
+30-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:21:7-23:23
 31                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-31-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:22:9-73
-31-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:22:17-70
+31-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:22:9-73
+31-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:22:17-70
 32            </intent-filter>
 33        </receiver>
 34
 35        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
-35-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:25:5-28:15
-35-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:25:14-85
+35-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:25:5-28:15
+35-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:25:14-85
 36            <meta-data
-36-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:26:7-27:86
+36-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:26:7-27:86
 37                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
-37-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:26:18-129
+37-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:26:18-129
 38                android:value="com.google.firebase.components.ComponentRegistrar" />
-38-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:27:18-83
+38-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:27:18-83
 39        </service>
 40
 41        <provider
-41-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:29:5-33:32
+41-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:29:5-33:32
 42            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
-42-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:30:7-59
+42-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:30:7-59
 43            android:authorities="${applicationId}.flutterfirebasemessaginginitprovider"
-43-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:31:7-82
+43-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:31:7-82
 44            android:exported="false"
-44-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:32:7-31
+44-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:32:7-31
 45            android:initOrder="99" /> <!-- Firebase = 100, using 99 to run after Firebase initialises (highest first) -->
-45-->/home/cmanas03/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:33:7-29
+45-->/Users/pramodkhandelwal/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1/android/src/main/AndroidManifest.xml:33:7-29
 46    </application>
 47
 48</manifest>

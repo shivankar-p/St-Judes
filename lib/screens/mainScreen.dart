@@ -14,10 +14,9 @@ import '../widgets/displayRequests.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 class Constants {
-  static const String Contact = 'Contact Us';
   static const String Language = 'Change Language';
 
-  static const List<String> choices = <String>[Language, Contact];
+  static const List<String> choices = <String>[Language];
 }
 
 class LanguageList1 extends StatelessWidget {
@@ -93,11 +92,6 @@ class _MainscreenState extends State<Mainscreen> {
         context: context,
         builder: (_) => LanguageList1(),
       );
-    } else {
-      showDialog(
-        context: context,
-        builder: (_) => FunkyOverlay(),
-      );
     }
   }
 
@@ -148,6 +142,20 @@ class _MainscreenState extends State<Mainscreen> {
                 },
                 child: Icon(
                   Icons.help,
+                  size: 26.0,
+                ),
+              )),
+          Padding(
+              padding: EdgeInsets.only(right: 5.0),
+              child: GestureDetector(
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (_) => FunkyOverlay(),
+                  );
+                },
+                child: Icon(
+                  Icons.contact_page_sharp,
                   size: 26.0,
                 ),
               )),

@@ -4,7 +4,7 @@
             "outputFile": "com.example.first.app-mergeDebugResources-21:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/cmanas03/.gradle/caches/transforms-3/08430a6236e4a7760ee4e44a0a59b23f/transformed/appcompat-1.2.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/pramodkhandelwal/.gradle/caches/transforms-3/08430a6236e4a7760ee4e44a0a59b23f/transformed/appcompat-1.2.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/cmanas03/.gradle/caches/transforms-3/6a699d3f6f1dcbad651a89e06b63a33f/transformed/media-1.2.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/pramodkhandelwal/.gradle/caches/transforms-3/6a699d3f6f1dcbad651a89e06b63a33f/transformed/media-1.2.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

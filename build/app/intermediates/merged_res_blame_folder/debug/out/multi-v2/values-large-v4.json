@@ -4,7 +4,7 @@
             "outputFile": "com.example.first.app-mergeDebugResources-21:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/cmanas03/.gradle/caches/transforms-3/08430a6236e4a7760ee4e44a0a59b23f/transformed/appcompat-1.2.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/pramodkhandelwal/.gradle/caches/transforms-3/08430a6236e4a7760ee4e44a0a59b23f/transformed/appcompat-1.2.0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

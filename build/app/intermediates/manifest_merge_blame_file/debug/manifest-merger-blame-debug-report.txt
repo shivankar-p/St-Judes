@@ -13,74 +13,74 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/debug/AndroidManifest.xml:7:1-62
-15-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/debug/AndroidManifest.xml:7:18-60
+15-->/Users/pramodkhandelwal/St-Judes/android/app/src/debug/AndroidManifest.xml:7:1-62
+15-->/Users/pramodkhandelwal/St-Judes/android/app/src/debug/AndroidManifest.xml:7:18-60
 16    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-16-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:4:5-73
-16-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:4:22-70
+16-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:4:5-73
+16-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:4:22-70
 17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-17-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:5:5-79
-17-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:5:22-76
+17-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:5:5-79
+17-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:5:22-76
 18    <uses-permission android:name="android.permission.VIBRATE" />
-18-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:6:5-66
-18-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:6:22-63
+18-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:6:5-66
+18-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:6:22-63
 19    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-19-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:7:5-80
-19-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:7:22-78
+19-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:7:5-80
+19-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:7:22-78
 20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-20-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:8:5-79
-20-->/home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/android/app/src/main/AndroidManifest.xml:8:22-76
+20-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:8:5-79
+20-->/Users/pramodkhandelwal/St-Judes/android/app/src/main/AndroidManifest.xml:8:22-76
 21    <uses-permission android:name="android.permission.WAKE_LOCK" />
-21-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
-21-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
+21-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+21-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
 22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-22-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-80
-22-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-77
+22-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-80
+22-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-77
 23
 24    <queries>
-24-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-17:15
+24-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-17:15
 25        <intent>
-25-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:18
+25-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:18
 26            <action android:name="android.intent.action.GET_CONTENT" />
-26-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-72
-26-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:21-69
+26-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-72
+26-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:21-69
 27
 28            <data android:mimeType="*/*" />
-28-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-44
-28-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:19-41
+28-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-44
+28-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:19-41
 29        </intent>
 30    </queries>
 31
 32    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
-32-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
-32-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
+32-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+32-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
 33    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-33-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
-33-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
+33-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
+33-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
 34    <uses-permission android:name="android.permission.CALL_PHONE" />
-34-->[:flutter_phone_direct_caller] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-69
-34-->[:flutter_phone_direct_caller] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-66
+34-->[:flutter_phone_direct_caller] /Users/pramodkhandelwal/St-Judes/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-69
+34-->[:flutter_phone_direct_caller] /Users/pramodkhandelwal/St-Judes/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-66
 35
 36    <uses-feature
-36-->[:flutter_phone_direct_caller] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-13:36
+36-->[:flutter_phone_direct_caller] /Users/pramodkhandelwal/St-Judes/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-13:36
 37        android:name="android.hardware.telephony"
-37-->[:flutter_phone_direct_caller] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-50
+37-->[:flutter_phone_direct_caller] /Users/pramodkhandelwal/St-Judes/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-50
 38        android:required="false" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-38-->[:flutter_phone_direct_caller] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:13:9-33
+38-->[:flutter_phone_direct_caller] /Users/pramodkhandelwal/St-Judes/build/flutter_phone_direct_caller/intermediates/merged_manifest/debug/AndroidManifest.xml:13:9-33
 39    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-39-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:5-82
-39-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:22-79
+39-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:5-82
+39-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:22-79
 40    <uses-permission android:name="android.permission.BLUETOOTH" />
-40-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:11:5-68
-40-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:11:22-65
+40-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:11:5-68
+40-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:11:22-65
 41    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-41-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:13:5-80
-41-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:13:22-77
+41-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:13:5-80
+41-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:13:22-77
 42
 43    <application
 44        android:name="android.app.Application"
 45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-45-->[androidx.core:core:1.8.0] /home/cmanas03/.gradle/caches/transforms-3/55f48ab5b208bd688f7b2eb30d739304/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+45-->[androidx.core:core:1.8.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/55f48ab5b208bd688f7b2eb30d739304/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 46        android:debuggable="true"
 47        android:icon="@mipmap/ic_launcher"
 48        android:label="first" >
@@ -112,8 +112,8 @@
 74                <action android:name="FLUTTER_NOTIFICATION_CLICK" />
 75
 76                <category android:name="android.intent.category.DEFAULT" />
-76-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
-76-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
+76-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
+76-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
 77            </intent-filter>
 78        </activity>
 79        <!--
@@ -125,259 +125,259 @@
 85            android:value="2" />
 86
 87        <service
-87-->[:firebase_database] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+87-->[:firebase_database] /Users/pramodkhandelwal/St-Judes/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 88            android:name="com.google.firebase.components.ComponentDiscoveryService"
-88-->[:firebase_database] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+88-->[:firebase_database] /Users/pramodkhandelwal/St-Judes/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
 89            android:directBootAware="true"
-89-->[com.google.firebase:firebase-common:20.1.1] /home/cmanas03/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
+89-->[com.google.firebase:firebase-common:20.1.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
 90            android:exported="false" >
-90-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:66:13-37
+90-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:66:13-37
 91            <meta-data
-91-->[:firebase_database] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+91-->[:firebase_database] /Users/pramodkhandelwal/St-Judes/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 92                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
-92-->[:firebase_database] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-127
+92-->[:firebase_database] /Users/pramodkhandelwal/St-Judes/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-127
 93                android:value="com.google.firebase.components.ComponentRegistrar" />
-93-->[:firebase_database] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+93-->[:firebase_database] /Users/pramodkhandelwal/St-Judes/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 94            <meta-data
-94-->[:cloud_firestore] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+94-->[:cloud_firestore] /Users/pramodkhandelwal/St-Judes/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 95                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-95-->[:cloud_firestore] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
+95-->[:cloud_firestore] /Users/pramodkhandelwal/St-Judes/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
 96                android:value="com.google.firebase.components.ComponentRegistrar" />
-96-->[:cloud_firestore] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+96-->[:cloud_firestore] /Users/pramodkhandelwal/St-Judes/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 97            <meta-data
-97-->[:firebase_auth] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+97-->[:firebase_auth] /Users/pramodkhandelwal/St-Judes/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 98                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-98-->[:firebase_auth] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+98-->[:firebase_auth] /Users/pramodkhandelwal/St-Judes/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 99                android:value="com.google.firebase.components.ComponentRegistrar" />
-99-->[:firebase_auth] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+99-->[:firebase_auth] /Users/pramodkhandelwal/St-Judes/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 100            <meta-data
-100-->[:firebase_storage] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+100-->[:firebase_storage] /Users/pramodkhandelwal/St-Judes/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 101                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
-101-->[:firebase_storage] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-126
+101-->[:firebase_storage] /Users/pramodkhandelwal/St-Judes/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-126
 102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[:firebase_storage] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+102-->[:firebase_storage] /Users/pramodkhandelwal/St-Judes/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 103            <meta-data
-103-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-38:85
+103-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-38:85
 104                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
-104-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:17-128
+104-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:17-128
 105                android:value="com.google.firebase.components.ComponentRegistrar" />
-105-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:38:17-82
+105-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:38:17-82
 106            <meta-data
-106-->[:firebase_core] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+106-->[:firebase_core] /Users/pramodkhandelwal/St-Judes/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 107                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-107-->[:firebase_core] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+107-->[:firebase_core] /Users/pramodkhandelwal/St-Judes/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[:firebase_core] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+108-->[:firebase_core] /Users/pramodkhandelwal/St-Judes/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 109            <meta-data
-109-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:67:13-69:85
+109-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:67:13-69:85
 110                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-110-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:68:17-109
+110-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:68:17-109
 111                android:value="com.google.firebase.components.ComponentRegistrar" />
-111-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:69:17-82
+111-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:69:17-82
 112            <meta-data
-112-->[com.google.firebase:firebase-firestore:24.1.2] /home/cmanas03/.gradle/caches/transforms-3/f1cac7d6bb10c057f40704825df9e718/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:20:13-22:85
+112-->[com.google.firebase:firebase-firestore:24.1.2] /Users/pramodkhandelwal/.gradle/caches/transforms-3/f1cac7d6bb10c057f40704825df9e718/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:20:13-22:85
 113                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-113-->[com.google.firebase:firebase-firestore:24.1.2] /home/cmanas03/.gradle/caches/transforms-3/f1cac7d6bb10c057f40704825df9e718/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:21:17-111
+113-->[com.google.firebase:firebase-firestore:24.1.2] /Users/pramodkhandelwal/.gradle/caches/transforms-3/f1cac7d6bb10c057f40704825df9e718/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:21:17-111
 114                android:value="com.google.firebase.components.ComponentRegistrar" />
-114-->[com.google.firebase:firebase-firestore:24.1.2] /home/cmanas03/.gradle/caches/transforms-3/f1cac7d6bb10c057f40704825df9e718/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:22:17-82
+114-->[com.google.firebase:firebase-firestore:24.1.2] /Users/pramodkhandelwal/.gradle/caches/transforms-3/f1cac7d6bb10c057f40704825df9e718/transformed/jetified-firebase-firestore-24.1.2/AndroidManifest.xml:22:17-82
 115            <meta-data
-115-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:55:13-57:85
+115-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:55:13-57:85
 116                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-116-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:56:17-119
+116-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:56:17-119
 117                android:value="com.google.firebase.components.ComponentRegistrar" />
-117-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:57:17-82
+117-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:57:17-82
 118            <meta-data
-118-->[com.google.firebase:firebase-storage:20.0.1] /home/cmanas03/.gradle/caches/transforms-3/5e6c9be83423510d1016bcb0844aae94/transformed/jetified-firebase-storage-20.0.1/AndroidManifest.xml:33:13-35:85
+118-->[com.google.firebase:firebase-storage:20.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/5e6c9be83423510d1016bcb0844aae94/transformed/jetified-firebase-storage-20.0.1/AndroidManifest.xml:33:13-35:85
 119                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-119-->[com.google.firebase:firebase-storage:20.0.1] /home/cmanas03/.gradle/caches/transforms-3/5e6c9be83423510d1016bcb0844aae94/transformed/jetified-firebase-storage-20.0.1/AndroidManifest.xml:34:17-107
+119-->[com.google.firebase:firebase-storage:20.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/5e6c9be83423510d1016bcb0844aae94/transformed/jetified-firebase-storage-20.0.1/AndroidManifest.xml:34:17-107
 120                android:value="com.google.firebase.components.ComponentRegistrar" />
-120-->[com.google.firebase:firebase-storage:20.0.1] /home/cmanas03/.gradle/caches/transforms-3/5e6c9be83423510d1016bcb0844aae94/transformed/jetified-firebase-storage-20.0.1/AndroidManifest.xml:35:17-82
+120-->[com.google.firebase:firebase-storage:20.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/5e6c9be83423510d1016bcb0844aae94/transformed/jetified-firebase-storage-20.0.1/AndroidManifest.xml:35:17-82
 121            <meta-data
-121-->[com.google.firebase:firebase-database:20.0.5] /home/cmanas03/.gradle/caches/transforms-3/64b8a4f8ca0262e618ee9a19cfa153d0/transformed/jetified-firebase-database-20.0.5/AndroidManifest.xml:32:13-34:85
+121-->[com.google.firebase:firebase-database:20.0.5] /Users/pramodkhandelwal/.gradle/caches/transforms-3/64b8a4f8ca0262e618ee9a19cfa153d0/transformed/jetified-firebase-database-20.0.5/AndroidManifest.xml:32:13-34:85
 122                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-122-->[com.google.firebase:firebase-database:20.0.5] /home/cmanas03/.gradle/caches/transforms-3/64b8a4f8ca0262e618ee9a19cfa153d0/transformed/jetified-firebase-database-20.0.5/AndroidManifest.xml:33:17-109
+122-->[com.google.firebase:firebase-database:20.0.5] /Users/pramodkhandelwal/.gradle/caches/transforms-3/64b8a4f8ca0262e618ee9a19cfa153d0/transformed/jetified-firebase-database-20.0.5/AndroidManifest.xml:33:17-109
 123                android:value="com.google.firebase.components.ComponentRegistrar" />
-123-->[com.google.firebase:firebase-database:20.0.5] /home/cmanas03/.gradle/caches/transforms-3/64b8a4f8ca0262e618ee9a19cfa153d0/transformed/jetified-firebase-database-20.0.5/AndroidManifest.xml:34:17-82
+123-->[com.google.firebase:firebase-database:20.0.5] /Users/pramodkhandelwal/.gradle/caches/transforms-3/64b8a4f8ca0262e618ee9a19cfa153d0/transformed/jetified-firebase-database-20.0.5/AndroidManifest.xml:34:17-82
 124            <meta-data
-124-->[com.google.firebase:firebase-datatransport:18.1.3] /home/cmanas03/.gradle/caches/transforms-3/dbd685ddf5653f03ec73ef54accfabbf/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:28:13-30:85
+124-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/dbd685ddf5653f03ec73ef54accfabbf/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:28:13-30:85
 125                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-125-->[com.google.firebase:firebase-datatransport:18.1.3] /home/cmanas03/.gradle/caches/transforms-3/dbd685ddf5653f03ec73ef54accfabbf/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:29:17-115
+125-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/dbd685ddf5653f03ec73ef54accfabbf/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:29:17-115
 126                android:value="com.google.firebase.components.ComponentRegistrar" />
-126-->[com.google.firebase:firebase-datatransport:18.1.3] /home/cmanas03/.gradle/caches/transforms-3/dbd685ddf5653f03ec73ef54accfabbf/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:30:17-82
+126-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/dbd685ddf5653f03ec73ef54accfabbf/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:30:17-82
 127            <meta-data
-127-->[com.google.firebase:firebase-installations:17.0.1] /home/cmanas03/.gradle/caches/transforms-3/f59186a1a72094776cd0b2a497bce413/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
+127-->[com.google.firebase:firebase-installations:17.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/f59186a1a72094776cd0b2a497bce413/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
 128                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-128-->[com.google.firebase:firebase-installations:17.0.1] /home/cmanas03/.gradle/caches/transforms-3/f59186a1a72094776cd0b2a497bce413/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
+128-->[com.google.firebase:firebase-installations:17.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/f59186a1a72094776cd0b2a497bce413/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
 129                android:value="com.google.firebase.components.ComponentRegistrar" />
-129-->[com.google.firebase:firebase-installations:17.0.1] /home/cmanas03/.gradle/caches/transforms-3/f59186a1a72094776cd0b2a497bce413/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
+129-->[com.google.firebase:firebase-installations:17.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/f59186a1a72094776cd0b2a497bce413/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
 130        </service>
 131        <service
-131-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-17:72
+131-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-17:72
 132            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
-132-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-107
+132-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-107
 133            android:exported="false"
-133-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-37
+133-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-37
 134            android:permission="android.permission.BIND_JOB_SERVICE" />
-134-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-69
+134-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-69
 135        <service
-135-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-24:19
+135-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-24:19
 136            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
-136-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-97
+136-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-97
 137            android:exported="false" >
-137-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-37
+137-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-37
 138            <intent-filter>
-138-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-23:29
+138-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-23:29
 139                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-139-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-78
-139-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-75
+139-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-78
+139-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-75
 140            </intent-filter>
 141        </service>
 142
 143        <receiver
-143-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:26:9-33:20
+143-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:26:9-33:20
 144            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
-144-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-98
+144-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-98
 145            android:exported="true"
-145-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-36
+145-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-36
 146            android:permission="com.google.android.c2dm.permission.SEND" >
-146-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-73
+146-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-73
 147            <intent-filter>
-147-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-32:29
+147-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-32:29
 148                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-148-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:17-81
-148-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:25-78
+148-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:17-81
+148-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:25-78
 149            </intent-filter>
 150        </receiver>
 151
 152        <provider
-152-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:41:9-45:38
+152-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:41:9-45:38
 153            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
-153-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-102
+153-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-102
 154            android:authorities="com.example.first.flutterfirebasemessaginginitprovider"
-154-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:43:13-88
+154-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:43:13-88
 155            android:exported="false"
-155-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:44:13-37
+155-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:44:13-37
 156            android:initOrder="99" />
-156-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:45:13-35
+156-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:45:13-35
 157        <provider
-157-->[:image_picker_android] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+157-->[:image_picker_android] /Users/pramodkhandelwal/St-Judes/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 158            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-158-->[:image_picker_android] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+158-->[:image_picker_android] /Users/pramodkhandelwal/St-Judes/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
 159            android:authorities="com.example.first.flutter.image_provider"
-159-->[:image_picker_android] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+159-->[:image_picker_android] /Users/pramodkhandelwal/St-Judes/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
 160            android:exported="false"
-160-->[:image_picker_android] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+160-->[:image_picker_android] /Users/pramodkhandelwal/St-Judes/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 161            android:grantUriPermissions="true" >
-161-->[:image_picker_android] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+161-->[:image_picker_android] /Users/pramodkhandelwal/St-Judes/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
 162            <meta-data
-162-->[:image_picker_android] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+162-->[:image_picker_android] /Users/pramodkhandelwal/St-Judes/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
 163                android:name="android.support.FILE_PROVIDER_PATHS"
-163-->[:image_picker_android] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+163-->[:image_picker_android] /Users/pramodkhandelwal/St-Judes/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 164                android:resource="@xml/flutter_image_picker_file_paths" />
-164-->[:image_picker_android] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+164-->[:image_picker_android] /Users/pramodkhandelwal/St-Judes/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
 165        </provider>
 166
 167        <receiver
-167-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-17:40
+167-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-17:40
 168            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
-168-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-97
+168-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-97
 169            android:exported="false" />
-169-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
+169-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
 170        <receiver
-170-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-27:20
+170-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-27:20
 171            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
-171-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-101
+171-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-101
 172            android:exported="false" >
-172-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-37
+172-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-37
 173            <intent-filter>
-173-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-26:29
+173-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-26:29
 174                <action android:name="android.intent.action.BOOT_COMPLETED" />
-174-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-79
-174-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-76
+174-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-79
+174-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-76
 175                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-175-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:17-84
-175-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:25-81
+175-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:17-84
+175-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:25-81
 176                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-176-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-82
-176-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-79
+176-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-82
+176-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-79
 177                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-177-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-82
-177-->[:flutter_local_notifications] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:25-79
+177-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-82
+177-->[:flutter_local_notifications] /Users/pramodkhandelwal/St-Judes/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:25-79
 178            </intent-filter>
 179        </receiver>
 180
 181        <uses-library
-181-->[androidx.window:window:1.0.0-beta04] /home/cmanas03/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+181-->[androidx.window:window:1.0.0-beta04] /Users/pramodkhandelwal/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 182            android:name="androidx.window.extensions"
-182-->[androidx.window:window:1.0.0-beta04] /home/cmanas03/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+182-->[androidx.window:window:1.0.0-beta04] /Users/pramodkhandelwal/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
 183            android:required="false" />
-183-->[androidx.window:window:1.0.0-beta04] /home/cmanas03/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+183-->[androidx.window:window:1.0.0-beta04] /Users/pramodkhandelwal/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
 184        <uses-library
-184-->[androidx.window:window:1.0.0-beta04] /home/cmanas03/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+184-->[androidx.window:window:1.0.0-beta04] /Users/pramodkhandelwal/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
 185            android:name="androidx.window.sidecar"
-185-->[androidx.window:window:1.0.0-beta04] /home/cmanas03/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+185-->[androidx.window:window:1.0.0-beta04] /Users/pramodkhandelwal/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
 186            android:required="false" />
-186-->[androidx.window:window:1.0.0-beta04] /home/cmanas03/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+186-->[androidx.window:window:1.0.0-beta04] /Users/pramodkhandelwal/.gradle/caches/transforms-3/32eb3f448a250467da939bef0b7b7296/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
 187
 188        <activity
-188-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:27:9-44:20
+188-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:27:9-44:20
 189            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-189-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:28:13-80
+189-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:28:13-80
 190            android:excludeFromRecents="true"
-190-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:29:13-46
+190-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:29:13-46
 191            android:exported="true"
-191-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:30:13-36
+191-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:30:13-36
 192            android:launchMode="singleTask"
-192-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:31:13-44
+192-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:31:13-44
 193            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-193-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:32:13-72
+193-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:32:13-72
 194            <intent-filter>
-194-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:33:13-43:29
+194-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:33:13-43:29
 195                <action android:name="android.intent.action.VIEW" />
-195-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:17-69
-195-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:25-66
+195-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:17-69
+195-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:25-66
 196
 197                <category android:name="android.intent.category.DEFAULT" />
-197-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
-197-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
+197-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
+197-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
 198                <category android:name="android.intent.category.BROWSABLE" />
-198-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
-198-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
+198-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
+198-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
 199
 200                <data
-200-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-44
+200-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-44
 201                    android:host="firebase.auth"
 202                    android:path="/"
 203                    android:scheme="genericidp" />
 204            </intent-filter>
 205        </activity>
 206        <activity
-206-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:45:9-62:20
+206-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:45:9-62:20
 207            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-207-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:46:13-79
+207-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:46:13-79
 208            android:excludeFromRecents="true"
-208-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:47:13-46
+208-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:47:13-46
 209            android:exported="true"
-209-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:48:13-36
+209-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:48:13-36
 210            android:launchMode="singleTask"
-210-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:49:13-44
+210-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:49:13-44
 211            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-211-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:50:13-72
+211-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:50:13-72
 212            <intent-filter>
-212-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:51:13-61:29
+212-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:51:13-61:29
 213                <action android:name="android.intent.action.VIEW" />
-213-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:17-69
-213-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:25-66
+213-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:17-69
+213-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:34:25-66
 214
 215                <category android:name="android.intent.category.DEFAULT" />
-215-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
-215-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
+215-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
+215-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
 216                <category android:name="android.intent.category.BROWSABLE" />
-216-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
-216-->[com.google.firebase:firebase-auth:21.0.3] /home/cmanas03/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
+216-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
+216-->[com.google.firebase:firebase-auth:21.0.3] /Users/pramodkhandelwal/.gradle/caches/transforms-3/2c47b47c6d233f6b2b023ca8a8780334/transformed/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
 217
 218                <data
-218-->[:file_picker] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-44
+218-->[:file_picker] /Users/pramodkhandelwal/St-Judes/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-44
 219                    android:host="firebase.auth"
 220                    android:path="/"
 221                    android:scheme="recaptcha" />
@@ -385,18 +385,18 @@
 223        </activity>
 224
 225        <receiver
-225-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:31:9-38:20
+225-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:31:9-38:20
 226            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-226-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:32:13-78
+226-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:32:13-78
 227            android:exported="true"
-227-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:33:13-36
+227-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:33:13-36
 228            android:permission="com.google.android.c2dm.permission.SEND" >
-228-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:34:13-73
+228-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:34:13-73
 229            <intent-filter>
-229-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-32:29
+229-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-32:29
 230                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-230-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:17-81
-230-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:25-78
+230-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:17-81
+230-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:25-78
 231            </intent-filter>
 232        </receiver>
 233        <!--
@@ -404,116 +404,116 @@
 235             but set to not exported to explicitly avoid allowing another app to call it.
 236        -->
 237        <service
-237-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:44:9-51:19
+237-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:44:9-51:19
 238            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-238-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:45:13-82
+238-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:45:13-82
 239            android:directBootAware="true"
-239-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:46:13-43
+239-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:46:13-43
 240            android:exported="false" >
-240-->[com.google.firebase:firebase-messaging:23.0.4] /home/cmanas03/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:47:13-37
+240-->[com.google.firebase:firebase-messaging:23.0.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/e35c6323a6b61495c28917d29d3d9bd2/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:47:13-37
 241            <intent-filter android:priority="-500" >
-241-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-23:29
+241-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-23:29
 242                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-242-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-78
-242-->[:firebase_messaging] /home/cmanas03/Desktop/Morgan_Stanley/duplicate/MyBranch/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-75
+242-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-78
+242-->[:firebase_messaging] /Users/pramodkhandelwal/St-Judes/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-75
 243            </intent-filter>
 244        </service>
 245
 246        <provider
-246-->[com.google.firebase:firebase-common:20.1.1] /home/cmanas03/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
+246-->[com.google.firebase:firebase-common:20.1.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
 247            android:name="com.google.firebase.provider.FirebaseInitProvider"
-247-->[com.google.firebase:firebase-common:20.1.1] /home/cmanas03/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
+247-->[com.google.firebase:firebase-common:20.1.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
 248            android:authorities="com.example.first.firebaseinitprovider"
-248-->[com.google.firebase:firebase-common:20.1.1] /home/cmanas03/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
+248-->[com.google.firebase:firebase-common:20.1.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
 249            android:directBootAware="true"
-249-->[com.google.firebase:firebase-common:20.1.1] /home/cmanas03/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
+249-->[com.google.firebase:firebase-common:20.1.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
 250            android:exported="false"
-250-->[com.google.firebase:firebase-common:20.1.1] /home/cmanas03/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
+250-->[com.google.firebase:firebase-common:20.1.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
 251            android:initOrder="100" />
-251-->[com.google.firebase:firebase-common:20.1.1] /home/cmanas03/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
+251-->[com.google.firebase:firebase-common:20.1.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/88718205b22c0b5b8ce1e65937094790/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
 252
 253        <receiver
-253-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:16:9-23:20
+253-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:16:9-23:20
 254            android:name="androidx.media.session.MediaButtonReceiver"
-254-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:17:13-70
+254-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:17:13-70
 255            android:exported="true" >
-255-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:18:13-36
+255-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:18:13-36
 256            <intent-filter>
-256-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:19:13-22:29
+256-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:19:13-22:29
 257                <action android:name="android.intent.action.MEDIA_BUTTON" />
-257-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:20:17-77
-257-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:20:25-74
+257-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:20:17-77
+257-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:20:25-74
 258                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
-258-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:21:17-77
-258-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:21:25-74
+258-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:21:17-77
+258-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:21:25-74
 259            </intent-filter>
 260        </receiver>
 261
 262        <service
-262-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:25:9-33:19
+262-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:25:9-33:19
 263            android:name="com.dooboolab.TauEngine.FlautoBackgroundAudioService"
-263-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:26:13-80
+263-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:26:13-80
 264            android:exported="true" >
-264-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:27:13-36
+264-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:27:13-36
 265            <intent-filter>
-265-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:28:13-32:29
+265-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:28:13-32:29
 266                <action android:name="android.intent.action.MEDIA_BUTTON" />
-266-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:20:17-77
-266-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:20:25-74
+266-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:20:17-77
+266-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:20:25-74
 267                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
-267-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:21:17-77
-267-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:21:25-74
+267-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:21:17-77
+267-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:21:25-74
 268                <action android:name="android.media.browse.FlautoMediaBrowserService" />
-268-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:31:17-89
-268-->[com.github.canardoux:flutter_sound_core:8.5.0] /home/cmanas03/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:31:25-86
+268-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:31:17-89
+268-->[com.github.canardoux:flutter_sound_core:8.5.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/93981906dfd93d61dd3ea88a0d022e87/transformed/jetified-flutter_sound_core-8.5.0/AndroidManifest.xml:31:25-86
 269            </intent-filter>
 270        </service>
 271
 272        <activity
-272-->[com.google.android.gms:play-services-base:18.0.1] /home/cmanas03/.gradle/caches/transforms-3/8166a58f9b12f021bdcb995cd32ddb6b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+272-->[com.google.android.gms:play-services-base:18.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/8166a58f9b12f021bdcb995cd32ddb6b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
 273            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-273-->[com.google.android.gms:play-services-base:18.0.1] /home/cmanas03/.gradle/caches/transforms-3/8166a58f9b12f021bdcb995cd32ddb6b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+273-->[com.google.android.gms:play-services-base:18.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/8166a58f9b12f021bdcb995cd32ddb6b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
 274            android:exported="false"
-274-->[com.google.android.gms:play-services-base:18.0.1] /home/cmanas03/.gradle/caches/transforms-3/8166a58f9b12f021bdcb995cd32ddb6b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+274-->[com.google.android.gms:play-services-base:18.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/8166a58f9b12f021bdcb995cd32ddb6b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
 275            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-275-->[com.google.android.gms:play-services-base:18.0.1] /home/cmanas03/.gradle/caches/transforms-3/8166a58f9b12f021bdcb995cd32ddb6b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+275-->[com.google.android.gms:play-services-base:18.0.1] /Users/pramodkhandelwal/.gradle/caches/transforms-3/8166a58f9b12f021bdcb995cd32ddb6b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
 276
 277        <meta-data
-277-->[com.google.android.gms:play-services-basement:18.0.0] /home/cmanas03/.gradle/caches/transforms-3/9e4fc2400ff6339d837570d1a4a157cb/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+277-->[com.google.android.gms:play-services-basement:18.0.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/9e4fc2400ff6339d837570d1a4a157cb/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
 278            android:name="com.google.android.gms.version"
-278-->[com.google.android.gms:play-services-basement:18.0.0] /home/cmanas03/.gradle/caches/transforms-3/9e4fc2400ff6339d837570d1a4a157cb/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+278-->[com.google.android.gms:play-services-basement:18.0.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/9e4fc2400ff6339d837570d1a4a157cb/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
 279            android:value="@integer/google_play_services_version" />
-279-->[com.google.android.gms:play-services-basement:18.0.0] /home/cmanas03/.gradle/caches/transforms-3/9e4fc2400ff6339d837570d1a4a157cb/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+279-->[com.google.android.gms:play-services-basement:18.0.0] /Users/pramodkhandelwal/.gradle/caches/transforms-3/9e4fc2400ff6339d837570d1a4a157cb/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
 280
 281        <service
-281-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:29:9-35:19
+281-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:29:9-35:19
 282            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-282-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:30:13-103
+282-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:30:13-103
 283            android:exported="false" >
-283-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:31:13-37
+283-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:31:13-37
 284            <meta-data
-284-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:32:13-34:39
+284-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:32:13-34:39
 285                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-285-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:33:17-94
+285-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:33:17-94
 286                android:value="cct" />
-286-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:34:17-36
+286-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3363db6dbca393b1ae31a89ab3f0e1c0/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:34:17-36
 287        </service>
 288        <service
-288-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:26:9-30:19
+288-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:26:9-30:19
 289            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-289-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:27:13-117
+289-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:27:13-117
 290            android:exported="false"
-290-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:28:13-37
+290-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:28:13-37
 291            android:permission="android.permission.BIND_JOB_SERVICE" >
-291-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:29:13-69
+291-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:29:13-69
 292        </service>
 293
 294        <receiver
-294-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:32:9-34:40
+294-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:32:9-34:40
 295            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-295-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:33:13-132
+295-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:33:13-132
 296            android:exported="false" />
-296-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/cmanas03/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:34:13-37
+296-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/pramodkhandelwal/.gradle/caches/transforms-3/3db0460f37125f6f7151751af0a8dfda/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:34:13-37
 297    </application>
 298
 299</manifest>
