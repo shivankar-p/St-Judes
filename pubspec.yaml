@@ -42,7 +42,10 @@ dependencies:
   image_picker: ^0.8.5+3
   html_unescape: ^2.0.0
   translator: ^0.1.7
-
+  speech_to_text: ^5.5.0
+  avatar_glow: ^2.0.2
+  flutter_tts: ^3.4.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
