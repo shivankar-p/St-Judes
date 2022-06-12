@@ -13,6 +13,7 @@ import 'package:first/widgets/uploadWait.dart';
 import 'package:first/widgets/documentcapture.dart';
 
 import '../models/document.dart';
+import '../models/uidvalue.dart';
 import 'slidingdots.dart';
 
 class Upload extends StatefulWidget {
@@ -32,7 +33,8 @@ class _UploadState extends State<Upload> {
   Map pagemap = {};
 
   late var typestatelist;
-  late DatabaseReference ref1;
+  DatabaseReference ref1 =
+      FirebaseDatabase.instance.ref('activerequests/${UIDValue.uid}');
 
   final PageController _pageController = PageController(initialPage: 0);
 
@@ -68,17 +70,10 @@ class _UploadState extends State<Upload> {
     return _numberOfDocuments;
   }
 
-  getuid() async {
-    var prefs = await SharedPreferences.getInstance();
-    String _uid = prefs.getString('loginstate')!;
-    DatabaseReference ref1 =
-        FirebaseDatabase.instance.ref('activerequests/$_uid');
-  }
-
   @override
   void initState() {
     super.initState();
-    getuid();
+
     typestatelist = [];
     notif = getStateFromSF();
   }

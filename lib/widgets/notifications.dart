@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../models/uidvalue.dart';
 
 class Notifications extends StatefulWidget {
   const Notifications({Key? key}) : super(key: key);
@@ -22,20 +23,14 @@ class _NotificationsState extends State<Notifications> {
           'This channel is used for important notifications.', // description
       importance: Importance.high,
       playSound: true);
-  late DatabaseReference ref;
-
-  getuid() async {
-    var prefs = await SharedPreferences.getInstance();
-    String _uid = prefs.getString('loginstate')!;
-    DatabaseReference ref =
-        FirebaseDatabase.instance.ref('notifications/$_uid');
-  }
+  DatabaseReference ref =
+      FirebaseDatabase.instance.ref('notifications/${UIDValue.uid}');
 
   Future getData() async {
     await _notifications.initialize(InitializationSettings(
         android: AndroidInitializationSettings('@mipmap/ic_launcher')));
     var event = await ref.once();
-    if (event.snapshot.value == null) return;
+    if (event.snapshot.value == null) return [];
     var data = event.snapshot.value as List<dynamic>;
     setState(() {
       _itemCount = data.length;
@@ -46,6 +41,17 @@ class _NotificationsState extends State<Notifications> {
   }
 
   Widget displayNotifs(BuildContext ctx) {
+    if (messages.isEmpty) {
+      return Center(
+        child: Text('There are no notifications currenlty.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Color.fromARGB(255, 0, 0, 0),
+              fontFamily: 'ProximaNovaRegular',
+              fontSize: 20,
+            )),
+      );
+    }
     return RefreshIndicator(
         child: ListView.separated(
             itemCount: _itemCount,
@@ -53,7 +59,7 @@ class _NotificationsState extends State<Notifications> {
             itemBuilder: (ctx, index) {
               return ListTile(
                 title: Text(messages[index]['msg'].split(':')[0]),
-                // isThreeLine: true,
+                isThreeLine: true,
                 subtitle: Text(messages[index]['msg'].split(':')[1]),
                 leading: CircleAvatar(child: Text('AD')),
                 trailing: Text(messages[index]['date']),

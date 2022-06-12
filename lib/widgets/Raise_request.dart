@@ -8,6 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
+import '../models/uidvalue.dart';
 
 class RaiseRequest extends StatelessWidget {
   @override
@@ -135,7 +136,8 @@ class RequestOptionsState extends State<RequestOptions>
   late AnimationController controller;
   late Animation<double> scaleAnimation;
 
-  late DatabaseReference ref1;
+  DatabaseReference ref1 =
+      FirebaseDatabase.instance.ref('activerequests/${UIDValue.uid}');
   UploadTask? task;
 
   changeState() async {
@@ -145,17 +147,10 @@ class RequestOptionsState extends State<RequestOptions>
     await prefs.setInt('request', 1);
   }
 
-  getuid() async {
-    var prefs = await SharedPreferences.getInstance();
-    String _uid = prefs.getString('loginstate')!;
-    DatabaseReference ref1 =
-        FirebaseDatabase.instance.ref('activerequests/$_uid');
-  }
-
   @override
   void initState() {
     super.initState();
-    getuid();
+
     controller =
         AnimationController(vsync: this, duration: Duration(milliseconds: 600));
     scaleAnimation =

@@ -1,3 +1,4 @@
+import 'package:first/models/uidvalue.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -14,7 +15,8 @@ class UploadWait extends StatefulWidget {
 class _UploadWaitState extends State<UploadWait> {
   int _state = 1;
 
-  DatabaseReference ref = FirebaseDatabase.instance.ref('activerequests/15000');
+  DatabaseReference ref =
+      FirebaseDatabase.instance.ref('activerequests/${UIDValue.uid}');
 
   late String statusdate, statusremarks;
   late int statusstate;

@@ -1,3 +1,4 @@
+import 'package:first/models/uidvalue.dart';
 import 'package:first/widgets/Raise_request.dart';
 import 'package:first/widgets/uploadWait.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -14,16 +15,10 @@ class RequestWait extends StatefulWidget {
 
 class _RequestWaitState extends State<RequestWait> {
   int _state = 1;
-  late DatabaseReference ref;
+  DatabaseReference ref =
+      FirebaseDatabase.instance.ref('activerequests/${UIDValue.uid}');
 
   late String rejectdate, rejectremarks;
-
-  getuid() async {
-    var prefs = await SharedPreferences.getInstance();
-    String _uid = prefs.getString('loginstate')!;
-    DatabaseReference ref =
-        FirebaseDatabase.instance.ref('activerequests/$_uid');
-  }
 
   getUploadData() async {
     var event = await ref.child('docs').once();
@@ -73,7 +68,6 @@ class _RequestWaitState extends State<RequestWait> {
     super.initState();
 
     checkValue();
-    getuid();
     ref.onValue.listen((event) {
       var value = event.snapshot.value as Map<dynamic, dynamic>;
       setState(() {

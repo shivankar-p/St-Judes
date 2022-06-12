@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:first/models/uidvalue.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:first/screens/mainScreen.dart';
 import 'package:flutter/material.dart';
@@ -66,21 +67,21 @@ class _UIDform extends State<UIDform> {
     });
 
     try {
-      print('Trying final auth');
-      final authCredential =
-          await _auth.signInWithCredential(phoneAuthCredential);
+      _auth.signInWithCredential(phoneAuthCredential).then((result) {
+        if (result.user != null) {
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => Mainscreen()),
+            // MaterialPageRoute(
+            //     builder: (context) => LoggedInScreen(otpController)),
+            (Route<dynamic> route) => false,
+          );
+        }
+      });
 
       setState(() {
         showLoading = false;
       });
-
-      if (authCredential.user != null) {
-        Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (context) => Mainscreen()),
-          (Route<dynamic> route) => false,
-        );
-      }
     } on FirebaseAuthException catch (e) {
       setState(() {
         showLoading = false;
@@ -106,7 +107,7 @@ class _UIDform extends State<UIDform> {
               key: _formKey,
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 220),
+                  SizedBox(height: 350),
                   Center(
                       child: Text(_uidExists,
                           style: TextStyle(
@@ -126,7 +127,7 @@ class _UIDform extends State<UIDform> {
                               height: 1,
                             ))),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   Center(
                     child: Material(
                       elevation: 10,
@@ -139,17 +140,23 @@ class _UIDform extends State<UIDform> {
                                 BorderRadius.all(Radius.circular(10))),
                         child: SizedBox(
                           width: 250,
-                          height: 40,
+                          // height: 40,
                           child: Padding(
-                            padding: EdgeInsets.all(5.0),
-                            child: TextFormField(
+                            padding: EdgeInsets.all(0),
+                            child: TextField(
+                              keyboardType: TextInputType.number,
+                              textAlignVertical: TextAlignVertical.center,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.black,
+                                  letterSpacing: 10),
                               decoration: InputDecoration(
-                                  //labelText: 'UID',
                                   focusedBorder: InputBorder.none,
                                   enabledBorder: InputBorder.none,
                                   errorBorder: InputBorder.none,
                                   disabledBorder: InputBorder.none,
-                                  hintText: ''),
+                                  hintText: 'UID'),
                               controller: myController,
                             ),
                           ),
@@ -159,10 +166,13 @@ class _UIDform extends State<UIDform> {
                   ),
                   SizedBox(height: 10),
                   Container(
-                      width: 110,
-                      padding: const EdgeInsets.only(top: 40.0),
+                      width: 300,
+                      height: 117,
+                      padding: const EdgeInsets.only(top: 80),
                       child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.black),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.black,
+                        ),
                         //Submit
                         child: Text(AppLocalizations.of(context)!.submit,
                             style: TextStyle(
@@ -323,6 +333,7 @@ class _UIDform extends State<UIDform> {
                                 .child('${otpController.text}/language')
                                 .set(prefs.getString('locale'));
                             prefs.setString('loginstate', otpController.text);
+                            UIDValue.uid = otpController.text;
 
                             //original code
                             // /*dummycode*/
@@ -374,14 +385,33 @@ class _UIDform extends State<UIDform> {
             ),
           )),
           Positioned(
-              top: 100,
-              //left: ((constraints.maxWidth - 210) / 2),
+              top: 100 * (constraints.maxHeight / 800),
+              //left: ((constraints.maxWidth - 213) / 2),
               child: Container(
                   width: 218,
                   height: 288.45,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage('assets/images/Logo.png'))))),
+          Positioned(
+              top: 350 * (constraints.maxHeight / 800),
+              child: SizedBox(
+                width: 350,
+                child: Material(
+                    color: Color.fromARGB(0, 255, 255, 255),
+                    child: Text(
+                        //Select Language
+                        'St Judes India Childcares',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 27, 63, 27),
+                          fontFamily: 'ProximaNovaRegular',
+                          fontSize: 27,
+                          letterSpacing: 0,
+                          fontWeight: FontWeight.normal,
+                          height: 1,
+                        ))),
+              )),
           Material(
             color: Colors.transparent,
             child: showLoading

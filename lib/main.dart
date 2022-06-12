@@ -1,3 +1,4 @@
+import 'package:first/models/uidvalue.dart';
 import 'package:first/screens/Language.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   late Future notif;
-  late String uid;
+  String uid = '';
 
   getState() async {
     var prefs = await SharedPreferences.getInstance();
@@ -56,8 +57,9 @@ class _MyAppState extends State<MyApp> {
           theme: ThemeData(
             primarySwatch: Colors.orange,
           ),
-          home: Mainscreen());
+          home: Language());
     } else {
+      UIDValue.uid = uid;
       return MaterialApp(
           debugShowCheckedModeBanner: false,
           supportedLocales: L10n.all,
