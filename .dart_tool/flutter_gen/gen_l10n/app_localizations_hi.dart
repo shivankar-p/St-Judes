@@ -47,10 +47,10 @@ class AppLocalizationsHi extends AppLocalizations {
   String get need => 'मार्गदर्शन की आवश्यकता है?';
 
   @override
-  String get applyfor => 'आवेदन करें';
+  String get applyfor => 'काउंसिलिंग में';
 
   @override
-  String get incoun => 'काउंसिलिंग में';
+  String get incoun => 'आवेदन करें';
 
   @override
   String get countext => 'हम आपके साथ हैं! परामर्श के लिए आवेदन करने पर हमारे अधिकारी आपके आवश्यक करियर और जीवन परामर्श में आपकी सहायता करेंगे।';
@@ -104,10 +104,10 @@ class AppLocalizationsHi extends AppLocalizations {
   String get call => 'या हमें हमारे फोन नंबरों पर कॉल करें';
 
   @override
-  String get raise => 'अनुरोध';
+  String get raise => 'सहायता की';
 
   @override
-  String get request => 'करें';
+  String get request => 'अनुरोध';
 
   @override
   String get finhelp => 'आर्थिक मदद चाहिए?';
@@ -117,4 +117,55 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get requestraised => 'अनुरोध किया गया है। कृपया इसे स्वीकृत होने तक प्रतीक्षा करें।';
+
+  @override
+  String get stjudes => 'जीवन के लिए सेंट जूड्स';
+
+  @override
+  String get loc => 'संचार की अपनी पसंदीदा भाषा चुनें। आगे संचार आपकी चुनी हुई भाषा में किया जाएगा।';
+
+  @override
+  String get additional => 'आप किसी भी अतिरिक्त जानकारी को भी रिकॉर्ड कर सकते हैं जो आप हमें बताना चाहते हैं :';
+
+  @override
+  String get submitreq => 'अनुरोध प्रस्तुत करें';
+
+  @override
+  String get reqapp => 'बधाई हो! आपका अनुरोध स्वीकार कर लिया गया है। कृपया आवश्यक दस्तावेज अपलोड करने के लिए आगे बढ़ें।';
+
+  @override
+  String get reqrej => 'हमें आपको यह बताते हुए अत्यंत खेद हो रहा है कि आप हमारे कार्यक्रम के लिए लागू नहीं हैं। आप जो भी स्पष्टीकरण देना चाहते हैं, उसके लिए बेझिझक हमारे अधिकारियों से संपर्क करें।';
+
+  @override
+  String get reqwait => 'आपका अनुरोध किया गया है। हमारे अधिकारी शीघ्र ही आपसे संपर्क करेंगे। कृपया अनुमोदन की प्रतीक्षा करें।';
+
+  @override
+  String get homescreen => 'होम स्क्रीन';
+
+  @override
+  String get load => 'दस्तावेज जमा करें';
+
+  @override
+  String get contactus => 'संपर्क करें';
+
+  @override
+  String get qry => 'हमें अपना प्रश्न लिखें और हमारे अधिकारी जल्द से जल्द आपसे संपर्क करेंगे!';
+
+  @override
+  String get ring => 'हमें यहां कॉल करें -';
+
+  @override
+  String get safe => 'आपके दस्तावेज़ हमारे पास सुरक्षित हैं! जैसे ही आप ऑनलाइन होंगे, उन्हें अपलोड कर दिया जाएगा।';
+
+  @override
+  String get uploaded => 'आपके दस्तावेज़ अपलोड कर दिए गए हैं। कृपया तब तक प्रतीक्षा करें जब तक हम उन्हें सत्यापित नहीं कर देते और आपसे संपर्क नहीं कर लेते।';
+
+  @override
+  String get reuploaded => 'ऐसा लगता है कि आपके दस्तावेज़ों में एक छोटी सी समस्या है। कृपया आवश्यक दस्तावेज़ पुनः अपलोड करें।';
+
+  @override
+  String get verified => 'बधाई हो! आपके दस्तावेज़ अपलोड और सत्यापित कर दिए गए हैं, और अब आप हमारे कार्यक्रम का हिस्सा बनने के योग्य हैं! हमारे अधिकारी आपसे जल्द से जल्द संपर्क करेंगे।';
+
+  @override
+  String get updocs => 'दस्तावेज जमा करें';
 }

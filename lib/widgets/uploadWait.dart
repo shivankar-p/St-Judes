@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'upload.dart';
@@ -101,20 +101,92 @@ class _UploadWaitState extends State<UploadWait> {
   Widget displayScreen() {
     if (_state == 1) {
       return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        const CircularProgressIndicator(),
-        Text(
-            'Docs are safe with us. They will be uploaded as soon as you go online')
+        //const CircularProgressIndicator(),
+        Container(
+            width: 300,
+            height: 300,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/images/safe.png')))),
+        SizedBox(height: 20),
+        Padding(
+          padding: EdgeInsets.all(15),
+          child: Container(
+              child: Center(
+                  child: Padding(
+            padding: EdgeInsets.all(15.0),
+            child: Text(
+              AppLocalizations.of(context)!.safe,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(109, 109, 109, 1),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 22,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.normal,
+                  height: 1),
+            ),
+          ))),
+        ),
       ]);
     } else if (_state == 3) {
-      return Center(
-          child:
-              const Text('Documents uploaded. wait till they are approved.'));
+      return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Container(
+            width: 320,
+            height: 320,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/images/upload.png')))),
+        SizedBox(height: 20),
+        Container(
+            child: Center(
+                child: Padding(
+          padding: EdgeInsets.all(15),
+          child: Text(
+            AppLocalizations.of(context)!.uploaded,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Color.fromRGBO(109, 109, 109, 1),
+                fontFamily: 'ProximaNovaRegular',
+                fontSize: 22,
+                letterSpacing: 0,
+                fontWeight: FontWeight.normal,
+                height: 1),
+          ),
+        )))
+      ]);
     } else if (_state == 2) {
       return Center(
           child: Column(children: [
-        const Text('Problem with docs. please reupload them.'),
+        SizedBox(height: 30),
+        Container(
+            width: 310,
+            height: 310,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/images/reupload.png')))),
+        Padding(
+          padding: EdgeInsets.all(15),
+          child: Text(AppLocalizations.of(context)!.reuploaded,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(109, 109, 109, 1),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 22,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.normal,
+                  height: 1)),
+        ),
+        SizedBox(height: 40),
         ElevatedButton(
-            child: Text('Upload Documents'),
+            child: Text(AppLocalizations.of(context)!.updocs,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 20,
+                  fontWeight: FontWeight.normal,
+                )),
             onPressed: () {
               changeState(2);
               Navigator.push(
@@ -124,9 +196,35 @@ class _UploadWaitState extends State<UploadWait> {
     }
     return Center(
         child: Column(children: [
-      const Text('Congrats. Done. Team will contact soon.'),
+      SizedBox(height: 15),
+      Container(
+          width: 310,
+          height: 310,
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/congrats.png')))),
+      Padding(
+        padding: EdgeInsets.all(15),
+        child: Text(AppLocalizations.of(context)!.verified,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Color.fromRGBO(109, 109, 109, 1),
+                fontFamily: 'ProximaNovaRegular',
+                fontSize: 22,
+                letterSpacing: 0,
+                fontWeight: FontWeight.normal,
+                height: 1)),
+      ),
+      SizedBox(height: 20),
       ElevatedButton(
-          child: Text('Go back to home page'),
+          child: Text(AppLocalizations.of(context)!.homescreen,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontFamily: 'ProximaNovaRegular',
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+              )),
           onPressed: () {
             changeState(0);
             Navigator.push(context,

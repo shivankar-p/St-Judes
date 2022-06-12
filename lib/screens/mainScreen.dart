@@ -1,12 +1,15 @@
 import 'package:first/screens/Language.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:first/screens/faq.dart';
 import 'package:first/widgets/Counselling.dart';
 import 'package:first/widgets/Raise_request.dart';
 import 'package:first/widgets/requestHistory.dart';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
+import '../LocaleProvider.dart';
 import '../widgets/notifications.dart';
 
 import '../widgets/overlay.dart';
@@ -31,6 +34,7 @@ class LanguageList1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<LocaleProvider>(context);
     return Center(
         child: Container(
             decoration: BoxDecoration(
@@ -52,6 +56,7 @@ class LanguageList1 extends StatelessWidget {
                                   style: TextStyle(
                                       color: Color.fromARGB(255, 0, 0, 0)))),
                           onTap: () {
+                            provider.setLocale(Locale(e[1]));
                             Navigator.pop(context);
                           },
                           tileColor: Color.fromARGB(255, 255, 255, 255))))
@@ -130,7 +135,15 @@ class _MainscreenState extends State<Mainscreen> {
   Widget displayScreen() {
     return Scaffold(
       appBar: AppBar(
-        title: Text("St. Judes For Life"),
+        //St judes for life
+        title: Text("St. Judes for Life",
+            style: TextStyle(
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontFamily: 'ProximaNovaRegular',
+                fontSize: 22,
+                letterSpacing: 0,
+                fontWeight: FontWeight.normal,
+                height: 1)),
         elevation: 5,
         actions: <Widget>[
           Padding(
@@ -184,11 +197,17 @@ class _MainscreenState extends State<Mainscreen> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.add_moderator), label: 'Raise Request'),
+                //raise request
+                icon: Icon(Icons.add_moderator),
+                label: AppLocalizations.of(context)!.raisereq),
             BottomNavigationBarItem(
-                icon: Icon(Icons.announcement), label: 'Counselling'),
+                //counselling
+                icon: Icon(Icons.announcement),
+                label: AppLocalizations.of(context)!.counselling),
             BottomNavigationBarItem(
-                icon: Icon(Icons.notifications), label: 'Notifications')
+                //notifications
+                icon: Icon(Icons.notifications),
+                label: AppLocalizations.of(context)!.notifications)
           ],
           onTap: (index) => {
                 setState(() {

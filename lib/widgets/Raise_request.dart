@@ -1,4 +1,5 @@
 import 'package:first/widgets/displayRequests.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:first/widgets/record.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -20,9 +21,9 @@ class RaiseRequest extends StatelessWidget {
           decoration: const BoxDecoration(
             color: Color.fromRGBO(255, 255, 255, 1),
           ),
-          child: Stack(children: <Widget>[
+          child: Stack(alignment: Alignment.center, children: <Widget>[
             Positioned(
-                top: 320 * (constraints.maxHeight / 800),
+                top: 335 * (constraints.maxHeight / 800),
                 left: 50 * (constraints.maxWidth / 360),
                 child: Container(
                     width: 267,
@@ -34,59 +35,65 @@ class RaiseRequest extends StatelessWidget {
             Positioned(
                 top: 100 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
-                child: const Text('Raise a\nRequest',
+                child: Text(
+                    //Raise a request
+                    AppLocalizations.of(context)!.raise +
+                        '\n' +
+                        AppLocalizations.of(context)!.request,
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         color: Color.fromRGBO(245, 130, 32, 1),
-                        fontFamily: 'RobotoSerif-SemiBold',
+                        fontFamily: 'Helvetica',
                         fontSize: 40,
                         letterSpacing: 0,
                         fontWeight: FontWeight.normal,
                         height: 1))),
             Positioned(
-                top: 75 * (constraints.maxHeight / 800),
+                top: 65 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
-                child: const Text(
-                  'Need financial help?',
+                child: Text(
+                  //Need financial help?
+                  AppLocalizations.of(context)!.finhelp,
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color.fromRGBO(245, 129, 45, 1),
-                      fontFamily: 'RobotoSerif-SemiBold',
+                      fontFamily: 'ProximaNovaSemibold',
                       fontSize: 18,
                       letterSpacing: 0,
                       fontWeight: FontWeight.normal,
                       height: 1),
                 )),
             Positioned(
-                top: 215 * (constraints.maxHeight / 800),
+                top: 225 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
                 right: 25 * (constraints.maxWidth / 360),
-                child: const Text(
-                  'Dont worry! Once you raise a request, our officials shall contact you to furthur understand your problem and requirement.',
+                child: Text(
+                  //Dont worry!
+                  AppLocalizations.of(context)!.fintext,
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color.fromRGBO(109, 109, 109, 1),
-                      fontFamily: 'RobotoSerif-SemiBold',
-                      fontSize: 14,
+                      fontFamily: 'ProximaNovaSemibold',
+                      fontSize: 16,
                       letterSpacing: 0,
                       fontWeight: FontWeight.normal,
                       height: 1),
                 )),
             Positioned(
-                top: 620 * (constraints.maxHeight / 800),
-                left: 80 * (constraints.maxWidth / 360),
+                top: 640 * (constraints.maxHeight / 800),
+                //left: 80 * (constraints.maxWidth / 360),
                 child: Column(children: [
                   SizedBox(
                       width: 200,
                       height: 54,
                       child: ElevatedButton(
                         child: Text(
-                          'Raise Request',
+                          AppLocalizations.of(context)!.raisereq,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Color.fromRGBO(255, 255, 255, 1),
-                              fontFamily: 'RobotoSerif-Regular',
-                              fontSize: 24,
+                              fontFamily: 'ProximaNovaRegular',
+                              fontSize: 26,
                               letterSpacing: 0,
                               fontWeight: FontWeight.normal,
                               height: 1),
@@ -205,69 +212,97 @@ class RequestOptionsState extends State<RequestOptions>
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0))),
             child: SizedBox(
-                height: 400,
-                width: 350,
+                height: 420,
+                width: 320,
                 child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Column(children: [
-                      Text(
-                          'Choose Language of Communication. Futher steps will be taken in that language only.'),
-                      DropdownButton<String>(
-                        focusColor: Colors.white,
-                        value: _chosenValue,
-                        //elevation: 5,
-                        style: TextStyle(color: Colors.white),
-                        iconEnabledColor: Colors.black,
-                        items: _languages.map((String value) {
-                          return DropdownMenuItem<String>(
-                            value: value,
-                            child: Text(
-                              value,
-                              style: TextStyle(color: Colors.black),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 17.0, vertical: 20.0),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(AppLocalizations.of(context)!.loc,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                  fontFamily: 'ProximaNovaRegular',
+                                  fontSize: 19,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.normal,
+                                  height: 1)),
+                          SizedBox(height: 10),
+                          DropdownButton<String>(
+                            focusColor: Colors.white,
+                            value: _chosenValue,
+                            //elevation: 5,
+                            style: TextStyle(
+                                fontFamily: 'ProximaNovaRegular',
+                                fontSize: 18,
+                                color: Colors.white),
+                            iconEnabledColor: Colors.black,
+                            items: _languages.map((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(
+                                  value,
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              );
+                            }).toList(),
+                            hint: Text(
+                              "Please choose a langauage",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500),
                             ),
-                          );
-                        }).toList(),
-                        hint: Text(
-                          "Please choose a langauage",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        onChanged: (String? value) {
-                          setState(() {
-                            _chosenValue = value!;
-                          });
-                        },
-                      ),
-                      Text(
-                          'Optionally please record any additional information you want to provide'),
-                      Record(_path),
-                      ElevatedButton(
-                          child: Text('Submit Request'),
-                          onPressed: () {
-                            changeState();
-                            ref1.set({
-                              'date': DateFormat('dd-MM-yyyy')
-                                  .format(DateTime.now()),
-                              'state': 1,
-                              'language':
-                                  _locales[_languages.indexOf(_chosenValue)],
-                              'logs': {
-                                'amount': '',
-                                'category': '',
-                                'description': '',
-                                'remarks': ''
-                              }
-                            });
+                            onChanged: (String? value) {
+                              setState(() {
+                                _chosenValue = value!;
+                              });
+                            },
+                          ),
+                          SizedBox(height: 25),
+                          Text(AppLocalizations.of(context)!.additional,
+                              style: TextStyle(
+                                  fontSize: 19,
+                                  fontFamily: 'ProximaNovaRegular')),
+                          SizedBox(height: 7),
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [Record(_path)]),
+                          SizedBox(height: 17),
+                          ElevatedButton(
+                              child: Text(
+                                  AppLocalizations.of(context)!.submitreq,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'ProximaNovaRegular',
+                                      fontSize: 20)),
+                              onPressed: () {
+                                changeState();
+                                ref1.set({
+                                  'date': DateFormat('dd-MM-yyyy')
+                                      .format(DateTime.now()),
+                                  'state': 1,
+                                  'language': _locales[
+                                      _languages.indexOf(_chosenValue)],
+                                  'logs': {
+                                    'amount': '',
+                                    'category': '',
+                                    'description': '',
+                                    'remarks': ''
+                                  }
+                                });
 
-                            uploadFile();
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => (Displayrequests())));
-                          })
-                    ]))),
+                                uploadFile();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            (Displayrequests())));
+                              })
+                        ]))),
           ),
         ),
       ),

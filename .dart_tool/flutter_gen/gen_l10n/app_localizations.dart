@@ -323,6 +323,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Request has been made. Please wait until it is approved.'**
   String get requestraised;
+
+  /// St
+  ///
+  /// In en, this message translates to:
+  /// **'St. Judes for Life'**
+  String get stjudes;
+
+  /// Choose your preferred language of communication
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your preferred language of communication (Furthur communication shall be carried out in your selected language) :'**
+  String get loc;
+
+  /// Optionally, you may record any additional information you
+  ///
+  /// In en, this message translates to:
+  /// **'Optionally, you may record any additional information you would like us to know :'**
+  String get additional;
+
+  /// Submit Request
+  ///
+  /// In en, this message translates to:
+  /// **'Submit Request'**
+  String get submitreq;
+
+  /// approved
+  ///
+  /// In en, this message translates to:
+  /// **'Congratulations! Your request has been approved. Kindly proceed to upload the required documents.'**
+  String get reqapp;
+
+  /// rejected
+  ///
+  /// In en, this message translates to:
+  /// **'We are extremely sorry to inform you that you are not applicable for our program. Feel free to contact our officials for any furthur clarifications you wish to make.'**
+  String get reqrej;
+
+  /// waiting
+  ///
+  /// In en, this message translates to:
+  /// **'Your request has been made. Our officials shall contact you shortly. Kindly wait for approval.'**
+  String get reqwait;
+
+  /// Return
+  ///
+  /// In en, this message translates to:
+  /// **'Return to Home'**
+  String get homescreen;
+
+  /// Upload
+  ///
+  /// In en, this message translates to:
+  /// **'Upload Documents'**
+  String get load;
+
+  /// Contact Us
+  ///
+  /// In en, this message translates to:
+  /// **'Contact Us'**
+  String get contactus;
+
+  /// query
+  ///
+  /// In en, this message translates to:
+  /// **'Write us your query and our officials shall get back to you at the earliest!'**
+  String get qry;
+
+  /// call
+  ///
+  /// In en, this message translates to:
+  /// **'Give us a call at -'**
+  String get ring;
+
+  /// safe
+  ///
+  /// In en, this message translates to:
+  /// **'Your documents are safe with us! They shall be uploaded the moment you go online.'**
+  String get safe;
+
+  /// uploaded
+  ///
+  /// In en, this message translates to:
+  /// **'Your documents have been uploaded. Please wait until we verify them and get back to you.'**
+  String get uploaded;
+
+  /// reuploaded
+  ///
+  /// In en, this message translates to:
+  /// **'There seems to be a small issue with your documents. Kindly re-upload the required documents.'**
+  String get reuploaded;
+
+  /// verified
+  ///
+  /// In en, this message translates to:
+  /// **'Congratulations! Your documents have been uploaded and verified, and you are now eligible to be a part of our program! Our officials will contact you at the earliest.'**
+  String get verified;
+
+  /// updocs
+  ///
+  /// In en, this message translates to:
+  /// **'Upload Documents'**
+  String get updocs;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

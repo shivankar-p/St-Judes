@@ -1,4 +1,6 @@
 import 'package:first/widgets/Raise_request.dart';
+import 'package:first/widgets/uploadWait.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'upload.dart';
@@ -96,17 +98,68 @@ class _RequestWaitState extends State<RequestWait> {
 
   Widget displayScreen() {
     if (_state == 1) {
-      return Container(
-          child: Center(
-              child: const Text(
-        'Request Raised. wait till it are approved.',
-      )));
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(height: 50),
+          Container(
+              width: 320,
+              height: 320,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/Processing.png')))),
+          SizedBox(height: 20),
+          Padding(
+            padding: EdgeInsets.all(15),
+            child: Container(
+                child: Center(
+                    child: Text(
+              AppLocalizations.of(context)!.reqwait,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(109, 109, 109, 1),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 22,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.normal,
+                  height: 1),
+            ))),
+          ),
+        ],
+      );
     } else if (_state == 2) {
+      //2
       return Center(
           child: Column(children: [
-        const Text('Approved.'),
+        SizedBox(height: 30),
+        Container(
+            width: 320,
+            height: 320,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/images/Approved.png')))),
+        Padding(
+          padding: EdgeInsets.all(15),
+          child: Text(AppLocalizations.of(context)!.reqapp,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(109, 109, 109, 1),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 22,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.normal,
+                  height: 1)),
+        ),
+        SizedBox(height: 40),
         ElevatedButton(
-            child: Text('Upload Documents'),
+            child: Text(AppLocalizations.of(context)!.load,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 20,
+                )),
             onPressed: () {
               changeState(2);
               Navigator.push(
@@ -116,9 +169,34 @@ class _RequestWaitState extends State<RequestWait> {
     }
     return Center(
         child: Column(children: [
-      const Text('Not Aprroved. Go back simon'),
+      SizedBox(height: 30),
+      Container(
+          width: 300,
+          height: 300,
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/Rejected.png')))),
+      Padding(
+        padding: EdgeInsets.all(15),
+        child: Text(AppLocalizations.of(context)!.reqrej,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Color.fromRGBO(109, 109, 109, 1),
+                fontFamily: 'ProximaNovaRegular',
+                fontSize: 22,
+                letterSpacing: 0,
+                fontWeight: FontWeight.normal,
+                height: 1)),
+      ),
+      SizedBox(height: 25),
       ElevatedButton(
-          child: Text('Go back'),
+          child: Text(AppLocalizations.of(context)!.homescreen,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontFamily: 'ProximaNovaRegular',
+                fontSize: 20,
+              )),
           onPressed: () {
             changeState(0);
             Navigator.push(context,

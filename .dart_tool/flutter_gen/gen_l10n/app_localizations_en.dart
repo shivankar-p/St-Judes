@@ -117,4 +117,55 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get requestraised => 'Request has been made. Please wait until it is approved.';
+
+  @override
+  String get stjudes => 'St. Judes for Life';
+
+  @override
+  String get loc => 'Choose your preferred language of communication (Furthur communication shall be carried out in your selected language) :';
+
+  @override
+  String get additional => 'Optionally, you may record any additional information you would like us to know :';
+
+  @override
+  String get submitreq => 'Submit Request';
+
+  @override
+  String get reqapp => 'Congratulations! Your request has been approved. Kindly proceed to upload the required documents.';
+
+  @override
+  String get reqrej => 'We are extremely sorry to inform you that you are not applicable for our program. Feel free to contact our officials for any furthur clarifications you wish to make.';
+
+  @override
+  String get reqwait => 'Your request has been made. Our officials shall contact you shortly. Kindly wait for approval.';
+
+  @override
+  String get homescreen => 'Return to Home';
+
+  @override
+  String get load => 'Upload Documents';
+
+  @override
+  String get contactus => 'Contact Us';
+
+  @override
+  String get qry => 'Write us your query and our officials shall get back to you at the earliest!';
+
+  @override
+  String get ring => 'Give us a call at -';
+
+  @override
+  String get safe => 'Your documents are safe with us! They shall be uploaded the moment you go online.';
+
+  @override
+  String get uploaded => 'Your documents have been uploaded. Please wait until we verify them and get back to you.';
+
+  @override
+  String get reuploaded => 'There seems to be a small issue with your documents. Kindly re-upload the required documents.';
+
+  @override
+  String get verified => 'Congratulations! Your documents have been uploaded and verified, and you are now eligible to be a part of our program! Our officials will contact you at the earliest.';
+
+  @override
+  String get updocs => 'Upload Documents';
 }

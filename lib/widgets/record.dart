@@ -114,6 +114,7 @@ class _RecordState extends State<Record> {
   Widget build(BuildContext context) {
     return Center(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           AnimatedContainer(
@@ -129,7 +130,7 @@ class _RecordState extends State<Record> {
               child: getIcon(audioState),
             ),
           ),
-          SizedBox(width: 20),
+          SizedBox(width: 0),
           if (audioState == AudioState.play || audioState == AudioState.stop)
             Container(
               padding: EdgeInsets.all(5),

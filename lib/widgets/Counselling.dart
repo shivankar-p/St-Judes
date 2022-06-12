@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Counselling extends StatelessWidget {
   DatabaseReference ref = FirebaseDatabase.instance.ref('counselling/15000');
@@ -15,9 +16,9 @@ class Counselling extends StatelessWidget {
           decoration: BoxDecoration(
             color: Color.fromRGBO(255, 255, 255, 1),
           ),
-          child: Stack(children: <Widget>[
+          child: Stack(alignment: Alignment.center, children: <Widget>[
             Positioned(
-                top: 335 * (constraints.maxHeight / 800),
+                top: 340 * (constraints.maxHeight / 800),
                 left: 50 * (constraints.maxWidth / 360),
                 child: Container(
                     width: 267,
@@ -28,58 +29,65 @@ class Counselling extends StatelessWidget {
             Positioned(
                 top: 100 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
-                child: Text('Apply for\nCounselling',
+                child: Text(
+                    //Apply for counselling
+                    AppLocalizations.of(context)!.applyfor +
+                        '\n' +
+                        AppLocalizations.of(context)!.incoun,
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         color: Color.fromRGBO(245, 130, 32, 1),
-                        fontFamily: 'RobotoSerif-SemiBold',
+                        fontFamily: 'Helvetica',
                         fontSize: 40,
                         letterSpacing: 0,
                         fontWeight: FontWeight.normal,
                         height: 1))),
             Positioned(
-                top: 75 * (constraints.maxHeight / 800),
+                top: 65 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
                 child: Text(
-                  'Need some guidance?',
+                  //need some guidance
+                  AppLocalizations.of(context)!.need,
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color.fromRGBO(245, 129, 45, 1),
-                      fontFamily: 'RobotoSerif-SemiBold',
+                      fontFamily: 'ProximaNovaSemibold',
                       fontSize: 18,
                       letterSpacing: 0,
                       fontWeight: FontWeight.normal,
                       height: 1),
                 )),
             Positioned(
-                top: 215 * (constraints.maxHeight / 800),
+                top: 235 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
                 right: 25 * (constraints.maxWidth / 360),
                 child: Text(
-                  'We’re there for you! On applying for counselling our officials will help you out with your much required career and life counselling.',
+                  //were there for you!
+                  AppLocalizations.of(context)!.countext,
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color.fromRGBO(109, 109, 109, 1),
-                      fontFamily: 'RobotoSerif-SemiBold',
-                      fontSize: 14,
+                      fontFamily: 'ProximaNovaSemibold',
+                      fontSize: 16,
                       letterSpacing: 0,
                       fontWeight: FontWeight.normal,
                       height: 1),
                 )),
             Positioned(
-              top: 620 * (constraints.maxHeight / 800),
-              left: 80 * (constraints.maxWidth / 360),
+              top: 640 * (constraints.maxHeight / 800),
+              //left: 80 * (constraints.maxWidth / 360),
               child: SizedBox(
                   width: 200,
                   height: 54,
                   child: ElevatedButton(
                     child: Text(
-                      'Get Enrolled',
+                      //Get Enrolled
+                      AppLocalizations.of(context)!.enrol,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Color.fromRGBO(255, 255, 255, 1),
-                          fontFamily: 'RobotoSerif-Regular',
-                          fontSize: 24,
+                          fontFamily: 'ProximaNovaRegular',
+                          fontSize: 26,
                           letterSpacing: 0,
                           fontWeight: FontWeight.normal,
                           height: 1),
