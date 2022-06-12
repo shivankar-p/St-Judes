@@ -67,20 +67,24 @@ class _UIDform extends State<UIDform> {
 
     try {
       print('Trying final auth');
-      final authCredential =
-          await _auth.signInWithCredential(phoneAuthCredential);
+      
+      
+      _auth.signInWithCredential(phoneAuthCredential).then((result) {
+        if (result.user != null) {
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+              builder: (context) => LoggedInScreen(otpController)),
+          (Route<dynamic> route) => false,
+        );
+      }
+      });
+      
 
       setState(() {
         showLoading = false;
       });
-
-      if (authCredential.user != null) {
-        Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (context) => Mainscreen()),
-          (Route<dynamic> route) => false,
-        );
-      }
+      
     } on FirebaseAuthException catch (e) {
       setState(() {
         showLoading = false;
