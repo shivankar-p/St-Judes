@@ -6,10 +6,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
 import './screens/mainScreen.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:provider/provider.dart';
-import 'widgets/requestWait.dart';
 import 'LocaleProvider.dart';
 import 'l10n/l10n.dart';
 
@@ -28,12 +25,12 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   late Future notif;
-  int loginstate = 0;
+  late String uid;
 
   getState() async {
     var prefs = await SharedPreferences.getInstance();
-    // loginstate = prefs.getInt('loginstate') ?? 0;
-    return loginstate;
+    uid = prefs.getString('loginstate') ?? '';
+    return uid;
   }
 
   @override
@@ -44,7 +41,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   showScreen(LocaleProvider provider) {
-    if (loginstate == 0) {
+    if (uid.isEmpty) {
       return MaterialApp(
           debugShowCheckedModeBanner: false,
           supportedLocales: L10n.all,
@@ -73,8 +70,7 @@ class _MyAppState extends State<MyApp> {
           ],
           title: 'Flutter Demo',
           theme: ThemeData(
-            primarySwatch: Colors.orange,
-          ),
+              primarySwatch: Colors.orange, fontFamily: 'ProximaNovaRegular'),
           home: Mainscreen());
     }
   }

@@ -62,41 +62,44 @@ class _FAQState extends State<FAQ> {
   }
 
   Widget show() {
-    return ListView(children: [
-      Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-        ElevatedButton(
-          onPressed: () {
-            setState(() {
-              filteredData = data;
-            });
-          },
-          child: Text("All"),
-          style: ButtonStyle(
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(18.0),
-              //side: BorderSide(color: Colors.red)
-            )),
-            overlayColor: MaterialStateProperty.resolveWith<Color?>(
-              (Set<MaterialState> states) {
-                if (states.contains(MaterialState.pressed))
-                  return Colors.redAccent; //<-- SEE HERE
-                return null; // Defer to the widget's default.
+    return Padding(
+        padding: EdgeInsets.only(top: 20),
+        child: ListView(children: [
+          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  filteredData = data;
+                });
               },
+              child: Text("All"),
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  //side: BorderSide(color: Colors.red)
+                )),
+                overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                  (Set<MaterialState> states) {
+                    if (states.contains(MaterialState.pressed))
+                      return Colors.redAccent; //<-- SEE HERE
+                    return null; // Defer to the widget's default.
+                  },
+                ),
+              ),
+            ),
+            FilterButton(txt: "Money", callback: callback),
+            FilterButton(txt: "Education", callback: callback),
+            FilterButton(txt: "Upload", callback: callback),
+          ]),
+          SingleChildScrollView(
+            padding: EdgeInsets.only(top: 20),
+            child: Container(
+              child: _buildPanel(),
             ),
           ),
-        ),
-        FilterButton(txt: "Money", callback: callback),
-        FilterButton(txt: "Education", callback: callback),
-        FilterButton(txt: "Upload", callback: callback),
-      ]),
-      SpeechWidget(data: this.data),
-      SingleChildScrollView(
-        child: Container(
-          child: _buildPanel(),
-        ),
-      )
-    ]);
+          SpeechWidget(data: this.data),
+        ]));
   }
 
   @override
@@ -193,10 +196,18 @@ class _SpeechWidgetState extends State<SpeechWidget> {
   String possibleAnswer = 'Never gonna give you up';
   List<Item> filteredData = [];
 
+  initializeSpeech() async {
+    _speech = stt.SpeechToText();
+    bool available = await _speech.initialize(
+      onStatus: (val) => print('onStatus: $val'),
+      onError: (val) => print('onError: $val'),
+    );
+  }
+
   @override
   void initState() {
     super.initState();
-    _speech = stt.SpeechToText();
+    initializeSpeech();
     data = widget.data;
   }
 
@@ -231,32 +242,47 @@ class _SpeechWidgetState extends State<SpeechWidget> {
             "I don't know the answer for that right now, check the questions below.";
       });
     }
-    print(data);
     _speak();
   }
 
+  TextEditingController questiontext = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    questiontext.text = _text;
     return Column(
       children: [
-        AvatarGlow(
-          animate: _isListening,
-          glowColor: Theme.of(context).primaryColor,
-          endRadius: 50.0,
-          duration: const Duration(milliseconds: 2000),
-          repeatPauseDuration: const Duration(milliseconds: 100),
-          repeat: true,
-          child: FloatingActionButton(
-            onPressed: _listen,
-            child: Icon(_isListening ? Icons.mic : Icons.mic_none),
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Or ask your question directly',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 20,
+                )),
+            AvatarGlow(
+              animate: _isListening,
+              glowColor: Theme.of(context).primaryColor,
+              endRadius: 50.0,
+              duration: const Duration(milliseconds: 2000),
+              repeatPauseDuration: const Duration(milliseconds: 100),
+              repeat: true,
+              child: FloatingActionButton(
+                onPressed: _listen,
+                child: Icon(_isListening ? Icons.mic : Icons.mic_none),
+              ),
+            ),
+          ],
         ),
-        Container(padding: EdgeInsets.all(10), child: Text("Your Question:")),
         Container(
-            padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 75.0),
-            child: Text(_text, textAlign: TextAlign.center)),
+            padding: const EdgeInsets.all(10),
+            child: TextFormField(
+                controller: questiontext,
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(border: OutlineInputBorder()))),
         Container(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(5),
           child: ElevatedButton(
               onPressed: () {
                 findPossibleAnswer(_text);
@@ -269,19 +295,12 @@ class _SpeechWidgetState extends State<SpeechWidget> {
 
   void _listen() async {
     if (!_isListening) {
-      bool available = await _speech.initialize(
-        onStatus: (val) => print('onStatus: $val'),
-        onError: (val) => print('onError: $val'),
+      setState(() => _isListening = true);
+      _speech.listen(
+        onResult: (val) => setState(() {
+          _text = val.recognizedWords;
+        }),
       );
-      if (available) {
-        setState(() => _isListening = true);
-        _speech.listen(
-          onResult: (val) => setState(() {
-            _text = val.recognizedWords;
-            print(_text);
-          }),
-        );
-      }
     } else {
       setState(() {
         _isListening = false;

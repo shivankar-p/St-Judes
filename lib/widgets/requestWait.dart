@@ -14,9 +14,16 @@ class RequestWait extends StatefulWidget {
 
 class _RequestWaitState extends State<RequestWait> {
   int _state = 1;
-  DatabaseReference ref = FirebaseDatabase.instance.ref('activerequests/15000');
+  late DatabaseReference ref;
 
   late String rejectdate, rejectremarks;
+
+  getuid() async {
+    var prefs = await SharedPreferences.getInstance();
+    String _uid = prefs.getString('loginstate')!;
+    DatabaseReference ref =
+        FirebaseDatabase.instance.ref('activerequests/$_uid');
+  }
 
   getUploadData() async {
     var event = await ref.child('docs').once();
@@ -66,7 +73,7 @@ class _RequestWaitState extends State<RequestWait> {
     super.initState();
 
     checkValue();
-
+    getuid();
     ref.onValue.listen((event) {
       var value = event.snapshot.value as Map<dynamic, dynamic>;
       setState(() {

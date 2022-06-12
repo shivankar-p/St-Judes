@@ -32,8 +32,7 @@ class _UploadState extends State<Upload> {
   Map pagemap = {};
 
   late var typestatelist;
-  DatabaseReference ref1 =
-      FirebaseDatabase.instance.ref('/activerequests/15000');
+  late DatabaseReference ref1;
 
   final PageController _pageController = PageController(initialPage: 0);
 
@@ -69,9 +68,17 @@ class _UploadState extends State<Upload> {
     return _numberOfDocuments;
   }
 
+  getuid() async {
+    var prefs = await SharedPreferences.getInstance();
+    String _uid = prefs.getString('loginstate')!;
+    DatabaseReference ref1 =
+        FirebaseDatabase.instance.ref('activerequests/$_uid');
+  }
+
   @override
   void initState() {
     super.initState();
+    getuid();
     typestatelist = [];
     notif = getStateFromSF();
   }

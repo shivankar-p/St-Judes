@@ -37,7 +37,7 @@ class Counselling extends StatelessWidget {
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         color: Color.fromRGBO(245, 130, 32, 1),
-                        fontFamily: 'ProximaNova',
+                        fontFamily: 'ProximaNovaRegular',
                         fontSize: 40,
                         letterSpacing: 0,
                         fontWeight: FontWeight.normal,
@@ -67,7 +67,7 @@ class Counselling extends StatelessWidget {
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color.fromRGBO(109, 109, 109, 1),
-                      fontFamily: 'ProximaNovaSemibold',
+                      fontFamily: 'ProximaNovaRegular',
                       fontSize: 16,
                       letterSpacing: 0,
                       fontWeight: FontWeight.normal,

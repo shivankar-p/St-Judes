@@ -4,6 +4,7 @@ import 'package:first/screens/mainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 enum MobileVerificationState {
   SHOW_UID_FORM_STATE,
@@ -18,6 +19,8 @@ class UIDform extends StatefulWidget {
 class _UIDform extends State<UIDform> {
   MobileVerificationState currentState =
       MobileVerificationState.SHOW_UID_FORM_STATE;
+
+  DatabaseReference ref = FirebaseDatabase.instance.ref('uidToPhone');
 
   String _uidExists = '';
   String _otpValid = '';
@@ -315,7 +318,11 @@ class _UIDform extends State<UIDform> {
                                     smsCode: otpController.text);
 
                             signInWithPhoneAuthCredential(phoneAuthCredential);
-                            //ref.set(e[1]);
+                            var prefs = await SharedPreferences.getInstance();
+                            ref
+                                .child('${otpController.text}/language')
+                                .set(prefs.getString('locale'));
+                            prefs.setString('loginstate', otpController.text);
 
                             //original code
                             // /*dummycode*/

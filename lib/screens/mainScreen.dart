@@ -16,6 +16,8 @@ import '../widgets/overlay.dart';
 import '../widgets/displayRequests.dart';
 import 'package:firebase_database/firebase_database.dart';
 
+String _uid = '';
+
 class Constants {
   static const String Language = 'Change Language';
 
@@ -31,8 +33,7 @@ class LanguageList1 extends StatelessWidget {
     ['മലയാളം (Malayalam)', 'ml'],
     ['বাংলা (Bengali)', 'bn']
   ];
-  DatabaseReference ref =
-      FirebaseDatabase.instance.ref('uidToPhone/15000/language');
+  DatabaseReference ref = FirebaseDatabase.instance.ref('uidToPhone');
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +60,7 @@ class LanguageList1 extends StatelessWidget {
                                       color: Color.fromARGB(255, 0, 0, 0)))),
                           onTap: () {
                             provider.setLocale(Locale(e[1]));
-                            ref.set(e[1]);
+                            ref.child('$_uid/language').set(e[1]);
                             Navigator.pop(context);
                           },
                           tileColor: Color.fromARGB(255, 255, 255, 255))))
@@ -81,6 +82,7 @@ class _MainscreenState extends State<Mainscreen> {
 
   Future getAppState() async {
     var prefs = await SharedPreferences.getInstance();
+    _uid = prefs.getString('loginstate')!;
     setState(() {
       _appStateC = prefs.getInt('counselling') ?? 0;
       _appStateR = prefs.getInt('request') ?? 0;

@@ -122,7 +122,7 @@ class _LanguageState extends State<Language> {
             child: GestureDetector(
                 onTap: () async {
                   var prefs = await SharedPreferences.getInstance();
-                  final stringlist = prefs.setString(
+                  prefs.setString(
                       'locale', _locales[_languages.indexOf(language)]);
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {

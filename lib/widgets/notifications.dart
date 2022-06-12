@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Notifications extends StatefulWidget {
   const Notifications({Key? key}) : super(key: key);
@@ -21,7 +22,14 @@ class _NotificationsState extends State<Notifications> {
           'This channel is used for important notifications.', // description
       importance: Importance.high,
       playSound: true);
-  DatabaseReference ref = FirebaseDatabase.instance.ref('notifications/15000');
+  late DatabaseReference ref;
+
+  getuid() async {
+    var prefs = await SharedPreferences.getInstance();
+    String _uid = prefs.getString('loginstate')!;
+    DatabaseReference ref =
+        FirebaseDatabase.instance.ref('notifications/$_uid');
+  }
 
   Future getData() async {
     await _notifications.initialize(InitializationSettings(

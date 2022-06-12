@@ -71,7 +71,7 @@ class RaiseRequest extends StatelessWidget {
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color.fromRGBO(109, 109, 109, 1),
-                      fontFamily: 'ProximaNovaSemibold',
+                      fontFamily: 'ProximaNovaRegular',
                       fontSize: 16,
                       letterSpacing: 0,
                       fontWeight: FontWeight.normal,
@@ -135,8 +135,7 @@ class RequestOptionsState extends State<RequestOptions>
   late AnimationController controller;
   late Animation<double> scaleAnimation;
 
-  DatabaseReference ref1 =
-      FirebaseDatabase.instance.ref('activerequests/15000');
+  late DatabaseReference ref1;
   UploadTask? task;
 
   changeState() async {
@@ -146,10 +145,17 @@ class RequestOptionsState extends State<RequestOptions>
     await prefs.setInt('request', 1);
   }
 
+  getuid() async {
+    var prefs = await SharedPreferences.getInstance();
+    String _uid = prefs.getString('loginstate')!;
+    DatabaseReference ref1 =
+        FirebaseDatabase.instance.ref('activerequests/$_uid');
+  }
+
   @override
   void initState() {
     super.initState();
-
+    getuid();
     controller =
         AnimationController(vsync: this, duration: Duration(milliseconds: 600));
     scaleAnimation =
