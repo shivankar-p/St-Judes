@@ -14,7 +14,7 @@ import '../widgets/notifications.dart';
 
 import '../widgets/overlay.dart';
 import '../widgets/displayRequests.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class Constants {
   static const String Language = 'Change Language';
@@ -31,6 +31,8 @@ class LanguageList1 extends StatelessWidget {
     ['മലയാളം (Malayalam)', 'ml'],
     ['বাংলা (Bengali)', 'bn']
   ];
+  DatabaseReference ref =
+      FirebaseDatabase.instance.ref('uidToPhone/15000/language');
 
   @override
   Widget build(BuildContext context) {
@@ -57,6 +59,7 @@ class LanguageList1 extends StatelessWidget {
                                       color: Color.fromARGB(255, 0, 0, 0)))),
                           onTap: () {
                             provider.setLocale(Locale(e[1]));
+                            ref.set(e[1]);
                             Navigator.pop(context);
                           },
                           tileColor: Color.fromARGB(255, 255, 255, 255))))
@@ -110,7 +113,7 @@ class _MainscreenState extends State<Mainscreen> {
     return {
       '/': (context) {
         if (index == 0) {
-          return screens[index][_appStateR];
+          return screens[index][0];
         }
         return screens[index][0];
       },
@@ -159,7 +162,7 @@ class _MainscreenState extends State<Mainscreen> {
                 ),
               )),
           Padding(
-              padding: EdgeInsets.only(right: 5.0),
+              padding: EdgeInsets.only(right: 0),
               child: GestureDetector(
                 onTap: () {
                   showDialog(

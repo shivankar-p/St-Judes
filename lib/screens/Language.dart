@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../LocaleProvider.dart';
 import '../widgets/HeroDialogue.dart';
 import 'UID.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 String language = "English (default)";
 double font_size = 30;
@@ -16,6 +17,16 @@ class Language extends StatefulWidget {
 }
 
 class _LanguageState extends State<Language> {
+  List<String> _languages = [
+    'English (default)',
+    'தமிழ் (Tamil)',
+    'తెలుగు (Telugu)',
+    'हिन्दी (Hindi)',
+    'മലയാളം (Malayalam)',
+    'বাংলা (Bengali)'
+  ];
+
+  var _locales = ['en', 'ta', 'te', 'hi', 'ml', 'bl'];
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -109,7 +120,10 @@ class _LanguageState extends State<Language> {
             top: 700 * (constraints.maxHeight / 800),
             //left: (constraints.maxWidth - 100) / 2,
             child: GestureDetector(
-                onTap: () {
+                onTap: () async {
+                  var prefs = await SharedPreferences.getInstance();
+                  final stringlist = prefs.setString(
+                      'locale', _locales[_languages.indexOf(language)]);
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
                     return UIDform();

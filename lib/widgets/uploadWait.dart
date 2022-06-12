@@ -66,7 +66,7 @@ class _UploadWaitState extends State<UploadWait> {
   @override
   void initState() {
     super.initState();
-
+    _state = 1;
     checkValue();
 
     ref.child('state').onValue.listen((event) {

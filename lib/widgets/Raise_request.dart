@@ -6,7 +6,6 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 
@@ -43,13 +42,12 @@ class RaiseRequest extends StatelessWidget {
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         color: Color.fromRGBO(245, 130, 32, 1),
-                        fontFamily: 'Helvetica',
+                        fontFamily: 'ProximaNova',
                         fontSize: 40,
-                        letterSpacing: 0,
                         fontWeight: FontWeight.normal,
                         height: 1))),
             Positioned(
-                top: 65 * (constraints.maxHeight / 800),
+                top: 70 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
                 child: Text(
                   //Need financial help?
@@ -64,7 +62,7 @@ class RaiseRequest extends StatelessWidget {
                       height: 1),
                 )),
             Positioned(
-                top: 225 * (constraints.maxHeight / 800),
+                top: 220 * (constraints.maxHeight / 800),
                 left: 25 * (constraints.maxWidth / 360),
                 right: 25 * (constraints.maxWidth / 360),
                 child: Text(

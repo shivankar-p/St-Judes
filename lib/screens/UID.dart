@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:first/screens/mainScreen.dart';
-import '../widgets/HeroDialogue.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -315,8 +314,10 @@ class _UIDform extends State<UIDform> {
                                     verificationId: verificationId,
                                     smsCode: otpController.text);
 
-                            signInWithPhoneAuthCredential(
-                                phoneAuthCredential); //original code
+                            signInWithPhoneAuthCredential(phoneAuthCredential);
+                            //ref.set(e[1]);
+
+                            //original code
                             // /*dummycode*/
 
                             // if (otpController.text == '123456') {

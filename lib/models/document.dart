@@ -1,6 +1,3 @@
-import 'dart:collection';
-import 'package:flutter/material.dart';
-
 class Document {
   final String name;
   final String desc;
