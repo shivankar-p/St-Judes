@@ -1,3 +1,4 @@
+import 'package:first/models/uidvalue.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
@@ -27,17 +28,9 @@ class FunkyOverlayState extends State<FunkyOverlay>
     super.dispose();
   }
 
-  late String _uid;
-
-  getuid() async {
-    var prefs = await SharedPreferences.getInstance();
-    String _uid = prefs.getString('loginstate')!;
-  }
-
   @override
   void initState() {
     super.initState();
-    getuid();
 
     controller =
         AnimationController(vsync: this, duration: Duration(milliseconds: 600));
@@ -124,7 +117,7 @@ class FunkyOverlayState extends State<FunkyOverlay>
                                       var newref = ref.push();
                                       newref.set({
                                         'msg': myController.text,
-                                        'uid': _uid,
+                                        'uid': UIDValue.uid,
                                         'date': DateFormat("dd MMMM yyyy")
                                             .format(DateTime.now()),
                                         'time': DateFormat("HH:mm:ss")
