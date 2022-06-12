@@ -53,7 +53,7 @@ class _UIDform extends State<UIDform> {
   void dispose() {
     // Clean up the controller when the widget is disposed.
     myController.dispose();
-    otpController.dispose();
+    // otpController.dispose();
     super.dispose();
     AltSmsAutofill().unregisterListener();
   }
@@ -361,10 +361,10 @@ class _UIDform extends State<UIDform> {
                             signInWithPhoneAuthCredential(phoneAuthCredential);
                             var prefs = await SharedPreferences.getInstance();
                             ref
-                                .child('${otpController.text}/language')
+                                .child('${myController.text}/language')
                                 .set(prefs.getString('locale'));
-                            prefs.setString('loginstate', otpController.text);
-                            UIDValue.uid = otpController.text;
+                            prefs.setString('loginstate', myController.text);
+                            UIDValue.uid = myController.text;
 
                             //original code
                             // /*dummycode*/

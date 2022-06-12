@@ -91,7 +91,6 @@ class _NotificationsState extends State<Notifications> {
   void initState() {
     super.initState();
     notif = getData();
-
     ref.onValue.listen((event) {
       if (event.snapshot.value == null) return;
       var data = event.snapshot.value as List<dynamic>;

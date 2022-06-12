@@ -66,7 +66,6 @@ class _UploadState extends State<Upload> {
     for (int i = 0; i < _numberOfDocuments; i++) {
       typestatelist.add(0);
     }
-    print(pagemap);
     return _numberOfDocuments;
   }
 

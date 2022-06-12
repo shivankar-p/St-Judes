@@ -279,6 +279,7 @@ class _SpeechWidgetState extends State<SpeechWidget> {
             padding: const EdgeInsets.all(10),
             child: TextFormField(
                 controller: questiontext,
+                enabled: false,
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(border: OutlineInputBorder()))),
         Container(

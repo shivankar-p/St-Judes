@@ -291,7 +291,8 @@ class RequestOptionsState extends State<RequestOptions>
                                     'category': '',
                                     'description': '',
                                     'remarks': ''
-                                  }
+                                  },
+                                  'voice': ''
                                 });
 
                                 uploadFile();

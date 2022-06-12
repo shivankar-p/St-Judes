@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../models/uidvalue.dart';
 
 class Active {
   Widget icon;
@@ -31,8 +32,7 @@ class Displayrequests extends StatefulWidget {
 
 class _DisplayrequestsState extends State<Displayrequests> {
   DatabaseReference ref1 =
-      FirebaseDatabase.instance.ref('activerequests/15000');
-  DatabaseReference ref2 = FirebaseDatabase.instance.ref('requests/15000');
+      FirebaseDatabase.instance.ref('activerequests/${UIDValue.uid}');
 
   late Future notif;
   List<Old> olds = [];
