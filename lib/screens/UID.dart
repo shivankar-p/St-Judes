@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:alt_sms_autofill/alt_sms_autofill.dart';
+import 'package:flutter/services.dart';
 
 enum MobileVerificationState {
   SHOW_UID_FORM_STATE,
@@ -42,10 +44,39 @@ class _UIDform extends State<UIDform> {
   bool showLoading = false;
 
   @override
+  void initState() {
+    initSmsListener();
+  }
+
+  String _comingSms = 'Unknown';
+  @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
-    //myController.dispose();
+    myController.dispose();
+    otpController.dispose();
     super.dispose();
+    AltSmsAutofill().unregisterListener();
+  }
+
+  Future<void> initSmsListener() async {
+    String comingSms;
+    try {
+      comingSms = await AltSmsAutofill().listenForSms ?? 'Failed to get Sms';
+    } on PlatformException {
+      comingSms = 'Failed to get Sms.';
+    }
+    if (!mounted) return;
+    setState(() {
+      _comingSms = comingSms;
+      print("====>Message: ${_comingSms}");
+      print("${_comingSms[0]}");
+      otpController.text = _comingSms[0] +
+          _comingSms[1] +
+          _comingSms[2] +
+          _comingSms[3] +
+          _comingSms[4] +
+          _comingSms[5];
+    });
   }
 
   void _uidStatus(result) {

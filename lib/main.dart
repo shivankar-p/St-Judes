@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
           title: 'Flutter Demo',
           theme: ThemeData(
               primarySwatch: Colors.orange, fontFamily: 'ProximaNovaRegular'),
-          home: Mainscreen());
+          home: Language());
     }
   }
 
