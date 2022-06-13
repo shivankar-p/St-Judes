@@ -110,5 +110,7 @@
     "verified":"Congratulations! Your documents have been uploaded and verified, and you are now eligible to be a part of our program! Our officials will contact you at the earliest.",
     "@verified": {"description":"verified"},
     "updocs":"Upload Documents",
-    "@updocs": {"description":"updocs"}
+    "@updocs": {"description":"updocs"},
+    "requestquery":"Our process involves you to raise a request, become eligible for the program, upload the required documents and then on approval you shall be considered in the program."
+
 }

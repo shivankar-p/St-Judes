@@ -24,28 +24,39 @@ class FAQ extends StatefulWidget {
 }
 
 class _FAQState extends State<FAQ> {
-  static const str =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At erat pellentesque adipiscing commodo elit at imperdiet dui. Orci sagittis eu volutpat odio facilisis mauris sit amet.";
+  static const request =
+      "మా ప్రక్రియలో మీరు అభ్యర్థనను అందజేయడం, ప్రోగ్రామ్‌కు అర్హత పొందడం, అవసరమైన పత్రాలను అప్‌లోడ్ చేయడం మరియు ఆమోదం పొందిన తర్వాత మీరు ప్రోగ్రామ్‌లో పరిగణించబడతారు.";
+  //"Our process involves you to raise a request, become eligible for the program, upload the required documents and then on approval you shall be considered in the program.";
+  static const education1 =
+      "We provide education loans to regular students good at their academics, and for those who wish to pursue higher studies.";
+  static const education2 =
+      "The criterion which needs to be satisfied for an education loan include regular attendence, consistency in grades and minimal prior help received.";
+  static const upload =
+      "On the upload screen of the app, you are required to either click a picture with your camera, upload a photo from gallery, or send us a document like a PDF";
+  static const counselling =
+      "On applying for counselling, you shall be given an appointment and connected to one of our organization's counsellors to help you out.";
+
   final List<Item> data = [
     Item(
-        expandedValue:
-            "Never gonna give you up Never gonna let you down Never gonna run around and desert you",
-        headerValue: "Question 1",
-        questionType: "Money"),
+        expandedValue: request,
+        headerValue: "Raising a Request",
+        questionType: "Request"),
     Item(
-        expandedValue: str,
-        headerValue: "Question 2",
+        expandedValue: education1,
+        headerValue: "Education loans",
         questionType: "Education"),
     Item(
-        expandedValue: str,
-        headerValue: "Question 3",
+        expandedValue: education2,
+        headerValue: "Required Criterion",
         questionType: "Education"),
-    Item(expandedValue: str, headerValue: "Question 4", questionType: "Upload"),
     Item(
-        expandedValue:
-            "The answer for your question is RYAN STARTED THE FIRE!!",
-        headerValue: "Question 5",
+        expandedValue: upload,
+        headerValue: "Uploading of Documents",
         questionType: "Upload"),
+    Item(
+        expandedValue: counselling,
+        headerValue: "Counselling Process",
+        questionType: "Counselling"),
   ];
   static List<Item> filteredData = [];
 
@@ -88,9 +99,10 @@ class _FAQState extends State<FAQ> {
                 ),
               ),
             ),
-            FilterButton(txt: "Money", callback: callback),
             FilterButton(txt: "Education", callback: callback),
             FilterButton(txt: "Upload", callback: callback),
+            FilterButton(txt: "Request", callback: callback),
+            FilterButton(txt: "Counselling", callback: callback)
           ]),
           SingleChildScrollView(
             padding: EdgeInsets.only(top: 20),
@@ -212,7 +224,7 @@ class _SpeechWidgetState extends State<SpeechWidget> {
   }
 
   Future _speak() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("te-IN");
     await flutterTts.setPitch(1.0);
     await flutterTts.speak(possibleAnswer);
   }
@@ -224,22 +236,28 @@ class _SpeechWidgetState extends State<SpeechWidget> {
             data.where((item) => item.questionType == "Education").toList();
         possibleAnswer = filteredData[0].expandedValue;
       });
-    } else if (str.toLowerCase().contains("money")) {
-      setState(() {
-        filteredData =
-            data.where((item) => item.questionType == "Money").toList();
-        possibleAnswer = filteredData[0].expandedValue;
-      });
     } else if (str.toLowerCase().contains("upload")) {
       setState(() {
         filteredData =
             data.where((item) => item.questionType == "Upload").toList();
         possibleAnswer = filteredData[0].expandedValue;
       });
+    } else if (str.toLowerCase().contains("request")) {
+      setState(() {
+        filteredData =
+            data.where((item) => item.questionType == "Request").toList();
+        possibleAnswer = filteredData[0].expandedValue;
+      });
+    } else if (str.toLowerCase().contains("counselling")) {
+      setState(() {
+        filteredData =
+            data.where((item) => item.questionType == "Counselling").toList();
+        possibleAnswer = filteredData[0].expandedValue;
+      });
     } else {
       setState(() {
         possibleAnswer =
-            "I don't know the answer for that right now, check the questions below.";
+            "I don't know the answer for that right now, please check the questions below.";
       });
     }
     _speak();
