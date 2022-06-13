@@ -58,13 +58,23 @@ class _NotificationsState extends State<Notifications> {
             itemCount: _itemCount,
             separatorBuilder: (ctx, index) => Divider(),
             itemBuilder: (ctx, index) {
-              return ListTile(
-                title: Text(messages[index]['msg'].split(':')[0]),
-                isThreeLine: true,
-                subtitle: Text(messages[index]['msg'].split(':')[1]),
-                leading: CircleAvatar(child: Text('AD')),
-                trailing: Text(messages[index]['date']),
-              );
+              String message = messages[index]['msg'].split(':');
+              if (message.length == 1) {
+                return ListTile(
+                  title: Text('MESSAGE FROM ADMIN'),
+                  isThreeLine: true,
+                  subtitle: Text(message[0]),
+                  leading: CircleAvatar(child: Text('AD')),
+                  trailing: Text(messages[index]['date']),
+                );
+              } else
+                return ListTile(
+                  title: Text(message[0]),
+                  isThreeLine: true,
+                  subtitle: Text(message[1]),
+                  leading: CircleAvatar(child: Text('AD')),
+                  trailing: Text(messages[index]['date']),
+                );
             }),
         onRefresh: getData,
         displacement: 100);
@@ -102,10 +112,13 @@ class _NotificationsState extends State<Notifications> {
       });
 
       if (messages.isNotEmpty) {
-        _showNotification(
-            id: 0,
-            title: messages.first['msg'].split(':')[0],
-            body: messages.first['msg'].split(':')[1]);
+        String message = messages.first['msg'].split(':');
+        if (message.length == 1) {
+          _showNotification(
+              id: 0, title: 'Message from Admin', body: message[0]);
+        } else {
+          _showNotification(id: 0, title: message[0], body: message[1]);
+        }
       }
     });
   }
