@@ -1,4 +1,5 @@
 import 'package:speech_to_text/speech_to_text.dart' as stt;
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:avatar_glow/avatar_glow.dart';
@@ -19,43 +20,52 @@ class Item {
 }
 
 class FAQ extends StatefulWidget {
+  BuildContext _context;
+  FAQ(this._context);
   @override
-  State<FAQ> createState() => _FAQState();
+  State<FAQ> createState() => _FAQState(_context);
 }
 
 class _FAQState extends State<FAQ> {
-  static const request =
-      "మా ప్రక్రియలో మీరు అభ్యర్థనను అందజేయడం, ప్రోగ్రామ్‌కు అర్హత పొందడం, అవసరమైన పత్రాలను అప్‌లోడ్ చేయడం మరియు ఆమోదం పొందిన తర్వాత మీరు ప్రోగ్రామ్‌లో పరిగణించబడతారు.";
-  //"Our process involves you to raise a request, become eligible for the program, upload the required documents and then on approval you shall be considered in the program.";
-  static const education1 =
-      "We provide education loans to regular students good at their academics, and for those who wish to pursue higher studies.";
-  static const education2 =
-      "The criterion which needs to be satisfied for an education loan include regular attendence, consistency in grades and minimal prior help received.";
-  static const upload =
-      "On the upload screen of the app, you are required to either click a picture with your camera, upload a photo from gallery, or send us a document like a PDF";
-  static const counselling =
-      "On applying for counselling, you shall be given an appointment and connected to one of our organization's counsellors to help you out.";
+  BuildContext _context1;
+  _FAQState(this._context1);
 
-  final List<Item> data = [
+  var request = "";
+  var education1 = "";
+  var education2 = "";
+  var upload = "";
+  var counselling = "";
+  @override
+  initState() {
+    super.initState();
+    filteredData = this.data;
+    var request = AppLocalizations.of(_context1)!.requestquery;
+    var education1 = AppLocalizations.of(_context1)!.education1query;
+    var education2 = AppLocalizations.of(_context1)!.education2query;
+    var upload = AppLocalizations.of(_context1)!.uploadquery;
+    var counselling = AppLocalizations.of(_context1)!.counsellingquery;
+  }
+
+  late List<Item> data = [
     Item(
-        expandedValue: request,
-        headerValue: "Raising a Request",
+        expandedValue: AppLocalizations.of(_context1)!.requestquery,
+        headerValue: AppLocalizations.of(_context1)!.str1,
         questionType: "Request"),
     Item(
-        expandedValue: education1,
-        headerValue: "Education loans",
+        expandedValue: AppLocalizations.of(_context1)!.education1query,
+        headerValue: AppLocalizations.of(_context1)!.str2,
         questionType: "Education"),
     Item(
-        expandedValue: education2,
-        headerValue: "Required Criterion",
+        expandedValue: AppLocalizations.of(_context1)!.education2query,
+        headerValue: AppLocalizations.of(_context1)!.str3,
         questionType: "Education"),
     Item(
-        expandedValue: upload,
-        headerValue: "Uploading of Documents",
+        expandedValue: AppLocalizations.of(_context1)!.uploadquery,
+        headerValue: AppLocalizations.of(_context1)!.str4,
         questionType: "Upload"),
     Item(
-        expandedValue: counselling,
-        headerValue: "Counselling Process",
+        expandedValue: AppLocalizations.of(_context1)!.counsellingquery,
+        headerValue: AppLocalizations.of(_context1)!.str5,
         questionType: "Counselling"),
   ];
   static List<Item> filteredData = [];
@@ -64,12 +74,6 @@ class _FAQState extends State<FAQ> {
     setState(() {
       filteredData = data.where((item) => item.questionType == str).toList();
     });
-  }
-
-  @override
-  void initState() {
-    filteredData = this.data;
-    super.initState();
   }
 
   Widget show() {
@@ -83,7 +87,7 @@ class _FAQState extends State<FAQ> {
                   filteredData = data;
                 });
               },
-              child: Text("All"),
+              child: Text(AppLocalizations.of(_context1)!.allbutton),
               style: ButtonStyle(
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -99,10 +103,16 @@ class _FAQState extends State<FAQ> {
                 ),
               ),
             ),
-            FilterButton(txt: "Education", callback: callback),
-            FilterButton(txt: "Upload", callback: callback),
-            FilterButton(txt: "Request", callback: callback),
-            FilterButton(txt: "Counselling", callback: callback)
+            FilterButton(
+                txt: AppLocalizations.of(_context1)!.educationbutton,
+                callback: callback),
+            FilterButton(
+                txt: AppLocalizations.of(_context1)!.uploadbutton,
+                callback: callback),
+            FilterButton(
+                txt: AppLocalizations.of(_context1)!.requestbutton,
+                callback: callback),
+            //FilterButton(txt: "Counselling", callback: callback)
           ]),
           SingleChildScrollView(
             padding: EdgeInsets.only(top: 20),
@@ -194,7 +204,6 @@ class FilterButton extends StatelessWidget {
 class SpeechWidget extends StatefulWidget {
   final List<Item> data;
   SpeechWidget({Key? key, required this.data}) : super(key: key);
-
   @override
   _SpeechWidgetState createState() => _SpeechWidgetState();
 }
@@ -205,7 +214,7 @@ class _SpeechWidgetState extends State<SpeechWidget> {
   String _text = 'Press the button and start speaking';
   List<Item> data = [];
   final flutterTts = FlutterTts();
-  String possibleAnswer = 'Never gonna give you up';
+  String possibleAnswer = '';
   List<Item> filteredData = [];
 
   initializeSpeech() async {
@@ -224,7 +233,7 @@ class _SpeechWidgetState extends State<SpeechWidget> {
   }
 
   Future _speak() async {
-    await flutterTts.setLanguage("te-IN");
+    await flutterTts.setLanguage("hi-IN");
     await flutterTts.setPitch(1.0);
     await flutterTts.speak(possibleAnswer);
   }
@@ -269,20 +278,24 @@ class _SpeechWidgetState extends State<SpeechWidget> {
     questiontext.text = _text;
     return Column(
       children: [
+        SizedBox(height: 15),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Or ask your question directly',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0),
-                  fontFamily: 'ProximaNovaRegular',
-                  fontSize: 20,
-                )),
+            Padding(
+              padding: const EdgeInsets.only(left: 8),
+              child: Text('Or ask your question directly',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontFamily: 'ProximaNovaRegular',
+                    fontSize: 20,
+                  )),
+            ),
             AvatarGlow(
               animate: _isListening,
               glowColor: Theme.of(context).primaryColor,
-              endRadius: 50.0,
+              endRadius: 40.0,
               duration: const Duration(milliseconds: 2000),
               repeatPauseDuration: const Duration(milliseconds: 100),
               repeat: true,

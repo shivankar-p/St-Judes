@@ -99,35 +99,33 @@ class _RequestWaitState extends State<RequestWait> {
 
   Widget displayScreen() {
     if (_state == 1) {
-      return SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-                width: 320,
-                height: 320,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/Processing.png')))),
-            SizedBox(height: 20),
-            Padding(
-              padding: EdgeInsets.all(15),
-              child: Container(
-                  child: Center(
-                      child: Text(
-                AppLocalizations.of(context)!.reqwait,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Color.fromRGBO(109, 109, 109, 1),
-                    fontFamily: 'ProximaNovaRegular',
-                    fontSize: 22,
-                    letterSpacing: 0,
-                    fontWeight: FontWeight.normal,
-                    height: 1),
-              ))),
-            ),
-          ],
-        ),
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+              width: 320,
+              height: 320,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/Processing.png')))),
+          SizedBox(height: 20),
+          Padding(
+            padding: EdgeInsets.all(15),
+            child: Container(
+                child: Center(
+                    child: Text(
+              AppLocalizations.of(context)!.reqwait,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(109, 109, 109, 1),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 22,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.normal,
+                  height: 1),
+            ))),
+          ),
+        ],
       );
     } else if (_state == 2) {
       //2

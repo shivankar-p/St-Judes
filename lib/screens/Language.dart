@@ -55,13 +55,13 @@ class _LanguageState extends State<Language> {
             child: SizedBox(
               width: 350,
               child: Material(
-                  color: Color.fromARGB(0, 255, 255, 255),
+                  color: Color.fromARGB(0, 89, 184, 97),
                   child: Text(
                       //Select Language
-                      'St Judes India Childcares',
+                      'St Jude\'s India',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color.fromARGB(255, 27, 63, 27),
+                        color: Color.fromARGB(255, 40, 99, 40),
                         fontFamily: 'ProximaNovaRegular',
                         fontSize: 27,
                         letterSpacing: 0,

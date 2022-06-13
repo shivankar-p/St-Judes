@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'dart:io';
+import 'dart:convert';
 import '../models/document.dart';
 import 'upload.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SelectMode extends StatefulWidget {
   @override
@@ -118,12 +120,25 @@ class _DocumentcaptureState extends State<Documentcapture> {
     });
   }
 
+  String getname(String a, BuildContext context) {
+    if (a == 'Aadhar Card') return AppLocalizations.of(context)!.aadhar;
+    if (a == 'Birth Certificate') return AppLocalizations.of(context)!.birth;
+    if (a == 'Bonafide') return AppLocalizations.of(context)!.bonafide;
+    if (a == '12th class marksheet')
+      return AppLocalizations.of(context)!.marksheet;
+    if (a == 'Medical Certificate')
+      return AppLocalizations.of(context)!.medical;
+    return a;
+  }
+
   Widget getLine1() {
     var line1;
     if (_docState == 0) {
-      line1 = 'Please upload your';
+      line1 = AppLocalizations.of(context)!.upload;
     } else {
-      line1 = 'Your ${doctypes[_index].name} has been';
+      line1 = AppLocalizations.of(context)!.your +
+          '${getname(doctypes[_index].name, context)}' +
+          AppLocalizations.of(context)!.hasbeen;
     }
 
     return Text(line1,
@@ -132,19 +147,31 @@ class _DocumentcaptureState extends State<Documentcapture> {
             color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold));
   }
 
+  String getdesc(String a, String b, BuildContext context) {
+    if (a == 'Aadhar Card') return AppLocalizations.of(context)!.aadhars;
+    if (a == 'Birth Certificate') return AppLocalizations.of(context)!.births;
+    if (a == 'Bonafide') return AppLocalizations.of(context)!.bonafides;
+    if (a == '12th class marksheet')
+      return AppLocalizations.of(context)!.marksheets;
+    if (a == 'Medical Certificate')
+      return AppLocalizations.of(context)!.medicals;
+    return b;
+  }
+
   Widget getLine2() {
+    String hello = doctypes[_index].name;
     var line2;
     if (_docState == 0) {
-      line2 = doctypes[_index].name;
+      line2 = getname(hello, context);
       return Text(line2,
           textAlign: TextAlign.left,
           style: const TextStyle(
               color: Colors.black, fontSize: 32, fontWeight: FontWeight.bold));
     } else {
       if (_docState == 1) {
-        line2 = "Uploaded";
+        line2 = AppLocalizations.of(context)!.up;
       } else {
-        line2 = 'Approved';
+        line2 = AppLocalizations.of(context)!.app;
       }
 
       return RichText(
@@ -169,10 +196,11 @@ class _DocumentcaptureState extends State<Documentcapture> {
     }
   }
 
-  Widget emptyContainer() {
+  Widget emptyContainer(BuildContext context) {
     return Container(
-      child: const Center(
-          child: Text('No file Selected. Click + to add documents')),
+      child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 30),
+          child: Center(child: Text(AppLocalizations.of(context)!.noselect))),
     );
   }
 
@@ -256,8 +284,12 @@ class _DocumentcaptureState extends State<Documentcapture> {
               ),
               SizedBox(
                   width: 150,
-                  child: Text(path.split('/').last,
-                      overflow: TextOverflow.clip, maxLines: 2, softWrap: true))
+                  child: Center(
+                    child: Text(path.split('/').last,
+                        overflow: TextOverflow.clip,
+                        maxLines: 2,
+                        softWrap: true),
+                  ))
             ]),
           ));
     } else {
@@ -286,7 +318,7 @@ class _DocumentcaptureState extends State<Documentcapture> {
     ]));
   }
 
-  String files = "No File Selected. Click + to add documents";
+  String files = 'No file selected. Click + to add documents';
 
   @override
   Widget build(BuildContext context) {
@@ -304,7 +336,8 @@ class _DocumentcaptureState extends State<Documentcapture> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 28, top: 15, right: 28),
-            child: Text(doctypes[_index].desc,
+            child: Text(
+                getdesc(doctypes[_index].name, doctypes[_index].desc, context),
                 textAlign: TextAlign.left,
                 style: const TextStyle(
                   color: Colors.black,
@@ -315,7 +348,7 @@ class _DocumentcaptureState extends State<Documentcapture> {
             height: 30,
           ),
           if (_imagepaths.length > 0) showPreview(),
-          if (_imagepaths.length == 0) emptyContainer(),
+          if (_imagepaths.length == 0) emptyContainer(context),
           SizedBox(height: 30),
           if (_docState == 0)
             Center(

@@ -166,7 +166,7 @@ class _MainscreenState extends State<Mainscreen> {
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => (FAQ())));
+                      MaterialPageRoute(builder: (context) => (FAQ(context))));
                 },
                 child: Icon(
                   Icons.help,

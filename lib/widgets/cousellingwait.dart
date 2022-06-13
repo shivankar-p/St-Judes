@@ -52,7 +52,7 @@ class _CwaitState extends State<Cwait> {
             child: Container(
                 child: Center(
                     child: Text(
-              'Your request for a online counseliing has been raised. Further details will be notified once it is approved.',
+              'Your request for a online counselling has been raised. Further details will be notified once it is approved.',
               //AppLocalizations.of(context)!.reqwait,
               textAlign: TextAlign.center,
               style: TextStyle(
