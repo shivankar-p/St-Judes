@@ -27,14 +27,15 @@ class _NotificationsState extends State<Notifications> {
       FirebaseDatabase.instance.ref('notifications/${UIDValue.uid}');
 
   Future getData() async {
-    await _notifications.initialize(InitializationSettings(
+    await _notifications.initialize(const InitializationSettings(
         android: AndroidInitializationSettings('@mipmap/ic_launcher')));
     var event = await ref.once();
     if (event.snapshot.value == null) return [];
-    var data = event.snapshot.value as List<dynamic>;
+    var data = event.snapshot.value as Map<dynamic, dynamic>;
+    var x = data.keys;
     setState(() {
-      _itemCount = data.length;
-      messages = List.from(data.reversed);
+      _itemCount = x.length;
+      messages = List.from(List.from(data.values).reversed);
     });
 
     return data;
@@ -93,10 +94,11 @@ class _NotificationsState extends State<Notifications> {
     notif = getData();
     ref.onValue.listen((event) {
       if (event.snapshot.value == null) return;
-      var data = event.snapshot.value as List<dynamic>;
+      var data = event.snapshot.value as Map<dynamic, dynamic>;
+      var x = data.keys;
       setState(() {
-        _itemCount = data.length;
-        messages = List.from(data.reversed);
+        _itemCount = x.length;
+        messages = List.from(List.from(data.values).reversed);
       });
 
       if (messages.isNotEmpty) {

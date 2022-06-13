@@ -160,7 +160,6 @@ class _UploadWaitState extends State<UploadWait> {
     } else if (_state == 2) {
       return Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        SizedBox(height: 30),
         Container(
             width: 310,
             height: 310,
@@ -195,44 +194,81 @@ class _UploadWaitState extends State<UploadWait> {
                   context, MaterialPageRoute(builder: (context) => (Upload())));
             })
       ]));
-    }
-    return Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      SizedBox(height: 15),
-      Container(
-          width: 310,
-          height: 310,
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/congrats.png')))),
-      Padding(
-        padding: EdgeInsets.all(15),
-        child: Text(AppLocalizations.of(context)!.verified,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Color.fromRGBO(109, 109, 109, 1),
-                fontFamily: 'ProximaNovaRegular',
-                fontSize: 22,
-                letterSpacing: 0,
-                fontWeight: FontWeight.normal,
-                height: 1)),
-      ),
-      SizedBox(height: 20),
-      ElevatedButton(
-          child: Text(AppLocalizations.of(context)!.homescreen,
+    } else if (_state == 4) {
+      return Center(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Container(
+            width: 310,
+            height: 310,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/images/congrats.png')))),
+        Padding(
+          padding: EdgeInsets.all(15),
+          child: Text(AppLocalizations.of(context)!.verified,
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Color.fromARGB(255, 0, 0, 0),
-                fontFamily: 'ProximaNovaRegular',
-                fontSize: 20,
-                fontWeight: FontWeight.normal,
-              )),
-          onPressed: () {
-            changeState(0);
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => (RaiseRequest())));
-          })
-    ]));
+                  color: Color.fromRGBO(109, 109, 109, 1),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 22,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.normal,
+                  height: 1)),
+        ),
+        SizedBox(height: 20),
+        ElevatedButton(
+            child: Text(AppLocalizations.of(context)!.homescreen,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 20,
+                  fontWeight: FontWeight.normal,
+                )),
+            onPressed: () {
+              changeState(0);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => (RaiseRequest())));
+            })
+      ]));
+    }
+    return Center(
+        child: SingleChildScrollView(
+      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Container(
+            width: 300,
+            height: 300,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/images/Rejected.png')))),
+        Padding(
+          padding: EdgeInsets.all(15),
+          child: Text(AppLocalizations.of(context)!.reqrej,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(109, 109, 109, 1),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 22,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.normal,
+                  height: 1)),
+        ),
+        SizedBox(height: 25),
+        ElevatedButton(
+            child: Text(AppLocalizations.of(context)!.homescreen,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontFamily: 'ProximaNovaRegular',
+                  fontSize: 20,
+                )),
+            onPressed: () {
+              changeState(0);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => (RaiseRequest())));
+            })
+      ]),
+    ));
   }
 
   @override

@@ -19,8 +19,9 @@ import '../models/uidvalue.dart';
 
 class Constants {
   static const String Language = 'Change Language';
+  static const String Log = 'View Request Log';
 
-  static const List<String> choices = <String>[Language];
+  static const List<String> choices = <String>[Language, Log];
 }
 
 class LanguageList1 extends StatelessWidget {
@@ -106,6 +107,9 @@ class _MainscreenState extends State<Mainscreen> {
         context: context,
         builder: (_) => LanguageList1(),
       );
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => (History())));
     }
   }
 

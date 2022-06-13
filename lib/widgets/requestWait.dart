@@ -102,9 +102,7 @@ class _RequestWaitState extends State<RequestWait> {
       return SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 80),
             Container(
                 width: 320,
                 height: 320,
@@ -135,8 +133,7 @@ class _RequestWaitState extends State<RequestWait> {
       //2
       return Center(
           child: SingleChildScrollView(
-        child: Column(children: [
-          SizedBox(height: 30),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Container(
               width: 320,
               height: 320,
@@ -174,8 +171,7 @@ class _RequestWaitState extends State<RequestWait> {
     }
     return Center(
         child: SingleChildScrollView(
-      child: Column(children: [
-        SizedBox(height: 10),
+      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Container(
             width: 300,
             height: 300,

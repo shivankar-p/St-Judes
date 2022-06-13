@@ -96,7 +96,7 @@ class Counselling extends StatelessWidget {
                           height: 1),
                     ),
                     onPressed: () {
-                      ref.set(1);
+                      ref.set({'state': 1, 'date': '', 'time': '', 'link': ''});
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => (Cwait())));
                     },
