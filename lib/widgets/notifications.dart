@@ -43,7 +43,7 @@ class _NotificationsState extends State<Notifications> {
   Widget displayNotifs(BuildContext ctx) {
     if (messages.isEmpty) {
       return Center(
-        child: Text('There are no notifications currenlty.',
+        child: Text('There are no notifications currently.',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color.fromARGB(255, 0, 0, 0),

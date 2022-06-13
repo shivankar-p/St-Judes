@@ -99,50 +99,92 @@ class _RequestWaitState extends State<RequestWait> {
 
   Widget displayScreen() {
     if (_state == 1) {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(height: 50),
+      return SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(height: 80),
+            Container(
+                width: 320,
+                height: 320,
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/Processing.png')))),
+            SizedBox(height: 20),
+            Padding(
+              padding: EdgeInsets.all(15),
+              child: Container(
+                  child: Center(
+                      child: Text(
+                AppLocalizations.of(context)!.reqwait,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(109, 109, 109, 1),
+                    fontFamily: 'ProximaNovaRegular',
+                    fontSize: 22,
+                    letterSpacing: 0,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              ))),
+            ),
+          ],
+        ),
+      );
+    } else if (_state == 2) {
+      //2
+      return Center(
+          child: SingleChildScrollView(
+        child: Column(children: [
+          SizedBox(height: 30),
           Container(
               width: 320,
               height: 320,
               decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/images/Processing.png')))),
-          SizedBox(height: 20),
+                      image: AssetImage('assets/images/Approved.png')))),
           Padding(
             padding: EdgeInsets.all(15),
-            child: Container(
-                child: Center(
-                    child: Text(
-              AppLocalizations.of(context)!.reqwait,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Color.fromRGBO(109, 109, 109, 1),
-                  fontFamily: 'ProximaNovaRegular',
-                  fontSize: 22,
-                  letterSpacing: 0,
-                  fontWeight: FontWeight.normal,
-                  height: 1),
-            ))),
+            child: Text(AppLocalizations.of(context)!.reqapp,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(109, 109, 109, 1),
+                    fontFamily: 'ProximaNovaRegular',
+                    fontSize: 22,
+                    letterSpacing: 0,
+                    fontWeight: FontWeight.normal,
+                    height: 1)),
           ),
-        ],
-      );
-    } else if (_state == 2) {
-      //2
-      return Center(
-          child: Column(children: [
-        SizedBox(height: 30),
+          SizedBox(height: 40),
+          ElevatedButton(
+              child: Text(AppLocalizations.of(context)!.load,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontFamily: 'ProximaNovaRegular',
+                    fontSize: 20,
+                  )),
+              onPressed: () {
+                changeState(2);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => (Upload())));
+              })
+        ]),
+      ));
+    }
+    return Center(
+        child: SingleChildScrollView(
+      child: Column(children: [
+        SizedBox(height: 10),
         Container(
-            width: 320,
-            height: 320,
+            width: 300,
+            height: 300,
             decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/Approved.png')))),
+                    image: AssetImage('assets/images/Rejected.png')))),
         Padding(
           padding: EdgeInsets.all(15),
-          child: Text(AppLocalizations.of(context)!.reqapp,
+          child: Text(AppLocalizations.of(context)!.reqrej,
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Color.fromRGBO(109, 109, 109, 1),
@@ -152,9 +194,9 @@ class _RequestWaitState extends State<RequestWait> {
                   fontWeight: FontWeight.normal,
                   height: 1)),
         ),
-        SizedBox(height: 40),
+        SizedBox(height: 25),
         ElevatedButton(
-            child: Text(AppLocalizations.of(context)!.load,
+            child: Text(AppLocalizations.of(context)!.homescreen,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Color.fromARGB(255, 0, 0, 0),
@@ -162,48 +204,12 @@ class _RequestWaitState extends State<RequestWait> {
                   fontSize: 20,
                 )),
             onPressed: () {
-              changeState(2);
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => (Upload())));
+              changeState(0);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => (RaiseRequest())));
             })
-      ]));
-    }
-    return Center(
-        child: Column(children: [
-      SizedBox(height: 30),
-      Container(
-          width: 300,
-          height: 300,
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/Rejected.png')))),
-      Padding(
-        padding: EdgeInsets.all(15),
-        child: Text(AppLocalizations.of(context)!.reqrej,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Color.fromRGBO(109, 109, 109, 1),
-                fontFamily: 'ProximaNovaRegular',
-                fontSize: 22,
-                letterSpacing: 0,
-                fontWeight: FontWeight.normal,
-                height: 1)),
-      ),
-      SizedBox(height: 25),
-      ElevatedButton(
-          child: Text(AppLocalizations.of(context)!.homescreen,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Color.fromARGB(255, 0, 0, 0),
-                fontFamily: 'ProximaNovaRegular',
-                fontSize: 20,
-              )),
-          onPressed: () {
-            changeState(0);
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => (RaiseRequest())));
-          })
-    ]));
+      ]),
+    ));
   }
 
   @override

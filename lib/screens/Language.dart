@@ -51,7 +51,7 @@ class _LanguageState extends State<Language> {
                     image: DecorationImage(
                         image: AssetImage('assets/images/Logo.png'))))),
         Positioned(
-            top: 350 * (constraints.maxHeight / 800),
+            top: 380 * (constraints.maxHeight / 800),
             child: SizedBox(
               width: 350,
               child: Material(
@@ -70,7 +70,7 @@ class _LanguageState extends State<Language> {
                       ))),
             )),
         Positioned(
-            top: 500 * (constraints.maxHeight / 800),
+            top: 480 * (constraints.maxHeight / 800),
             child: SizedBox(
               width: 300,
               child: Material(
@@ -89,7 +89,7 @@ class _LanguageState extends State<Language> {
                       ))),
             )),
         Positioned(
-            top: 550 * (constraints.maxHeight / 800),
+            top: 530 * (constraints.maxHeight / 800),
             //left: (constraints.maxWidth - 237) / 2,
             child: Hero(
                 tag: "SelectLang",
@@ -117,7 +117,7 @@ class _LanguageState extends State<Language> {
                                         fontWeight: FontWeight.normal,
                                         height: 1)))))))),
         Positioned(
-            top: 700 * (constraints.maxHeight / 800),
+            top: 680 * (constraints.maxHeight / 800),
             //left: (constraints.maxWidth - 100) / 2,
             child: GestureDetector(
                 onTap: () async {
@@ -138,7 +138,7 @@ class _LanguageState extends State<Language> {
                             borderRadius: BorderRadius.circular(5)),
                         child: Stack(alignment: Alignment.center, children: [
                           SizedBox(
-                            width: 300,
+                            width: 200,
                             height: 40,
                           ),
                           Positioned(
@@ -148,7 +148,7 @@ class _LanguageState extends State<Language> {
                               child: Text(AppLocalizations.of(context)!.cont,
                                   style: TextStyle(
                                       fontFamily: 'ProximaNovaRegular',
-                                      fontSize: 17,
+                                      fontSize: 20,
                                       color:
                                           Color.fromARGB(255, 255, 255, 255))))
                         ])))))

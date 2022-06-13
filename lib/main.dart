@@ -11,6 +11,7 @@ import './screens/mainScreen.dart';
 import 'package:provider/provider.dart';
 import 'LocaleProvider.dart';
 import 'l10n/l10n.dart';
+import 'package:flutter/services.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +39,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-
+    SystemChrome.setEnabledSystemUIOverlays([]);
     notif = getState();
   }
 

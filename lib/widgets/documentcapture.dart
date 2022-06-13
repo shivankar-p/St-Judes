@@ -295,7 +295,7 @@ class _DocumentcaptureState extends State<Documentcapture> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 28, top: 80),
+            padding: EdgeInsets.only(left: 28, top: 70),
             child: getLine1(),
           ),
           Padding(
@@ -303,7 +303,7 @@ class _DocumentcaptureState extends State<Documentcapture> {
             child: getLine2(),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 28, top: 10, right: 28),
+            padding: const EdgeInsets.only(left: 28, top: 15, right: 28),
             child: Text(doctypes[_index].desc,
                 textAlign: TextAlign.left,
                 style: const TextStyle(
@@ -312,7 +312,7 @@ class _DocumentcaptureState extends State<Documentcapture> {
                 )),
           ),
           const SizedBox(
-            height: 20,
+            height: 30,
           ),
           if (_imagepaths.length > 0) showPreview(),
           if (_imagepaths.length == 0) emptyContainer(),

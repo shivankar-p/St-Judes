@@ -197,7 +197,7 @@ class _UIDform extends State<UIDform> {
                   ),
                   SizedBox(height: 10),
                   Container(
-                      width: 300,
+                      width: 200,
                       height: 117,
                       padding: const EdgeInsets.only(top: 80),
                       child: ElevatedButton(
@@ -208,7 +208,7 @@ class _UIDform extends State<UIDform> {
                         child: Text(AppLocalizations.of(context)!.submit,
                             style: TextStyle(
                                 fontFamily: 'ProximaNovaRegular',
-                                fontSize: 17,
+                                fontSize: 20,
                                 color: Color.fromARGB(255, 255, 255, 255))),
                         onPressed: () async {
                           DatabaseReference _testRef = FirebaseDatabase.instance
@@ -285,7 +285,7 @@ class _UIDform extends State<UIDform> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  SizedBox(height: 150),
+                  SizedBox(height: 250),
                   Center(
                       child: Text(_otpValid,
                           style:
@@ -425,7 +425,7 @@ class _UIDform extends State<UIDform> {
                       image: DecorationImage(
                           image: AssetImage('assets/images/Logo.png'))))),
           Positioned(
-              top: 350 * (constraints.maxHeight / 800),
+              top: 380 * (constraints.maxHeight / 800),
               child: SizedBox(
                 width: 350,
                 child: Material(
@@ -446,7 +446,8 @@ class _UIDform extends State<UIDform> {
           Material(
             color: Colors.transparent,
             child: showLoading
-                ? Center(
+                ? Positioned(
+                    top: 400,
                     child: CircularProgressIndicator(
                         valueColor:
                             AlwaysStoppedAnimation<Color>(Colors.black)),

@@ -159,7 +159,7 @@ class _UploadWaitState extends State<UploadWait> {
       ]);
     } else if (_state == 2) {
       return Center(
-          child: Column(children: [
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         SizedBox(height: 30),
         Container(
             width: 310,
@@ -197,7 +197,7 @@ class _UploadWaitState extends State<UploadWait> {
       ]));
     }
     return Center(
-        child: Column(children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       SizedBox(height: 15),
       Container(
           width: 310,
