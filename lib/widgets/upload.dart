@@ -54,9 +54,7 @@ class _UploadState extends State<Upload> {
 
       if (state == 0) {
         pagemap[nod] = int.parse(stringlist[i]);
-        setState(() {
-          nod++;
-        });
+        nod++;
       }
       doctypes[int.parse(stringlist[i])].docState = state;
     }

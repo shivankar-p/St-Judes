@@ -200,7 +200,7 @@ class _DocumentcaptureState extends State<Documentcapture> {
     final XFile? photo = await _picker.pickImage(source: ImageSource.camera);
     if (photo != null) {
       setState(() {
-        doctypes[_index].docpaths.add(photo.path);
+        doctypes[_index].docpaths.add(photo);
         _imagepaths.add(photo.path);
       });
     }

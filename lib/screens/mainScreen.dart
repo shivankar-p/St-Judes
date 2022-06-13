@@ -121,7 +121,7 @@ class _MainscreenState extends State<Mainscreen> {
     return {
       '/': (context) {
         if (index == 0) {
-          return screens[index][0];
+          return screens[index][1];
         }
         return screens[index][0];
       },
