@@ -161,7 +161,7 @@ class _UploadState extends State<Upload> {
                 Documentcapture(pagemap[i], typestatelist[i])),
       ])),
       Container(
-        margin: EdgeInsets.only(bottom: 50),
+        margin: EdgeInsets.only(bottom: 30),
         child: SizedBox(
             width: 200,
             child:

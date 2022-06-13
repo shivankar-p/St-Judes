@@ -1,10 +1,13 @@
+import 'package:first/widgets/cousellingwait.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../models/uidvalue.dart';
 
 class Counselling extends StatelessWidget {
-  DatabaseReference ref = FirebaseDatabase.instance.ref('counselling/15000');
+  DatabaseReference ref =
+      FirebaseDatabase.instance.ref('counselling/${UIDValue.uid}');
 
   @override
   Widget build(BuildContext context) {
@@ -93,15 +96,9 @@ class Counselling extends StatelessWidget {
                           height: 1),
                     ),
                     onPressed: () {
-                      // var newref = ref1.push();
-                      // newref.set({'state': 1, 'language': 'english'});
-
-                      // ref2.set(1);
-
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => (RequestWait())));
+                      ref.set(1);
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => (Cwait())));
                     },
                     style: ElevatedButton.styleFrom(
                         primary: Color.fromRGBO(245, 130, 32, 1),

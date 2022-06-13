@@ -4,6 +4,91 @@ import 'dart:io';
 import '../models/document.dart';
 import 'upload.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:image_picker/image_picker.dart';
+
+class SelectMode extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => SelectModeState();
+}
+
+class SelectModeState extends State<SelectMode>
+    with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  late Animation<double> scaleAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+    scaleAnimation =
+        CurvedAnimation(parent: controller, curve: Curves.easeInOut);
+
+    controller.addListener(() {
+      setState(() {});
+    });
+
+    controller.forward();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Material(
+      color: Colors.transparent,
+      child: ScaleTransition(
+        scale: scaleAnimation,
+        child: Container(
+          decoration: ShapeDecoration(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0))),
+          child: Padding(
+            padding: const EdgeInsets.all(45.0),
+            child: SizedBox(
+              width: 150,
+              child:
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: const CircleBorder(),
+                      padding: const EdgeInsets.all(15),
+                    ),
+                    child: const Icon(
+                      Icons.camera,
+                      size: 30,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context, 1);
+                    }),
+                SizedBox(width: 20),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: const CircleBorder(),
+                      padding: const EdgeInsets.all(15),
+                    ),
+                    child: const Icon(
+                      Icons.file_open,
+                      size: 30,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context, 2);
+                    })
+              ]),
+            ),
+          ),
+        ),
+      ),
+    ));
+  }
+}
 
 class Documentcapture extends StatefulWidget {
   final int index;
@@ -110,18 +195,37 @@ class _DocumentcaptureState extends State<Documentcapture> {
     }
   }
 
+  Future captureImage() async {
+    final ImagePicker _picker = ImagePicker();
+    final XFile? photo = await _picker.pickImage(source: ImageSource.camera);
+    if (photo != null) {
+      setState(() {
+        doctypes[_index].docpaths.add(photo.path);
+        _imagepaths.add(photo.path);
+      });
+    }
+  }
+
   Widget generateAddButton() {
     return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        shape: const CircleBorder(),
-        padding: const EdgeInsets.all(15),
-      ),
-      child: const Icon(
-        Icons.add,
-        size: 30,
-      ),
-      onPressed: selectFiles,
-    );
+        style: ElevatedButton.styleFrom(
+          shape: const CircleBorder(),
+          padding: const EdgeInsets.all(15),
+        ),
+        child: const Icon(
+          Icons.add,
+          size: 30,
+        ),
+        onPressed: () async {
+          var val =
+              await showDialog(context: context, builder: (_) => SelectMode());
+          if (val == 2)
+            selectFiles();
+          else if (val == 1)
+            captureImage();
+          else
+            return;
+        });
   }
 
   Widget generateDelButton() {
@@ -212,7 +316,7 @@ class _DocumentcaptureState extends State<Documentcapture> {
           ),
           if (_imagepaths.length > 0) showPreview(),
           if (_imagepaths.length == 0) emptyContainer(),
-          SizedBox(height: 20),
+          SizedBox(height: 30),
           if (_docState == 0)
             Center(
                 child:

@@ -17,8 +17,6 @@ import '../widgets/displayRequests.dart';
 import 'package:firebase_database/firebase_database.dart';
 import '../models/uidvalue.dart';
 
-String uid = '';
-
 class Constants {
   static const String Language = 'Change Language';
 
@@ -60,9 +58,11 @@ class LanguageList1 extends StatelessWidget {
                               child: Text(e[0],
                                   style: TextStyle(
                                       color: Color.fromARGB(255, 0, 0, 0)))),
-                          onTap: () {
+                          onTap: () async {
                             provider.setLocale(Locale(e[1]));
-                            ref.child('$uid/language').set(e[1]);
+                            var prefs = await SharedPreferences.getInstance();
+                            prefs.setString('locale', e[1]);
+                            ref.child('language').set(e[1]);
                             Navigator.pop(context);
                           },
                           tileColor: Color.fromARGB(255, 255, 255, 255))))
@@ -81,12 +81,15 @@ class _MainscreenState extends State<Mainscreen> {
   int _selectedIndex = 0;
   int _appStateR = 0;
   int _appStateC = 0;
+  String lang = 'en';
 
   Future getAppState() async {
     var prefs = await SharedPreferences.getInstance();
     setState(() {
       _appStateC = prefs.getInt('counselling') ?? 0;
       _appStateR = prefs.getInt('request') ?? 0;
+      lang = prefs.getString('locale') ?? 'en';
+      provider.setLocale(Locale(lang));
       if (_appStateR > 1) _appStateR = 1;
     });
   }
@@ -105,6 +108,8 @@ class _MainscreenState extends State<Mainscreen> {
       );
     }
   }
+
+  var provider;
 
   List<List<Widget>> screens = [
     [RaiseRequest(), Displayrequests()],
@@ -225,6 +230,7 @@ class _MainscreenState extends State<Mainscreen> {
 
   @override
   Widget build(BuildContext context) {
+    provider = Provider.of<LocaleProvider>(context);
     return displayScreen();
   }
 }
