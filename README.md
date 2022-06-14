@@ -9,5 +9,5 @@ An app that facilitates the communication process between the cancer struck peop
 * Run the app
 
 ## Admin website Repo
-[Admin Website](https://github.com/shivankar-p/St-Judes-admin)
+[Admin Website](https://github.com/shivankar-p/St-Judes-admin/tree/final)
 
