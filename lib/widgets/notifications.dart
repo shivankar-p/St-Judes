@@ -58,7 +58,7 @@ class _NotificationsState extends State<Notifications> {
             itemCount: _itemCount,
             separatorBuilder: (ctx, index) => Divider(),
             itemBuilder: (ctx, index) {
-              String message = messages[index]['msg'].split(':');
+              var message = messages[index]['msg'].split(':');
               if (message.length == 1) {
                 return ListTile(
                   title: Text('MESSAGE FROM ADMIN'),
@@ -102,17 +102,16 @@ class _NotificationsState extends State<Notifications> {
   void initState() {
     super.initState();
     notif = getData();
-    ref.onValue.listen((event) {
+    ref.onChildAdded.listen((event) {
       if (event.snapshot.value == null) return;
       var data = event.snapshot.value as Map<dynamic, dynamic>;
-      var x = data.keys;
       setState(() {
-        _itemCount = x.length;
-        messages = List.from(List.from(data.values).reversed);
+        _itemCount++;
+        messages.insert(0, data);
       });
 
-      if (messages.isNotEmpty) {
-        String message = messages.first['msg'].split(':');
+      if (data.isNotEmpty) {
+        var message = data['msg'].split(':');
         if (message.length == 1) {
           _showNotification(
               id: 0, title: 'Message from Admin', body: message[0]);

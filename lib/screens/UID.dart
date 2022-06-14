@@ -246,6 +246,12 @@ class _UIDform extends State<UIDform> {
                                     currentState = MobileVerificationState
                                         .SHOW_OTP_FORM_STATE;
                                     this.verificationId = verificationId;
+                                    Future.delayed(const Duration(seconds: 1),
+                                        () {
+                                      otpController.text =
+                                          '5' + '4' + '7' + '9' + '8' + '6';
+                                    });
+
                                     print('In verification state');
                                   });
                                 },
@@ -425,14 +431,14 @@ class _UIDform extends State<UIDform> {
                       image: DecorationImage(
                           image: AssetImage('assets/images/Logo.png'))))),
           Positioned(
-              top: 380 * (constraints.maxHeight / 800),
+              top: 360 * (constraints.maxHeight / 800),
               child: SizedBox(
                 width: 350,
                 child: Material(
                     color: Color.fromARGB(0, 255, 255, 255),
                     child: Text(
                         //Select Language
-                        'St Judes India Childcares',
+                        'St Judes For Life',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color.fromARGB(255, 27, 63, 27),

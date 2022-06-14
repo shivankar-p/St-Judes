@@ -20,8 +20,9 @@ import '../models/uidvalue.dart';
 class Constants {
   static const String Language = 'Change Language';
   static const String Log = 'View Request Log';
+  static const String Logout = 'Logout';
 
-  static const List<String> choices = <String>[Language, Log];
+  static const List<String> choices = <String>[Language, Log, Logout];
 }
 
 class LanguageList1 extends StatelessWidget {
@@ -101,15 +102,20 @@ class _MainscreenState extends State<Mainscreen> {
     getAppState();
   }
 
-  void choiceAction(String choice) {
+  void choiceAction(String choice) async {
     if (choice == Constants.Language) {
       showDialog(
         context: context,
         builder: (_) => LanguageList1(),
       );
-    } else {
+    } else if (choice == Constants.Log) {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => (History())));
+    } else {
+      var prefs = await SharedPreferences.getInstance();
+      await prefs.setString('loginstate', '');
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => (Language())));
     }
   }
 

@@ -51,14 +51,14 @@ class _LanguageState extends State<Language> {
                     image: DecorationImage(
                         image: AssetImage('assets/images/Logo.png'))))),
         Positioned(
-            top: 380 * (constraints.maxHeight / 800),
+            top: 360 * (constraints.maxHeight / 800),
             child: SizedBox(
               width: 350,
               child: Material(
                   color: Color.fromARGB(0, 89, 184, 97),
                   child: Text(
                       //Select Language
-                      'St Jude\'s India',
+                      'St Judes For Life',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color.fromARGB(255, 40, 99, 40),
