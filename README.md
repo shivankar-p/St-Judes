@@ -1,6 +1,6 @@
 # SJFL Revive
 
-An app that facilitates the communication process between the cancer struck poeple seeking rehabilitation and the noble workers at SJFL.
+An app that facilitates the communication process between the cancer struck people seeking rehabilitation and the noble workers at SJFL.
 
 ## Running the App
 * Clone the repository in the Language branch
