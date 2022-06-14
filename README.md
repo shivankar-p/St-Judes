@@ -4,8 +4,8 @@ An app that facilitates the communication process between the cancer struck peop
 
 ## Running the App
 * Clone the repository in the Language branch
-* Run flutter clean
-* Run flutter pub get
+* Run __flutter clean__
+* Run __flutter pub get__
 * Run the app
 
 ## Admin website Repo
