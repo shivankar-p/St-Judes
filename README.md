@@ -1,6 +1,6 @@
-# first
+# SJFL Revive
 
-A new Flutter project.
+An app that facilitates the communication process between the cancer struck poeple seeking rehabilitation and the noble workers at SJFL.
 
 ## Getting Started
 
